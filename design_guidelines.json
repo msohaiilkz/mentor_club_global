@@ -1,0 +1,98 @@
+{
+  "brand_identity": {
+    "name": "Mentor Global",
+    "domain": "Global Health Fintech Infrastructure",
+    "theme": "Light & Dark (Alternating)",
+    "archetype": "Archetype 4 (Swiss & High-Contrast) + Archetype 5 (Premium Tech)",
+    "design_principles": [
+      "Simplify. Give it contrast. Stay a rebel.",
+      "Clean, Bold, Global, Premium",
+      "Infrastructure grade, Enterprise ready",
+      "AI enabled, Human but not soft",
+      "Futuristic but not gimmicky"
+    ],
+    "anti_patterns": [
+      "No cheap SaaS template look",
+      "No cartoon illustrations",
+      "No generic robot images",
+      "Minimal icons",
+      "No heavy rounded corners (keep it sharp/structured)",
+      "No Inter font for headings"
+    ]
+  },
+  "colors": {
+    "primary": {
+      "hex": "#0048FF",
+      "usage": "Sparingly for emphasis, CTAs, active states, and subtle glows. Max 10% of UI."
+    },
+    "backgrounds": {
+      "light": "#FFFFFF",
+      "dark": "#11111F"
+    },
+    "text": {
+      "light_on_dark": "#FFFFFF",
+      "dark_on_light": "#11111F",
+      "muted_on_dark": "#8A8A93",
+      "muted_on_light": "#666666"
+    },
+    "borders": {
+      "light_theme": "rgba(17, 17, 31, 0.1)",
+      "dark_theme": "rgba(255, 255, 255, 0.1)"
+    }
+  },
+  "typography": {
+    "font_family": "Plus Jakarta Sans, sans-serif",
+    "scales": {
+      "hero_h1": "text-5xl md:text-6xl lg:text-[5rem] font-bold tracking-tighter leading-[1.05]",
+      "section_h2": "text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]",
+      "card_h3": "text-2xl md:text-3xl font-semibold tracking-tight",
+      "body": "text-base md:text-lg leading-relaxed",
+      "eyebrow": "text-xs md:text-sm uppercase tracking-[0.2em] font-bold text-[#0048FF]"
+    }
+  },
+  "layout_and_spacing": {
+    "section_padding": "py-24 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "grid_system": "Bento Grid (Mode B for density/data, Mode A for marketing impact). Use strict HTML grid structures.",
+    "borders": "Thin grid lines pattern: containers have border-collapse style; items have border-r border-b. Creates technical/infrastructure feel.",
+    "border_radius": "rounded-none or rounded-sm (2px-4px max)"
+  },
+  "visual_features": {
+    "buttons": "Sharp rectangular. Primary: bg-[#0048FF] text-white hover:bg-[#0030CC] transition-colors. Secondary: border border-current hover:bg-black/5 (light) or hover:bg-white/10 (dark).",
+    "cards": "Flat, zero drop shadow. Separated by 1px solid lines. Large internal padding (p-8 to p-12).",
+    "glow_effects": "In dark sections (like DEXA/AI), use: bg-[radial-gradient(circle_at_center,rgba(0,72,255,0.15),transparent_50%)] or similar very subtle volumetric light."
+  },
+  "image_urls": {
+    "hero_architecture": {
+      "url": "https://images.pexels.com/photos/10881102/pexels-photo-10881102.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Premium black and white architectural photography. Use as abstract visual in Hero or Scale section to convey unshakeable foundation."
+    },
+    "dexa_ai_bg": {
+      "url": "https://images.unsplash.com/photo-1680992046626-418f7e910589?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwzfHxkYXJrJTIwc2VydmVyJTIwcm9vbSUyMGdsb3dpbmclMjBibHVlJTIwbGluZXN8ZW58MHx8fHwxNzc3NDIxMjE2fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Dark server room with subtle blue glow. Use heavily overlaid with #11111F for the DEXA intelligence background."
+    },
+    "global_map_bg": {
+      "url": "https://images.unsplash.com/photo-1733195296321-b99d129b09cd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjB3b3JsZCUyMG1hcCUyMGFic3RyYWN0JTIwZGlnaXRhbCUyMGRhcmt8ZW58MHx8fHwxNzc3NDIxMjE2fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract blue and black globe. Use for the Global Presence section."
+    },
+    "team_founder": {
+      "url": "https://images.unsplash.com/photo-1640531005390-38bd92755d6a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMGxlYWRlciUyMHBvcnRyYWl0JTIwYmxhY2slMjBhbmQlMjB3aGl0ZXxlbnwwfHx8fDE3Nzc0MjEyMDR8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Black and white business leader portrait. Use for the Team Page founder feature card."
+    },
+    "pillar_abstract": {
+       "url": "https://images.unsplash.com/photo-1762279388956-1c098163a2a8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGZ1dHVyaXN0aWMlMjBkYXRhJTIwbmV0d29yayUyMGJhY2tncm91bmQlMjBkYXJrfGVufDB8fHx8MTc3NzQyMTIxNnww&ixlib=rb-4.1.0&q=85",
+       "description": "Abstract neon data lines. Can be used selectively as a visual texture in Infrastructure cards."
+    }
+  },
+  "instructions_to_main_agent": [
+    "INSTALLATION: Add Google Font 'Plus Jakarta Sans'. Configure tailwind.config.js to use it as the default sans font. Install framer-motion, lucide-react.",
+    "NAVIGATION: Create a premium desktop header with a 'Solutions' mega-menu. The header must have a solid or highly blurred background (no pure transparent) so links stay readable.",
+    "LAYOUT - GRID LINES: To achieve the requested 'thin grid lines' and 'clean cards', do NOT use standard gaps. Use CSS grids with border collapse, or wrap cards in borders. E.g., `border-r border-b border-[#11111F]/10`.",
+    "SECTION - DEXA: Build this as a dark authority section (#11111F). Add a subtle radial blue glow behind the content using tailwind radial-gradient utilities.",
+    "SECTION - SCALE: Implement animated counters (e.g., using framer-motion's useInView and useSpring) for global metrics. This section should also be dark.",
+    "COMPONENTS: Use Shadcn UI for forms, tabs, and complex interactive bits, but heavily customize them. Strip out all rounded borders (`rounded-md` -> `rounded-none`) to fit the sharp infrastructure vibe.",
+    "TESTING: Every single interactive element (buttons, links, form fields, dropdowns) MUST have a kebab-case `data-testid` attribute (e.g., `data-testid=\"hero-cta-button\"`).",
+    "IMAGES: Never use generic placeholder URLs. Use ONLY the provided `image_urls` mapped to their descriptions.",
+    "PAGES: Build out placeholders/routes for all requested pages: /, /solutions, /solutions/healthcare-infrastructure, /solutions/insurance-infrastructure, /solutions/fintech-infrastructure, /solutions/ai-infrastructure, /solutions/company-operating-infrastructure, /dexa, /subsidiaries, /about, /team, /contact."
+  ]
+}

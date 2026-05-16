@@ -1,0 +1,56 @@
+{
+  "summary": "Frontend-only testing of new comprehensive DEXA Intelligence Engine page at /dexa. All 18 sections render, every BRD count matches spec (Command Center 12, What DEXA Is 7, What DEXA Is Not 6, Problems 10, Thinking 13, Operating Model 4, Pillars 5, Channels 8, Interface Types 14, Intelligence Layers 8, Agent Groups 3 / Agents 8, Governance 16, Approval Queues 14, Scenarios 5, Architecture 12, Use Cases 20, Outcomes 16). Hero headline, italic clarification, video placeholder with Mentor Club logo + 'Video Coming Soon' chip, and final CTAs all match. No JS/console errors. Solution routes /solutions/healthcare-infrastructure and /solutions/ai-infrastructure still return 200 with correct H1.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {"screen": "/dexa Hero", "issues": ["Helper microcopy 'Mentor Global builds infrastructure...' uses text-[#8A8A93]/70 (~55% of #8A8A93 on dark) — borderline contrast on #11111F. Consider lifting to text-[#8A8A93] or text-white/60 for AA compliance."]},
+      {"screen": "/dexa Outcomes footer", "issues": ["Caption uses text-[#666666]/60 on white background — very low contrast (well below WCAG AA). Recommend at least text-[#666666] or text-[#11111F]/60."]},
+      {"screen": "/dexa Hero command center", "issues": ["Inner panel labels rendered at text-[8px] which is below typical readable minimum (~10–11px). Acceptable for a decorative mock, but worth flagging for accessibility."]}
+    ]
+  },
+  "test_report_links": [],
+  "action_items": [
+    "Optional: improve text contrast on the two muted captions noted in design_issues.",
+    "Optional: when the actual video asset is available, replace the placeholder block in VideoSection with a <video>/<iframe> embed."
+  ],
+  "critical_code_review_comments": [
+    "DexaNew.jsx is 301 lines with 18 inline section components — readable but consider splitting sections into /pages/dexa/ subcomponents if more sections are added.",
+    "Hero CTA 'Watch DEXA in Action' uses native <a href=\"#dexa-video\"> which is correct (anchor scroll), unlike previous pages that used react-router Link with hash. Good fix.",
+    "ScrollReveal animations gate visibility on scroll — Playwright must scroll the entire page before asserting counts (already documented in iteration_8).",
+    "Hero command-center labels use text-[8px] which may not be accessibility-friendly; cosmetic.",
+    "Final CTA both buttons route to /contact — could differentiate intent (e.g. 'Build With DEXA' to a partner/build form) but functionally fine."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (skipped)", "frontend": "100%"},
+  "test_credentials": "N/A",
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "/dexa now renders DexaNew (App.js maps /dexa -> import Dexa from '@/pages/DexaNew'). All 18 sections have data-testid (dexa-hero, dexa-video, dexa-what-is, dexa-what-is-not, dexa-problems, dexa-thinking, dexa-operating-model, dexa-pillars, dexa-channels, dexa-layers, dexa-agents, dexa-governance, dexa-approval, dexa-scenarios, dexa-architecture, dexa-use-cases, dexa-outcomes, dexa-final-cta). Final CTAs: dexa-final-build-cta, dexa-final-talk-cta. Page uses ScrollReveal so scroll the full page before counting. Counting tip: for sections rendered as flat grids, count direct children of the inner grid. For Architecture/Intelligence Layers, count .md\\:grid-cols-12 rows. The /dexa page coexists with all 5 dedicated solution routes and the /solutions/:slug detail route — verified healthcare and ai routes still return 200.",
+  "verified_checks": [
+    "Page loads at /dexa with no JS/console errors",
+    "Hero headline: 'DEXA, The Intelligence Processing Engine Behind Mentor Global'",
+    "Hero italic text: 'DEXA is not the chat window. DEXA is the intelligence layer behind the action.'",
+    "Hero Command Center has 12 connected panels",
+    "Video section present with eyebrow 'See DEXA in Motion', Mentor Club logo, and 'Video Coming Soon' chip",
+    "What DEXA Is: 7 capability cards",
+    "What DEXA Is Not: 6 cards (incl. 'Not just a chatbot' verified in data)",
+    "Problem section: 10 cards",
+    "How DEXA Thinks: 13-step processing chain",
+    "Operating Model: 4 stages (Understand, Reason, Act, Govern)",
+    "DEXA Across Pillars: 5 panels",
+    "Channels: 8 cards; Interface Types: 14",
+    "Intelligence Layers: 8",
+    "Agentic Pods: 3 groups, 8 agents total",
+    "Governance: 16 cards",
+    "Human Approval: 14 queues",
+    "Real Scenarios: 5 (data-confirmed)",
+    "Architecture: 12 layers",
+    "Use Cases: 20",
+    "Outcomes: 16",
+    "Final CTA: 'Build With DEXA' + 'Talk to Mentor Global'",
+    "/solutions/healthcare-infrastructure and /solutions/ai-infrastructure still return 200"
+  ]
+}

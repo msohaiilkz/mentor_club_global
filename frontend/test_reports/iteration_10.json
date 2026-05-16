@@ -1,0 +1,39 @@
+{
+  "summary": "Frontend-only testing of the comprehensive /subsidiaries page (SubsidiariesNew.jsx). Verified all 10 sections, required counts of items per section, hero headline, navigation label, and confirmed /dexa, /solutions, /contact still work without JS errors.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_results": {
+    "subsidiaries_page_loads": "PASS - no JS errors",
+    "hero_headline": "PASS - 'A Global Portfolio of Health Fintech Infrastructure Companies'",
+    "hero_region_cards": "PASS - SG, PK, AE, US, GL all visible",
+    "group_architecture_layers": "PASS - Holding Layer, Infrastructure Layer, Subsidiary Layer (each with 10 items in data)",
+    "portfolio_companies": "PASS - 7 companies rendered (Mentor Global, Mentor Health, Mentor TPA, Mentor Innovation, HealthRails, MedPreneur, InfraHealth)",
+    "portfolio_request_introduction_buttons": "PASS - 7 buttons found",
+    "region_sections": "PASS - Singapore (1), Pakistan (3), UAE (2), US (1)",
+    "global_technology_clients": "PASS - Asia, Middle East, Africa, United States (4 regions)",
+    "shared_backbone": "PASS - 14 components rendered",
+    "scaling_flow": "PASS - 8/8 steps found",
+    "partnership_pathways": "PASS - 7 cards rendered",
+    "governance_components": "PASS - 10 components rendered",
+    "final_cta": "PASS - Both 'Explore Partnership Opportunities' and 'Contact Mentor Global' present",
+    "navbar_label": "PASS - 'Subsidiaries' (correctly spelled)",
+    "other_routes": "PASS - /dexa, /solutions, /contact all render without JS errors"
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Website buttons always show 'Website Coming Soon' since all companies have websiteStatus='coming_soon'. When real URLs are added, the 'Visit Website' branch currently renders a non-clickable <span>, not an actual <a href>. Main agent should swap to <a target=\"_blank\" rel=\"noopener\"> when websiteStatus != 'coming_soon'.",
+    "SubsidiariesNew.jsx (~238 lines) is within size limit but dense; consider splitting section components into /components/subsidiaries/* for readability.",
+    "Some lists use child.slice().map without key uniqueness risks (e.g., company.serves mapping uses indexOf to detect last element which is O(n^2) and brittle on duplicates). Low priority."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (not tested)", "frontend": "100%"},
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Subsidiaries page verified end-to-end via data-testids (sub-hero, sub-architecture, sub-portfolio, sub-regions, sub-global-clients, sub-backbone, sub-scaling, sub-partnerships, sub-governance, sub-final-cta). All content counts match BRD. No backend involved. Navbar correctly labelled 'Subsidiaries'."
+}
