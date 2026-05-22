@@ -11,9 +11,15 @@ export function IphoneMockup({ children, className = "" }) {
   return (
     <div className={`relative mx-auto ${className}`} style={{ width: "320px", height: "650px" }}>
       {/* Outer Frame */}
-      <div className="absolute inset-0 bg-[#050505] rounded-[3rem] p-3 shadow-2xl border border-white/10 overflow-hidden">
+      <div 
+        className="absolute inset-0 bg-[#050505] rounded-[3rem] p-3 shadow-2xl border border-white/10 overflow-hidden"
+        style={{ WebkitMaskImage: "-webkit-radial-gradient(white, black)", WebkitTransform: "translateZ(0)" }}
+      >
         {/* Inner Bezel / Screen */}
-        <div className="relative w-full h-full bg-black rounded-[2.5rem] overflow-hidden border border-white/5">
+        <div 
+          className="relative w-full h-full bg-black rounded-[2.5rem] overflow-hidden border border-white/5"
+          style={{ WebkitMaskImage: "-webkit-radial-gradient(white, black)", WebkitTransform: "translateZ(0)" }}
+        >
           {/* Dynamic Island / Notch */}
           <div className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-black z-30 rounded-full flex items-center justify-center gap-2 border border-white/5">
             <div className="w-1.5 h-1.5 rounded-full bg-[#1a1a1a]" />

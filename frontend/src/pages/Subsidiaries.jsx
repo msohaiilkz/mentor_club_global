@@ -7,7 +7,7 @@ const countryFlags = {
   Singapore: "SG",
   Pakistan: "PK",
   "United Arab Emirates": "AE",
-  "United States": "US"
+  "United States": "US",
 };
 
 export default function Subsidiaries() {
@@ -26,7 +26,9 @@ export default function Subsidiaries() {
               </ScrollReveal>
               <ScrollReveal delay={0.15}>
                 <p className="mt-8 hero-desc">
-                  Mentor Global is a structured group of companies designed to build, deploy, and scale infrastructure across regulated markets.
+                  Mentor Global is a structured group of companies designed to
+                  build, deploy, and scale infrastructure across regulated
+                  markets.
                 </p>
               </ScrollReveal>
             </div>
@@ -53,9 +55,19 @@ export default function Subsidiaries() {
               <div className="p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-white/10 h-full">
                 <p className="eyebrow mb-6">Mentor Global Provides</p>
                 <div className="space-y-3">
-                  {["Strategy and capital allocation", "Global governance and compliance", "Technology architecture via Mentor Innovation", "Intelligence via DEXA", "Market entry and partnership coordination"].map((item) => (
-                    <p key={item} className="text-base text-[#8A8A93] flex items-start gap-3">
-                      <span className="text-[#0048FF] mt-0.5">&#8212;</span> {item}
+                  {[
+                    "Strategy and capital allocation",
+                    "Global governance and compliance",
+                    "Technology architecture via Mentor Innovation",
+                    "Intelligence via DeXa",
+                    "Market entry and partnership coordination",
+                  ].map((item) => (
+                    <p
+                      key={item}
+                      className="text-base text-[#8A8A93] flex items-start gap-3"
+                    >
+                      <span className="text-[#0048FF] mt-0.5">&#8212;</span>{" "}
+                      {item}
                     </p>
                   ))}
                 </div>
@@ -65,9 +77,19 @@ export default function Subsidiaries() {
               <div className="p-8 md:p-12 h-full">
                 <p className="eyebrow mb-6">Subsidiaries Provide</p>
                 <div className="space-y-3">
-                  {["Local market execution", "Regulatory compliance", "Customer relationships", "Operational delivery", "Market-specific adaptation"].map((item) => (
-                    <p key={item} className="text-base text-[#8A8A93] flex items-start gap-3">
-                      <span className="text-[#0048FF] mt-0.5">&#8212;</span> {item}
+                  {[
+                    "Local market execution",
+                    "Regulatory compliance",
+                    "Customer relationships",
+                    "Operational delivery",
+                    "Market-specific adaptation",
+                  ].map((item) => (
+                    <p
+                      key={item}
+                      className="text-base text-[#8A8A93] flex items-start gap-3"
+                    >
+                      <span className="text-[#0048FF] mt-0.5">&#8212;</span>{" "}
+                      {item}
                     </p>
                   ))}
                 </div>
@@ -90,28 +112,39 @@ export default function Subsidiaries() {
                 <span className="text-2xl">{countryFlags[sub.country]}</span>
                 <p className="eyebrow">{sub.country}</p>
               </div>
-              <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-3 ${idx % 2 === 0 ? "text-[#11111F]" : "text-white"}`}>
+              <h2
+                className={`text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-3 ${idx % 2 === 0 ? "text-[#11111F]" : "text-white"}`}
+              >
                 {sub.country}
               </h2>
-              <p className={`text-base mb-12 ${idx % 2 === 0 ? "text-[#666666]" : "text-[#8A8A93]"}`}>
+              <p
+                className={`text-base mb-12 ${idx % 2 === 0 ? "text-[#666666]" : "text-[#8A8A93]"}`}
+              >
                 {sub.role}
               </p>
             </ScrollReveal>
 
-            <div className={`grid grid-cols-1 md:grid-cols-${Math.min(sub.companies.length, 3)} border ${idx % 2 === 0 ? "border-[#11111F]/10" : "border-white/10"}`}>
+            <div
+              className={`grid grid-cols-1 md:grid-cols-${Math.min(sub.companies.length, 3)} border ${idx % 2 === 0 ? "border-[#11111F]/10" : "border-white/10"}`}
+            >
               {sub.companies.map((company, i) => (
                 <ScrollReveal key={company.name} delay={i * 0.1}>
-                  <div className={`p-8 md:p-10 h-full ${
-                    i < sub.companies.length - 1
+                  <div
+                    className={`p-8 md:p-10 h-full ${i < sub.companies.length - 1
                       ? idx % 2 === 0
                         ? "border-b md:border-b-0 md:border-r border-[#11111F]/10"
                         : "border-b md:border-b-0 md:border-r border-white/10"
                       : ""
-                  } ${idx % 2 === 0 ? "card-hover" : "card-hover-dark"}`}>
-                    <h3 className={`text-xl font-bold mb-3 ${idx % 2 === 0 ? "text-[#11111F]" : "text-white"}`}>
+                      } ${idx % 2 === 0 ? "card-hover" : "card-hover-dark"}`}
+                  >
+                    <h3
+                      className={`text-xl font-bold mb-3 ${idx % 2 === 0 ? "text-[#11111F]" : "text-white"}`}
+                    >
                       {company.name}
                     </h3>
-                    <p className={`text-base leading-relaxed ${idx % 2 === 0 ? "text-[#666666]" : "text-[#8A8A93]"}`}>
+                    <p
+                      className={`text-base leading-relaxed ${idx % 2 === 0 ? "text-[#666666]" : "text-[#8A8A93]"}`}
+                    >
                       {company.desc}
                     </p>
                   </div>
@@ -139,12 +172,14 @@ export default function Subsidiaries() {
           {/* Region indicators */}
           <ScrollReveal delay={0.2}>
             <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-[1px] bg-white/10">
-              {["Asia", "Middle East", "Africa", "United States"].map((region) => (
-                <div key={region} className="bg-[#11111F] p-6 md:p-8">
-                  <div className="w-3 h-3 bg-[#0048FF] mx-auto mb-3" />
-                  <p className="text-base font-medium text-white">{region}</p>
-                </div>
-              ))}
+              {["Asia", "Middle East", "Africa", "United States"].map(
+                (region) => (
+                  <div key={region} className="bg-[#11111F] p-6 md:p-8">
+                    <div className="w-3 h-3 bg-[#0048FF] mx-auto mb-3" />
+                    <p className="text-base font-medium text-white">{region}</p>
+                  </div>
+                ),
+              )}
             </div>
           </ScrollReveal>
         </div>
@@ -164,7 +199,8 @@ export default function Subsidiaries() {
               data-testid="subsidiaries-partner-cta"
               className="mt-10 inline-flex items-center gap-2 px-8 py-4 bg-[#0048FF] text-white font-semibold hover:bg-[#0030CC] transition-colors"
             >
-              Explore Partnership Opportunities <ArrowRight className="w-5 h-5" />
+              Explore Partnership Opportunities{" "}
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </ScrollReveal>
         </div>

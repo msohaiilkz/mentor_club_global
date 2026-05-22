@@ -23,7 +23,7 @@ import {
 /**
  * ChatSimulation Component
  *
- * A high-fidelity "industrial" simulation of the DEXA intelligence engine.
+ * A high-fidelity "industrial" simulation of the DeXa intelligence engine.
  * Features:
  * - Strictly boxy UI (no rounded corners)
  * - Real-time typing simulation in the input bar
@@ -238,7 +238,7 @@ export function ChatSimulation({ scenario: initialScenario, scenarios = [] }) {
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 bg-[#0048FF] shadow-[0_0_10px_rgba(0,72,255,0.5)]" />
                 <h3 className="text-[11px] font-black text-white uppercase tracking-[0.3em]">
-                  DEXA {/*{domain}*/}
+                  DeXa {/*{domain}*/}
                 </h3>
               </div>
               {/* <div className="hidden md:flex items-center gap-4 border-l border-white/10 pl-6 opacity-30">
@@ -306,7 +306,7 @@ export function ChatSimulation({ scenario: initialScenario, scenarios = [] }) {
                 <div className="flex items-center gap-2 mb-2 px-1">
                   <Cpu className="w-3 h-3 text-[#0048FF]" />
                   <span className="text-[9px] font-black text-[#0048FF] uppercase tracking-[0.3em]">
-                    DEXA Engine Response
+                    DeXa Engine Response
                   </span>
                 </div>
 
@@ -377,7 +377,7 @@ export function ChatSimulation({ scenario: initialScenario, scenarios = [] }) {
                               <div className="flex items-center gap-3">
                                 <div className="w-1 h-1 bg-[#0048FF]/40 group-hover:bg-[#0048FF] transition-colors" />
                                 <span className="text-[9px] text-white/40 font-black uppercase tracking-wider">
-                                  {check.replace("DEXA checks ", "CHK_")}
+                                  {check.replace("DeXa checks ", "CHK_")}
                                 </span>
                               </div>
                               <span className="text-[8px] font-black text-green-500/50 uppercase tracking-tighter">
@@ -473,11 +473,11 @@ export function ChatSimulation({ scenario: initialScenario, scenarios = [] }) {
                 <div className="absolute -inset-[1px] bg-white/5 group-focus-within/input:bg-[#0048FF]/20 transition-colors" />
                 <div className="relative bg-[#09090E] border border-white/10 flex items-stretch">
                   {/* Command Prefix */}
-                  <div className="px-4 flex items-center border-r border-white/10 bg-white/[0.02]">
+                  {/* <div className="px-4 flex items-center border-r border-white/10 bg-white/[0.02]">
                     <span className="text-[10px] font-black text-white/20 uppercase tracking-widest">
                       MG_CMD:
                     </span>
-                  </div>
+                  </div> */}
 
                   {/* Text Area */}
                   <div className="flex-1 px-5 py-4 min-h-[56px] flex items-center text-[13px] text-white/90">
@@ -505,13 +505,13 @@ export function ChatSimulation({ scenario: initialScenario, scenarios = [] }) {
                       animate={
                         step === 2
                           ? {
-                              scale: [1, 0.95, 1],
-                              backgroundColor: [
-                                "rgba(0,72,255,0.1)",
-                                "rgba(0,72,255,0.8)",
-                                "rgba(0,72,255,0.1)",
-                              ],
-                            }
+                            scale: [1, 0.95, 1],
+                            backgroundColor: [
+                              "rgba(0,72,255,0.1)",
+                              "rgba(0,72,255,0.8)",
+                              "rgba(0,72,255,0.1)",
+                            ],
+                          }
                           : {}
                       }
                       className={`w-14 h-full flex items-center justify-center transition-all ${step === 2 ? "text-white" : "text-white/10"}`}

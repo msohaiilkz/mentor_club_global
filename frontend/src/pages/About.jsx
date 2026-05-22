@@ -45,7 +45,8 @@ import Ali from "../assets/dr ali main.jpeg";
 const NAVY = "#0a0a15";
 const NEAR_BLACK = "#11111F";
 const BLUE = "#0048FF";
-const INDIGO = "#6366F1";
+const PRIMARY = "#0048FF";
+
 function Hero() {
   return (
     <section
@@ -57,12 +58,9 @@ function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-6">
             <ScrollReveal>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0048FF]/10 border border-[#0048FF]/20 mb-8">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#0048FF] animate-pulse" />
-                <span className="text-sm sm:text-base font-bold tracking-widest uppercase text-[#0048FF]">
-                  {aboutHero.eyebrow}
-                </span>
-              </div>
+              <p className="eyebrow mb-6 font-bold text-primary">
+                {aboutHero.eyebrow}
+              </p>
               <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-white tracking-tighter leading-[1.05]">
                 {aboutHero.headline}
               </h1>
@@ -156,7 +154,7 @@ function Hero() {
                     transition={{ delay: 0.3 }}
                     className="relative text-center text-sm md:text-base uppercase tracking-[0.25em] text-[#0048FF] font-black border border-[#0048FF]/15 bg-[#0048FF]/[0.05] py-2.5 mb-6"
                   >
-                    Powered by Mentor Innovation & DEXA
+                    Powered by Mentor Innovation & DeXa
                   </motion.div>
 
                   {/* Global Markers - Dense Grid to fit all 5 */}
@@ -216,7 +214,7 @@ function FounderThesis() {
       <div
         className="absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage: `linear-gradient(${BLUE} 1px, transparent 1px), linear-gradient(90deg, ${BLUE} 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(${PRIMARY} 1px, transparent 1px), linear-gradient(90deg, ${PRIMARY} 1px, transparent 1px)`,
           backgroundSize: "80px 80px",
         }}
       />
@@ -226,7 +224,7 @@ function FounderThesis() {
       />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <p className="eyebrow mb-4 font-bold" style={{ color: INDIGO }}>
+          <p className="eyebrow mb-4 font-bold" style={{ color: PRIMARY }}>
             A Vision for the Infrastructure Age{" "}
           </p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight mb-16">
@@ -242,7 +240,7 @@ function FounderThesis() {
                   src={Ali}
                   alt=""
                   className="w-full h-full object-cover transition-all duration-700"
-                  // style={{ filter: "grayscale(1) contrast(1.1)" }}
+                // style={{ filter: "grayscale(1) contrast(1.1)" }}
                 />
               </div>
             </div>
@@ -290,10 +288,10 @@ function WhoWeAre() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
             <ScrollReveal>
-              <p className="eyebrow mb-4">Who We Are</p>
-              <h2 className="text-[var(--fs-4xl)] font-bold text-[#11111F] tracking-tight leading-[1.05]">
+              <p className="eyebrow mb-4">Mentor Global</p>
+              <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-[#11111F] tracking-tighter leading-[1.05]">
                 Who We Are
-              </h2>
+              </h1>
             </ScrollReveal>
           </div>
           <div className="lg:col-span-7 space-y-6">
@@ -319,7 +317,8 @@ function WhoWeAre() {
                 operating and validation market, and operational chapters in the
                 UAE and the United States. Our subsidiaries and market chapters
                 execute locally, while Mentor Innovation builds the technology
-                engine and DEXA powers intelligence across the infrastructure.
+                engine and DeXa powers intelligence across the
+                infrastructure.
               </p>
             </ScrollReveal>
           </div>
@@ -331,11 +330,10 @@ function WhoWeAre() {
             {whoWeAreLayers.map((l, i) => (
               <div
                 key={l.label}
-                className={`grid grid-cols-12 items-center ${
-                  i !== whoWeAreLayers.length - 1
-                    ? "border-b border-[#11111F]/10"
-                    : ""
-                }`}
+                className={`grid grid-cols-12 items-center ${i !== whoWeAreLayers.length - 1
+                  ? "border-b border-[#11111F]/10"
+                  : ""
+                  }`}
               >
                 <div className="col-span-2 md:col-span-1 bg-[#0048FF] p-5 md:p-6 text-center">
                   <span className="text-lg md:text-2xl font-bold text-white font-mono">
@@ -384,9 +382,8 @@ function WhatWeBuild() {
           {whatWeBuildCards.map((c, i) => (
             <ScrollReveal key={c.title} delay={i * 0.06}>
               <div
-                className={`bg-white p-7 md:p-8 h-full card-hover ${
-                  i === 4 ? "lg:col-span-1" : ""
-                }`}
+                className={`bg-white p-7 md:p-8 h-full card-hover ${i === 4 ? "lg:col-span-1" : ""
+                  }`}
               >
                 <div className="flex items-center justify-between mb-6">
                   <span className="text-[#0048FF] text-sm font-bold font-mono">
@@ -526,16 +523,14 @@ function OperatingModel() {
             {operatingModelLayers.map((l, i) => (
               <ScrollReveal key={l.layer} delay={i * 0.08}>
                 <div
-                  className={`grid grid-cols-12 gap-0 items-stretch bg-white ${
-                    i % 2 === 0 ? "" : "md:flex-row-reverse"
-                  }`}
+                  className={`grid grid-cols-12 gap-0 items-stretch bg-white ${i % 2 === 0 ? "" : "md:flex-row-reverse"
+                    }`}
                 >
                   <div
-                    className={`col-span-12 md:col-span-4 ${
-                      i % 2 === 0
-                        ? "bg-[#11111F] text-white"
-                        : "bg-[#0048FF] text-white md:order-2"
-                    } p-8 flex flex-col justify-center`}
+                    className={`col-span-12 md:col-span-4 ${i % 2 === 0
+                      ? "bg-[#11111F] text-white"
+                      : "bg-[#0048FF] text-white md:order-2"
+                      } p-8 flex flex-col justify-center`}
                   >
                     <p className="text-sm uppercase tracking-[0.2em] font-bold mb-2 opacity-70">
                       Layer {String(i + 1).padStart(2, "0")}
@@ -545,9 +540,8 @@ function OperatingModel() {
                     </p>
                   </div>
                   <div
-                    className={`col-span-12 md:col-span-8 p-8 flex items-center ${
-                      i % 2 === 0 ? "" : "md:order-1"
-                    }`}
+                    className={`col-span-12 md:col-span-8 p-8 flex items-center ${i % 2 === 0 ? "" : "md:order-1"
+                      }`}
                   >
                     <p className="text-base md:text-lg text-[#666666] leading-relaxed">
                       {l.desc}
@@ -665,11 +659,10 @@ function ChaptersOperational() {
                       className="relative flex flex-col items-center"
                     >
                       <div
-                        className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-base relative z-10 ${
-                          i === expansionTimeline.length - 1
-                            ? "bg-[#0048FF] shadow-[0_0_30px_#0048FF]"
-                            : "bg-[#11111F]"
-                        }`}
+                        className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-base relative z-10 ${i === expansionTimeline.length - 1
+                          ? "bg-[#0048FF] shadow-[0_0_30px_#0048FF]"
+                          : "bg-[#11111F]"
+                          }`}
                       >
                         {i + 1}
                       </div>
@@ -677,9 +670,8 @@ function ChaptersOperational() {
                         {s.step}
                       </p>
                       <span
-                        className={`mt-2 text-xs uppercase tracking-[0.15em] font-bold ${
-                          i < 4 ? "text-[#0048FF]" : "text-[#666666]"
-                        }`}
+                        className={`mt-2 text-xs uppercase tracking-[0.15em] font-bold ${i < 4 ? "text-[#0048FF]" : "text-[#666666]"
+                          }`}
                       >
                         {i < 4 ? "Active" : "Expanding"}
                       </span>
@@ -695,11 +687,10 @@ function ChaptersOperational() {
                     className="flex items-center gap-4 border border-[#11111F]/10 p-4"
                   >
                     <div
-                      className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-base flex-shrink-0 ${
-                        i === expansionTimeline.length - 1
-                          ? "bg-[#0048FF]"
-                          : "bg-[#11111F]"
-                      }`}
+                      className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-base flex-shrink-0 ${i === expansionTimeline.length - 1
+                        ? "bg-[#0048FF]"
+                        : "bg-[#11111F]"
+                        }`}
                     >
                       {i + 1}
                     </div>
@@ -717,7 +708,7 @@ function ChaptersOperational() {
   );
 }
 
-/* ---------------- Section 9: Mentor Innovation & DEXA Backbone ---------------- */
+/* ---------------- Section 9: Mentor Innovation & DeXa Backbone ---------------- */
 
 function BackboneSection() {
   return (
@@ -729,7 +720,8 @@ function BackboneSection() {
         <ScrollReveal>
           <p className="eyebrow mb-4">Backbone</p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
-            Technology Built by Mentor Innovation. Intelligence Powered by DEXA.
+            Technology Built by Mentor Innovation. Intelligence Powered by
+            DeXa.
           </h2>
           <div className="mt-8 max-w-4xl space-y-4">
             <p className="text-base md:text-lg text-[#11111F] leading-relaxed">
@@ -742,7 +734,7 @@ function BackboneSection() {
               infrastructure across markets.
             </p>
             <p className="text-base text-[#666666] leading-relaxed">
-              DEXA is the intelligence processing engine. It makes the
+              DeXa is the intelligence processing engine. It makes the
               infrastructure more guided, responsive, explainable, and governed
               by connecting knowledge, rules, workflows, agents, monitoring, and
               human approval.
@@ -752,7 +744,7 @@ function BackboneSection() {
 
         {/* Backbone diagram */}
         <ScrollReveal delay={0.15}>
-          <div className="mt-16 border border-[#11111F]/10 bg-white p-8 md:p-12">
+          <div className="mt-16 bg-[#F8F8F9] p-8 md:p-12">
             {/* Top: Mentor Global */}
             <div className="flex justify-center">
               <div className="border-2 border-[#0048FF] bg-[#0048FF]/5 px-6 sm:px-10 py-5 text-center w-full max-w-[260px]">
@@ -770,7 +762,7 @@ function BackboneSection() {
               <div className="w-[2px] h-10 bg-[#0048FF]" />
             </div>
 
-            {/* Middle: Innovation + DEXA */}
+            {/* Middle: Innovation + DeXa */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               <div className="border border-[#0048FF]/40 bg-[#11111F] text-white p-6 text-center">
                 <Network className="w-5 h-5 text-[#0048FF] mx-auto mb-3" />
@@ -784,7 +776,7 @@ function BackboneSection() {
                 <p className="text-sm uppercase tracking-[0.2em] text-white/70 font-bold mb-1">
                   Intelligence Processing Engine
                 </p>
-                <p className="text-lg font-bold">DEXA</p>
+                <p className="text-lg font-bold">DeXa</p>
               </div>
             </div>
 
@@ -924,23 +916,38 @@ function Belief() {
     <section data-testid="about-belief" className="bg-white py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <p className="eyebrow mb-6">Our Belief</p>
+          <p className="text-[13px] uppercase tracking-[0.3em] font-bold text-[#0048FF] mb-6">
+            Our Belief
+          </p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
             The Systems We Connect
           </h2>
         </ScrollReveal>
-        <div className="mt-14 space-y-6 md:space-y-8">
+
+        <div className="mt-20 max-w-4xl relative space-y-12">
+          {/* The Infrastructure Connector Line */}
+          <div className="absolute left-0 top-3 bottom-12 w-[1px] bg-[#11111F]/10" />
+
           {beliefManifesto.map((line, i) => (
-            <ScrollReveal key={line} delay={i * 0.05}>
-              <p
-                className={`text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-tight ${
-                  i === beliefManifesto.length - 1
-                    ? "text-[#0048FF]"
-                    : "text-[#11111F]"
-                }`}
-              >
-                {line}
-              </p>
+            <ScrollReveal key={line} delay={i * 0.08}>
+              <div className="relative pl-10 group">
+                {/* Connection Node */}
+                <div
+                  className={`absolute left-[-4.5px] top-[14px] w-[10px] h-[10px] rounded-full border-2 border-white transition-all duration-500 ${i === beliefManifesto.length - 1
+                    ? "bg-[#0048FF] scale-150 ring-4 ring-[#0048FF]/10 shadow-[0_0_15px_rgba(0,72,255,0.3)]"
+                    : "bg-[#11111F]/30 group-hover:bg-[#11111F] group-hover:scale-125"
+                    }`}
+                />
+
+                <p
+                  className={`font-bold tracking-tight leading-tight transition-all duration-500 ${i === beliefManifesto.length - 1
+                    ? "text-2xl md:text-3xl lg:text-4xl text-[#0048FF] pt-4"
+                    : "text-lg md:text-xl lg:text-2xl text-[#11111F]/60 group-hover:text-[#11111F]"
+                    }`}
+                >
+                  {line}
+                </p>
+              </div>
             </ScrollReveal>
           ))}
         </div>
@@ -966,9 +973,8 @@ function Values() {
           {valuesCards.map((v, i) => (
             <ScrollReveal key={v.title} delay={i * 0.05}>
               <div
-                className={`bg-white p-7 h-full card-hover border-t-2 ${
-                  i === 0 ? "border-t-[#0048FF]" : "border-t-transparent"
-                } ${i === valuesCards.length - 1 ? "lg:col-span-1" : ""}`}
+                className={`bg-white p-7 h-full card-hover border-t-2 ${i === 0 ? "border-t-[#0048FF]" : "border-t-transparent"
+                  } ${i === valuesCards.length - 1 ? "lg:col-span-1" : ""}`}
               >
                 <div className="flex items-center justify-between mb-6">
                   <span className="text-[#0048FF] text-sm font-bold font-mono">
@@ -1178,7 +1184,7 @@ function FinalCTA() {
       <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
           <p className="eyebrow mb-4">Build With Mentor Global</p>
-          <h2 className="text-[var(--fs-hero)] font-bold text-[#11111F] tracking-tighter leading-[1.05]">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl mx-auto">
             Build on infrastructure designed for global health fintech systems.
           </h2>
         </ScrollReveal>

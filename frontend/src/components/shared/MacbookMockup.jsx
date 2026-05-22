@@ -11,9 +11,15 @@ export function MacbookMockup({ children, className = "" }) {
   return (
     <div className={`relative w-full max-w-5xl mx-auto ${className}`}>
       {/* Laptop Screen / Lid */}
-      <div className="relative z-10 bg-[#050505] rounded-[2rem] p-2 sm:p-3 shadow-2xl border border-white/10 overflow-hidden">
+      <div 
+        className="relative z-10 bg-[#050505] rounded-[2rem] p-2 sm:p-3 shadow-2xl border border-white/10 overflow-hidden"
+        style={{ WebkitMaskImage: "-webkit-radial-gradient(white, black)", WebkitTransform: "translateZ(0)" }}
+      >
         {/* Inner Bezel */}
-        <div className="relative bg-black rounded-[1.4rem] overflow-hidden border border-white/5 aspect-[16/10]">
+        <div 
+          className="relative bg-black rounded-[1.4rem] overflow-hidden border border-white/5 aspect-[16/10]"
+          style={{ WebkitMaskImage: "-webkit-radial-gradient(white, black)", WebkitTransform: "translateZ(0)" }}
+        >
           {/* Top Camera Notch */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-black z-30 rounded-b-xl flex items-center justify-center gap-2">
             <div className="w-1.5 h-1.5 rounded-full bg-[#1a1a1a]" />
@@ -21,7 +27,7 @@ export function MacbookMockup({ children, className = "" }) {
           </div>
           
           {/* Content Area */}
-          <div className="w-full h-full relative z-10 overflow-auto scrollbar-hide bg-[#050508]">
+          <div className="w-full h-full relative z-10 overflow-hidden bg-[#050508]">
             {children}
           </div>
 

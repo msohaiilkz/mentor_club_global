@@ -19,19 +19,14 @@ export default function Solutions() {
       {/* Premium Dark Hero */}
       <section className="relative bg-[#05050A] pt-32 pb-24 md:pt-48 md:pb-36 overflow-hidden">
         {/* Glow Effects */}
-        <div className="absolute top-1/4 -right-[20%] w-[320px] h-[320px] sm:w-[520px] sm:h-[520px] lg:w-[800px] lg:h-[800px] bg-[#0048FF]/10 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/3 -right-[20%] w-[320px] h-[320px] sm:w-[520px] sm:h-[520px] lg:w-[800px] lg:h-[800px] bg-[#0048FF]/10 blur-[150px] rounded-full pointer-events-none" />
         <div className="max-w-[1720px] mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             {/* Left Side: Text Content */}
             <div>
               <ScrollReveal>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#0048FF] animate-pulse" />
-                  <span className="text-sm sm:text-base font-bold tracking-widest uppercase text-white/80">
-                    SOLUTIONS
-                  </span>
-                </div>
-                <h1 className="text-[var(--fs-hero)] font-bold text-white tracking-tighter leading-[1.05]">
+                <p className="eyebrow mb-6 font-bold text-primary">SOLUTIONS</p>
+                <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-white tracking-tighter leading-[1.05]">
                   Infrastructure for Healthcare, Insurance, Fintech, AI, and
                   Operating Systems
                 </h1>
@@ -62,209 +57,199 @@ export default function Solutions() {
             {/* Right Side: Futuristic Infrastructure Visual */}
             <ScrollReveal delay={0.3}>
               <MacbookMockup>
-                <div className="relative w-full h-full flex items-center justify-center bg-[#05050A] overflow-hidden min-h-[400px] sm:min-h-[500px]">
-                  {/* Background Grid Pattern */}
+                <div className="absolute inset-0 pt-6 flex items-center justify-center bg-[#05050A] overflow-hidden">
+                  {/* Background: Perspective Grid */}
                   <div
-                    className="absolute inset-0"
+                    className="absolute inset-0 opacity-[0.1]"
                     style={{
-                      // backgroundImage:
-                      //   "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
-                      backgroundSize: "30px 30px",
+                      backgroundImage: `linear-gradient(#0048FF 1px, transparent 1px), linear-gradient(90deg, #0048FF 1px, transparent 1px)`,
+                      backgroundSize: "40px 40px",
+                      perspective: "1000px",
+                      transform:
+                        "perspective(600px) rotateX(60deg) translateY(-80px)",
+                      maskImage:
+                        "radial-gradient(circle at 50% 50%, black, transparent 85%)",
                     }}
                   />
 
-                  {/* Scalable Container for Mobile Responsiveness */}
-                  <div className="relative w-[300px] h-[300px] scale-[0.6] sm:scale-75 md:scale-90 lg:scale-100 flex items-center justify-center">
-                    {/* Central Core Glow */}
+                  {/* Ambient Core Glow */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-[#0048FF]/15 rounded-full blur-[100px] animate-pulse" />
+
+                  {/* Visual Container */}
+                  <div className="relative w-[450px] h-[450px] scale-[0.6] xs:scale-[0.7] sm:scale-[0.85] md:scale-[0.95] lg:scale-100 flex items-center justify-center">
+                    {/* Rotating Architecture Rings */}
                     <motion.div
-                      animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
+                      animate={{ rotate: 360 }}
                       transition={{
-                        duration: 4,
+                        duration: 45,
                         repeat: Infinity,
-                        ease: "easeInOut",
+                        ease: "linear",
                       }}
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] bg-[#0048FF]/20 rounded-full blur-[80px] pointer-events-none"
+                      className="absolute w-[380px] h-[380px] rounded-full border border-[#0048FF]/10 border-dashed"
+                    />
+                    <motion.div
+                      animate={{ rotate: -360 }}
+                      transition={{
+                        duration: 75,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
+                      className="absolute w-[300px] h-[300px] rounded-full border border-[#0048FF]/5"
                     />
 
-                    {/* Central Node */}
-                    <div className="relative z-20 flex flex-col items-center justify-center">
-                      <motion.div
-                        animate={{ rotate: 360 }}
-                        transition={{
-                          duration: 20,
-                          repeat: Infinity,
-                          ease: "linear",
-                        }}
-                        className="w-24 h-24 rounded-full border border-[#0048FF]/30 border-t-[#0048FF] absolute"
-                      />
-                      <div className="w-16 h-16 rounded-full bg-[#11111F] border border-[#0048FF]/50 flex items-center justify-center shadow-[0_0_30px_rgba(0,72,255,0.4)]">
-                        <span className="text-[#0048FF] font-bold text-sm tracking-wider">
-                          CORE
-                        </span>
+                    {/* Central Core Module */}
+                    <div className="relative z-50">
+                      <div className="w-24 h-24 rounded-2xl bg-[#0a0a1a] border border-[#0048FF]/40 flex items-center justify-center shadow-[0_0_60px_rgba(0,72,255,0.25)] backdrop-blur-xl relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#0048FF]/20 to-transparent opacity-50" />
+                        <div className="relative flex flex-col items-center">
+                          <Brain className="w-9 h-9 text-[#0048FF] mb-1" />
+                          <span className="text-[10px] font-bold text-white tracking-[0.25em]">
+                            DeXa
+                          </span>
+                        </div>
+                        {/* Scanning Effect */}
+                        <motion.div
+                          animate={{ top: ["-100%", "100%"] }}
+                          transition={{
+                            duration: 3.5,
+                            repeat: Infinity,
+                            ease: "linear",
+                          }}
+                          className="absolute left-0 right-0 h-[2px] bg-[#0048FF]/40 blur-sm"
+                        />
                       </div>
                     </div>
 
-                    {/* Connecting Lines (SVG) with Animated Data Packets */}
-                    <svg
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] pointer-events-none"
-                      style={{ zIndex: 0 }}
-                    >
+                    {/* Nodes & Connecting Infrastructure */}
+                    <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
                       <defs>
-                        <linearGradient
-                          id="line-glow"
-                          x1="0%"
-                          y1="0%"
-                          x2="100%"
-                          y2="100%"
-                        >
-                          <stop
-                            offset="0%"
-                            stopColor="#0048FF"
-                            stopOpacity="0.4"
-                          />
-                          <stop
-                            offset="100%"
-                            stopColor="#8A2BE2"
-                            stopOpacity="0.1"
-                          />
-                        </linearGradient>
+                        <filter id="glow-effect">
+                          <feGaussianBlur stdDeviation="2" result="blur" />
+                          <feMerge>
+                            <feMergeNode in="blur" />
+                            <feMergeNode in="SourceGraphic" />
+                          </feMerge>
+                        </filter>
                       </defs>
-                      <g stroke="url(#line-glow)" strokeWidth="1.5" fill="none">
-                        {[-90, -18, 54, 126, 198].map((angle, i) => {
-                          const x =
-                            150 + Math.cos((angle * Math.PI) / 180) * 130;
-                          const y =
-                            150 + Math.sin((angle * Math.PI) / 180) * 130;
-                          return (
-                            <g key={i}>
-                              <line
-                                x1="150"
-                                y1="150"
-                                x2={x}
-                                y2={y}
-                                strokeDasharray="4 4"
+
+                      {[
+                        {
+                          icon: Shield,
+                          label: "Healthcare",
+                          angle: -90,
+                          id: "health",
+                        },
+                        {
+                          icon: Building2,
+                          label: "Insurance",
+                          angle: -18,
+                          id: "insure",
+                        },
+                        {
+                          icon: Zap,
+                          label: "Fintech",
+                          angle: 54,
+                          id: "fintech",
+                        },
+                        { icon: Brain, label: "AI", angle: 126, id: "ai" },
+                        { icon: Globe, label: "OS", angle: 198, id: "os" },
+                      ].map((node, i) => {
+                        const radius = 160;
+                        const x =
+                          225 + Math.cos((node.angle * Math.PI) / 180) * radius;
+                        const y =
+                          225 + Math.sin((node.angle * Math.PI) / 180) * radius;
+                        const pathD = `M 225 225 L ${x} ${y}`;
+
+                        return (
+                          <g key={node.id}>
+                            {/* Path Line */}
+                            <path
+                              d={pathD}
+                              stroke="#0048FF"
+                              strokeWidth="1"
+                              strokeOpacity="0.15"
+                              fill="none"
+                              strokeDasharray="4 6"
+                            />
+
+                            {/* Animated Data Packets */}
+                            <motion.circle
+                              r="2"
+                              fill="#fff"
+                              filter="url(#glow-effect)"
+                            >
+                              <animateMotion
+                                dur={`${2.5 + i * 0.4}s`}
+                                repeatCount="indefinite"
+                                path={pathD}
                               />
-                              <motion.circle
-                                r="2"
-                                fill="#fff"
-                                initial={{ cx: 150, cy: 150, opacity: 0 }}
-                                animate={{
-                                  cx: [150, x],
-                                  cy: [150, y],
-                                  opacity: [0, 1, 0],
-                                }}
-                                transition={{
-                                  duration: 2,
-                                  repeat: Infinity,
-                                  delay: i * 0.4,
-                                  ease: "linear",
-                                }}
-                                style={{
-                                  filter: "drop-shadow(0 0 4px #0048FF)",
-                                }}
-                              />
-                            </g>
-                          );
-                        })}
-                      </g>
+                            </motion.circle>
+
+                            {/* Node Icon Component */}
+                            <foreignObject
+                              x={x - 45}
+                              y={y - 45}
+                              width="90"
+                              height="90"
+                            >
+                              <div className="w-full h-full flex flex-col items-center justify-center group">
+                                <motion.div
+                                  whileHover={{ scale: 1.1 }}
+                                  className="w-14 h-14 rounded-xl bg-[#11111F]/90 border border-[#0048FF]/20 flex items-center justify-center backdrop-blur-md transition-all duration-300 group-hover:border-[#0048FF]/50 group-hover:shadow-[0_0_25px_rgba(0,72,255,0.2)]"
+                                >
+                                  <node.icon className="w-6 h-6 text-[#0048FF]" />
+                                </motion.div>
+                                <span className="mt-3 text-[10px] font-bold text-[#8A8A93] uppercase tracking-[0.2em]">
+                                  {node.label}
+                                </span>
+                              </div>
+                            </foreignObject>
+                          </g>
+                        );
+                      })}
                     </svg>
 
-                    {/* Surrounding Nodes */}
-                    {[
-                      {
-                        icon: Shield,
-                        label: "Healthcare",
-                        angle: -90,
-                        radius: 130,
-                      },
-                      {
-                        icon: Building2,
-                        label: "Insurance",
-                        angle: -18,
-                        radius: 130,
-                      },
-                      { icon: Zap, label: "Fintech", angle: 54, radius: 130 },
-                      { icon: Brain, label: "AI", angle: 126, radius: 130 },
-                      { icon: Globe, label: "OS", angle: 198, radius: 130 },
-                    ].map((node, i) => {
-                      const x =
-                        Math.cos((node.angle * Math.PI) / 180) * node.radius;
-                      const y =
-                        Math.sin((node.angle * Math.PI) / 180) * node.radius;
-                      const Icon = node.icon;
-
-                      return (
-                        <motion.div
-                          key={node.label}
-                          initial={{ opacity: 0, scale: 0 }}
-                          animate={{ opacity: 1, scale: 1, x, y }}
-                          transition={{
-                            delay: 0.5 + i * 0.1,
-                            duration: 0.8,
-                            type: "spring",
-                          }}
-                          className="absolute top-1/2 left-1/2 -ml-8 -mt-8 w-16 h-16 flex flex-col items-center justify-center z-10"
-                        >
+                    {/* HUD Status Elements */}
+                    <div className="absolute top-0 left-0 p-6 border-l border-t border-[#0048FF]/20 rounded-tl-2xl pointer-events-none opacity-40">
+                      <div className="text-[9px] font-mono text-[#0048FF] tracking-tighter">
+                        INFRA_OS_LOADED
+                      </div>
+                      <div className="flex gap-1.5 mt-2">
+                        {[1, 2, 3, 4, 5].map((b) => (
                           <motion.div
-                            animate={{ y: [-4, 4, -4] }}
+                            key={b}
+                            animate={{ scaleY: [1, 1.5, 1] }}
                             transition={{
-                              duration: 4,
+                              duration: 0.8,
                               repeat: Infinity,
-                              delay: i * 0.2,
-                              ease: "easeInOut",
+                              delay: b * 0.1,
                             }}
-                            className="flex flex-col items-center"
-                          >
-                            <motion.div
-                              whileHover={{
-                                scale: 1.15,
-                                boxShadow: "0 0 20px rgba(0, 72, 255, 0.4)",
-                                borderColor: "rgba(0, 72, 255, 0.8)",
-                              }}
-                              className="w-10 h-10 rounded-lg bg-[#11111F]/80 backdrop-blur-sm border border-white/10 flex items-center justify-center transition-colors cursor-pointer shadow-lg relative group"
-                            >
-                              <Icon className="w-4 h-4 text-white/80 group-hover:text-[#0048FF] transition-colors" />
-                              <div className="absolute inset-0 bg-[#0048FF]/0 group-hover:bg-[#0048FF]/10 rounded-lg transition-colors" />
-                            </motion.div>
-                            <span className="mt-2 text-sm font-bold tracking-widest uppercase text-white/60 whitespace-nowrap">
-                              {node.label}
-                            </span>
-                          </motion.div>
-                        </motion.div>
-                      );
-                    })}
+                            className="w-1 h-3 bg-[#0048FF]/40 rounded-full origin-bottom"
+                          />
+                        ))}
+                      </div>
+                    </div>
 
-                    {/* Micro-labels floating around */}
-                    {[
-                      { text: "API-first", top: "-10%", left: "-10%" },
-                      { text: "Multi-tenant", top: "0%", right: "-20%" },
-                      { text: "White-labelled", bottom: "-0%", left: "-15%" },
-                      { text: "Modular", bottom: "-5%", right: "-10%" },
-                      { text: "Scalable Systems", top: "45%", right: "-25%" },
-                    ].map((label, i) => (
-                      <motion.div
-                        key={i}
-                        animate={{ y: [0, -5, 0] }}
-                        transition={{
-                          duration: 4,
-                          delay: i * 0.5,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                        }}
-                        className="absolute z-0 hidden sm:block"
-                        style={{
-                          top: label.top,
-                          left: label.left,
-                          right: label.right,
-                          bottom: label.bottom,
-                        }}
-                      >
-                        <div className="px-2 py-1 bg-white/[0.03] border border-white/5 rounded text-sm font-mono text-[#0048FF]/80 whitespace-nowrap backdrop-blur-sm">
-                          {label.text}
-                        </div>
-                      </motion.div>
-                    ))}
+                    <div className="absolute bottom-0 right-0 p-6 border-r border-b border-[#0048FF]/20 rounded-br-2xl pointer-events-none opacity-40">
+                      <div className="text-[9px] font-mono text-right text-[#0048FF]">
+                        SYNC_LATENCY: 8ms
+                      </div>
+                      <div className="text-[9px] font-mono text-right text-white/40 mt-1 uppercase tracking-widest">
+                        Global Cluster Active
+                      </div>
+                    </div>
                   </div>
+
+                  {/* Subtle Scanlines Overlay */}
+                  <div
+                    className="absolute inset-0 pointer-events-none opacity-[0.03]"
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))",
+                      backgroundSize: "100% 2px, 3px 100%",
+                    }}
+                  />
                 </div>
               </MacbookMockup>
             </ScrollReveal>
@@ -280,24 +265,29 @@ export default function Solutions() {
               const Icon = pillarIcons[pillar.slug];
               return (
                 <ScrollReveal key={pillar.slug} delay={i * 0.08}>
-                  <div
-                    className={`${i > 0 ? "border-t border-[#11111F]/10" : ""}`}
+                  <Link
+                    to={`/solutions/${pillar.slug}`}
+                    className={`block group relative transition-all duration-500 hover:bg-[#0048FF]/[0.03] ${i > 0 ? "border-t border-[#11111F]/10" : ""
+                      }`}
                   >
+                    {/* Hover Accent Line */}
+                    <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#0048FF] scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-center" />
+
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                       {/* Number + Icon */}
-                      <div className="lg:col-span-1 p-6 lg:p-8 flex lg:flex-col items-center lg:items-start gap-4 lg:gap-4 border-b lg:border-b-0 lg:border-r border-[#11111F]/10">
-                        <span className="text-base font-bold text-[#0048FF]">
+                      <div className="lg:col-span-1 p-6 lg:p-8 flex lg:flex-col items-center lg:items-start gap-4 lg:gap-4 border-b lg:border-b-0 lg:border-r border-[#11111F]/10 transition-colors duration-500 group-hover:border-[#0048FF]/20">
+                        <span className="text-base font-bold text-[#0048FF] transition-transform duration-500 group-hover:scale-110">
                           0{i + 1}
                         </span>
                         <Icon
-                          className="w-5 h-5 text-[#11111F]/40"
+                          className="w-5 h-5 text-[#11111F]/40 transition-colors duration-500 group-hover:text-[#0048FF]"
                           strokeWidth={1.5}
                         />
                       </div>
 
                       {/* Content */}
-                      <div className="lg:col-span-7 p-6 lg:p-8 border-b lg:border-b-0 lg:border-r border-[#11111F]/10">
-                        <h2 className="text-[var(--fs-3xl)] font-bold text-[#11111F] tracking-tight mb-3">
+                      <div className="lg:col-span-7 p-6 lg:p-8 border-b lg:border-b-0 lg:border-r border-[#11111F]/10 transition-colors duration-500 group-hover:border-[#0048FF]/20">
+                        <h2 className="text-[var(--fs-3xl)] font-bold text-[#0048FF] tracking-tight text-xl mb-3">
                           {pillar.title}
                         </h2>
                         <p className="text-base text-[#666666] leading-relaxed mb-4">
@@ -320,9 +310,9 @@ export default function Solutions() {
                         </div>
                         <p className="text-base text-[#666666] leading-relaxed">
                           <span className="text-[#0048FF] font-semibold">
-                            DEXA:{" "}
+                            DeXa:{" "}
                           </span>
-                          {pillar.dexaRole}
+                          {pillar.DeXaRole}
                         </p>
                       </div>
 
@@ -348,17 +338,13 @@ export default function Solutions() {
                             )}
                           </div>
                         </div>
-                        <Link
-                          to={`/solutions/${pillar.slug}`}
-                          data-testid={`solution-card-${pillar.slug}`}
-                          className="inline-flex items-center gap-2 text-base font-semibold text-[#0048FF] hover:text-[#0030CC] transition-colors"
-                        >
+                        <div className="inline-flex items-center gap-2 text-base font-semibold text-[#0048FF] group-hover:translate-x-2 transition-transform duration-500">
                           Explore {pillar.title}{" "}
                           <ArrowRight className="w-4 h-4" />
-                        </Link>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </ScrollReveal>
               );
             })}

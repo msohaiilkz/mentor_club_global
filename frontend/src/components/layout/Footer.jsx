@@ -36,7 +36,11 @@ export default function Footer() {
               className="inline-flex items-center"
               data-testid="footer-logo"
             >
-              <img src={logo} alt="Mentor Global" className="h-8 md:h-10 w-auto object-contain" />
+              <img
+                src={logo}
+                alt="Mentor Global"
+                className="h-10 md:h-12 lg:h-14 w-auto object-contain brightness-[1.05] transition-all duration-300"
+              />
             </Link>
             <p className="mt-6 text-sm text-[#8A8A93] leading-relaxed">
               The Infrastructure Behind the Future of Health Fintech
@@ -52,7 +56,7 @@ export default function Footer() {
               {[
                 "Home",
                 "Solutions",
-                "DEXA",
+                "DeXa",
                 "Subsidiaries",
                 "About",
                 "Team",

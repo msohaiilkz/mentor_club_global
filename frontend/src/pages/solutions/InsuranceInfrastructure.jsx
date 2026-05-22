@@ -12,8 +12,8 @@ import {
   brokerModules,
   reinsuranceRails,
   serviceCenterItems,
-  dexaInsuranceCapabilities,
-  dexaInsuranceScenarios,
+  DeXaInsuranceCapabilities,
+  DeXaInsuranceScenarios,
   insuranceArchitectureLayers,
   insuranceDeploymentModels,
   insuranceUseCases,
@@ -32,12 +32,12 @@ function Hero() {
     >
       <div className="absolute top-1/3 right-0 w-[260px] h-[260px] sm:w-[360px] sm:h-[360px] lg:w-[500px] lg:h-[500px] rounded-full bg-[#0048FF]/[0.05] blur-[140px]" />
       <div className="relative max-w-[1720px] mx-auto px-6 md:px-12">
-        <Link
+        {/* <Link
           to="/solutions"
           className="inline-flex items-center gap-2 text-sm text-[#8A8A93] hover:text-[#0048FF] transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" /> All Solutions
-        </Link>
+        </Link> */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <ScrollReveal>
@@ -52,7 +52,7 @@ function Hero() {
                 Deploy connected insurance rails for product setup, quote
                 journeys, underwriting, policy administration, reinsurance,
                 broker operations, claims, renewals, service centers, embedded
-                distribution, commissions, and DEXA powered intelligence.
+                distribution, commissions, and DeXa powered intelligence.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.25}>
@@ -74,11 +74,11 @@ function Hero() {
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
-                  to="/dexa"
-                  data-testid="ins-hero-dexa-cta"
+                  to="/DeXa"
+                  data-testid="ins-hero-DeXa-cta"
                   className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-8 py-3 sm:py-4 border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors"
                 >
-                  Explore DEXA Intelligence
+                  Explore DeXa Intelligence
                 </Link>
               </div>
             </ScrollReveal>
@@ -194,7 +194,9 @@ function ConnectedRailsVisual() {
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <div className="mx-auto w-72 md:w-96 py-6 bg-[#11111F] text-white text-center mb-8">
-            <p className="text-base font-bold">Mentor Insurance Infrastructure</p>
+            <p className="text-base font-bold">
+              Mentor Insurance Infrastructure
+            </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-px bg-[#11111F]/10 border border-[#11111F]/10">
             {insuranceRails.map((rail, i) => (
@@ -209,13 +211,13 @@ function ConnectedRailsVisual() {
               </div>
             ))}
           </div>
-          <div className="mt-6 flex items-center justify-center gap-4">
+          <div className="mt-6 flex items-center justify-center gap-2">
             <span className="text-sm text-[#666666]">Powered by</span>
             <span className="text-sm font-bold text-[#0048FF]">
               Mentor Innovation
             </span>
             <span className="text-sm text-[#666666]">and</span>
-            <span className="text-sm font-bold text-[#0048FF]">DEXA</span>
+            <span className="text-sm font-bold text-[#0048FF]">DeXa</span>
           </div>
         </ScrollReveal>
       </div>
@@ -524,31 +526,32 @@ function ServiceCenterSection() {
   );
 }
 
-function DexaIntelligence() {
+function DeXaIntelligence() {
   return (
     <section
-      data-testid="ins-dexa"
+      data-testid="ins-DeXa"
       className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden"
     >
       <div className="absolute inset-0 blue-glow-subtle" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <p className="eyebrow mb-4">DEXA Intelligence</p>
+          <p className="eyebrow mb-4">DeXa Intelligence</p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
-            DEXA is the intelligence layer inside insurance infrastructure
+            DeXa is the intelligence layer inside insurance infrastructure
           </h2>
           <p className="mt-6 text-base text-[#8A8A93] max-w-3xl leading-relaxed">
-            DEXA turns insurance infrastructure from a workflow system into a
-            guided operating layer. DEXA does not replace underwriters. DEXA
-            does not replace brokers. DEXA does not replace claims handlers.
-            DEXA does not make unsupported legal or coverage guarantees. DEXA
-            operates inside approved product rules, policy data, underwriting
-            logic, service workflows, claims status, document data, reinsurance
-            workflows, user permissions, and escalation boundaries.
+            DeXa turns insurance infrastructure from a workflow system into a
+            guided operating layer. DeXa does not replace underwriters.
+            DeXa does not replace brokers. DeXa does not replace claims
+            handlers. DeXa does not make unsupported legal or coverage
+            guarantees. DeXa operates inside approved product rules, policy
+            data, underwriting logic, service workflows, claims status, document
+            data, reinsurance workflows, user permissions, and escalation
+            boundaries.
           </p>
         </ScrollReveal>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-white/10">
-          {dexaInsuranceCapabilities.map((cap, i) => (
+          {DeXaInsuranceCapabilities.map((cap, i) => (
             <ScrollReveal key={cap.role} delay={i * 0.05}>
               <div className="bg-[#11111F] p-6 card-hover-dark h-full">
                 <p className="text-sm font-bold text-[#0048FF] mb-4">
@@ -570,16 +573,16 @@ function DexaIntelligence() {
   );
 }
 
-function DexaScenarios() {
+function DeXaScenarios() {
   return (
     <section
-      data-testid="ins-dexa-scenarios"
+      data-testid="ins-DeXa-scenarios"
       className="bg-[#0B0B14] py-24 md:py-32 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-[#0048FF]/[0.02]" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <p className="eyebrow mb-4">DEXA in Action</p>
+          <p className="eyebrow mb-4">DeXa in Action</p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight mb-12">
             From insurance complexity to governed next action
           </h2>
@@ -588,7 +591,7 @@ function DexaScenarios() {
         <ScrollReveal delay={0.1}>
           <div className="relative mt-8">
             <MacbookMockup>
-              <ChatSimulation scenarios={dexaInsuranceScenarios} />
+              <ChatSimulation scenarios={DeXaInsuranceScenarios} />
             </MacbookMockup>
           </div>
         </ScrollReveal>
@@ -599,24 +602,27 @@ function DexaScenarios() {
               <h3 className="text-sm font-bold text-white mb-2">
                 Governed Insurance Reasoning
               </h3>
-              <p className="text-xs text-[#8A8A93] leading-relaxed">
-                DEXA verifies policy rules, coverage limits, and underwriting guidelines before recommending any insurance action.
+              <p className="text-sm text-[#8A8A93] leading-relaxed">
+                DeXa verifies policy rules, coverage limits, and underwriting
+                guidelines before recommending any insurance action.
               </p>
             </div>
             <div className="p-6 border border-white/10 bg-white/[0.02]">
               <h3 className="text-sm font-bold text-white mb-2">
                 Infrastructure Integration
               </h3>
-              <p className="text-xs text-[#8A8A93] leading-relaxed">
-                DEXA operates directly inside your insurance rails, linking to policy systems, claims engines, and reinsurance ledgers.
+              <p className="text-sm text-[#8A8A93] leading-relaxed">
+                DeXa operates directly inside your insurance rails, linking
+                to policy systems, claims engines, and reinsurance ledgers.
               </p>
             </div>
             <div className="p-6 border border-white/10 bg-white/[0.02]">
               <h3 className="text-sm font-bold text-white mb-2">
                 Human in the Loop
               </h3>
-              <p className="text-xs text-[#8A8A93] leading-relaxed">
-                Complex underwriting referrals and claims exceptions are routed to specialist teams with full diagnostic context.
+              <p className="text-sm text-[#8A8A93] leading-relaxed">
+                Complex underwriting referrals and claims exceptions are routed
+                to specialist teams with full diagnostic context.
               </p>
             </div>
           </div>
@@ -650,7 +656,7 @@ function Architecture() {
                     <span className="text-[#0048FF] text-xs font-bold">
                       L{idx + 1}
                     </span>
-                    <p className="text-xs font-bold text-white mt-1">
+                    <p className="text-sm font-bold text-white mt-1">
                       {layer.name}
                     </p>
                   </div>
@@ -660,7 +666,7 @@ function Architecture() {
                     {layer.items.map((item) => (
                       <span
                         key={item}
-                        className="text-[11px] px-2 py-0.5 border border-white/10 text-[#8A8A93]"
+                        className="text-sm px-2 py-0.5 border border-white/10 text-[#8A8A93]"
                       >
                         {item}
                       </span>
@@ -693,7 +699,7 @@ function DeploymentModels() {
                 <h3 className="text-sm font-bold text-[#11111F] mb-3">
                   {d.name}
                 </h3>
-                <p className="text-xs text-[#666666] leading-relaxed">
+                <p className="text-sm text-[#666666] leading-relaxed">
                   {d.desc}
                 </p>
               </div>
@@ -724,7 +730,7 @@ function UseCasesSection() {
             <ScrollReveal key={uc.name} delay={i * 0.03}>
               <div className="bg-[#11111F] p-5 md:p-7 card-hover-dark h-full">
                 <h3 className="text-sm font-bold text-white mb-3">{uc.name}</h3>
-                <div className="space-y-1 text-[11px] text-[#8A8A93]">
+                <div className="space-y-1 text-sm text-[#8A8A93]">
                   <p>
                     <span className="text-[#0048FF] font-bold">Who:</span>{" "}
                     {uc.who}
@@ -738,8 +744,8 @@ function UseCasesSection() {
                     {uc.rail}
                   </p>
                   <p>
-                    <span className="text-[#0048FF] font-bold">DEXA:</span>{" "}
-                    {uc.dexa}
+                    <span className="text-[#0048FF] font-bold">DeXa:</span>{" "}
+                    {uc.DeXa}
                   </p>
                 </div>
               </div>
@@ -774,12 +780,17 @@ function OutcomesSection() {
           ))}
         </div>
         <ScrollReveal delay={0.3}>
-          <p className="mt-8 text-xs text-[#666666]/60 max-w-3xl">
-            Designed to improve workflow visibility, reduce manual coordination,
-            support faster product configuration, improve customer service
-            tracking, and strengthen governance. These do not represent
-            unsupported guarantees.
-          </p>
+          <div className="mt-12 flex items-start gap-4 p-6 bg-[#F8F9FF] border-l-2 border-[#0048FF] max-w-4xl shadow-sm">
+            <p className="text-sm text-[#666666] leading-relaxed">
+              <span className="text-[#0048FF] font-bold uppercase tracking-wider text-[10px] block mb-1">
+                Infrastructure Objectives
+              </span>
+              Designed to improve workflow visibility, reduce manual
+              coordination, support faster product configuration, improve
+              customer service tracking, and strengthen governance. These do not
+              represent unsupported guarantees.
+            </p>
+          </div>
         </ScrollReveal>
       </div>
     </section>
@@ -805,7 +816,8 @@ function FinalCTA() {
             Mentor Global helps organizations move from fragmented insurance
             operations to connected infrastructure powered by portals, APIs,
             workflows, underwriting tools, policy systems, reinsurance
-            workflows, claims engines, service centers, and DEXA intelligence.
+            workflows, claims engines, service centers, and DeXa
+            intelligence.
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
@@ -846,8 +858,8 @@ export default function InsuranceInfrastructure() {
       <BrokerSection />
       <ReinsuranceSection />
       <ServiceCenterSection />
-      <DexaIntelligence />
-      <DexaScenarios />
+      <DeXaIntelligence />
+      <DeXaScenarios />
       <Architecture />
       <DeploymentModels />
       <UseCasesSection />

@@ -1,4 +1,4 @@
-export const dexaProblems = [
+export const DeXaProblems = [
   "Users do not know which workflow to use",
   "Data sits across portals, documents, dashboards, and spreadsheets",
   "Rules are known by people, not embedded into systems",
@@ -11,104 +11,104 @@ export const dexaProblems = [
   "Enterprises need audit logs, confidence scores, approvals, and governance",
 ];
 
-export const dexaWhatIs = [
+export const DeXaWhatIs = [
   {
     title: "Context Understanding",
-    desc: "DEXA identifies user role, intent, workflow state, system context, conversation history, and permissions before processing any request.",
+    desc: "DeXa identifies user role, intent, workflow state, system context, conversation history, and permissions before processing any request.",
   },
   {
     title: "Knowledge Retrieval",
-    desc: "DEXA retrieves answers from approved knowledge bases, SOPs, policies, benefit rules, insurance rules, finance rules, and version-controlled documents.",
+    desc: "DeXa retrieves answers from approved knowledge bases, SOPs, policies, benefit rules, insurance rules, finance rules, and version-controlled documents.",
   },
   {
     title: "Rules Based Reasoning",
-    desc: "DEXA applies deterministic business rules including eligibility, approval, escalation, payment, underwriting, and compliance logic.",
+    desc: "DeXa applies deterministic business rules including eligibility, approval, escalation, payment, underwriting, and compliance logic.",
   },
   {
     title: "Workflow Orchestration",
-    desc: "DEXA routes tasks to the right workflow including claims, quotes, payments, reconciliation, payroll, and service requests.",
+    desc: "DeXa routes tasks to the right workflow including claims, quotes, payments, reconciliation, payroll, and service requests.",
   },
   {
     title: "Agent Coordination",
-    desc: "DEXA delegates complex multi-step tasks to specialist AI agents and supervises their execution with validation and retry logic.",
+    desc: "DeXa delegates complex multi-step tasks to specialist AI agents and supervises their execution with validation and retry logic.",
   },
   {
     title: "Operational Monitoring",
-    desc: "DEXA tracks agent health, workflow status, confidence scores, failure rates, escalation rates, and user feedback in real time.",
+    desc: "DeXa tracks agent health, workflow status, confidence scores, failure rates, escalation rates, and user feedback in real time.",
   },
   {
     title: "Governance and Audit",
-    desc: "DEXA enforces role-based access, logs every action, records every response, checks permissions, and maintains complete audit trails.",
+    desc: "DeXa enforces role-based access, logs every action, records every response, checks permissions, and maintains complete audit trails.",
   },
   {
     title: "Action Execution",
-    desc: "DEXA turns approved decisions into tasks, alerts, approvals, dashboard updates, provider instructions, claim status changes, and auditable next steps.",
+    desc: "DeXa turns approved decisions into tasks, alerts, approvals, dashboard updates, provider instructions, claim status changes, and auditable next steps.",
   },
 ];
 
-export const dexaWhatIsNot = [
+export const DeXaWhatIsNot = [
   {
     title: "Not just a chatbot",
-    desc: "DEXA processes information across systems, APIs, workflows, and agents. A chatbot only answers questions in a conversation window.",
+    desc: "DeXa processes information across systems, APIs, workflows, and agents. A chatbot only answers questions in a conversation window.",
   },
   {
     title: "Not only AI agents",
-    desc: "DEXA orchestrates agents as one capability. It also retrieves knowledge, applies rules, monitors workflows, and enforces governance.",
+    desc: "DeXa orchestrates agents as one capability. It also retrieves knowledge, applies rules, monitors workflows, and enforces governance.",
   },
   {
     title: "Not only healthcare",
-    desc: "DEXA powers intelligence across healthcare, insurance, fintech, AI infrastructure, and company operating systems.",
+    desc: "DeXa powers intelligence across healthcare, insurance, fintech, AI infrastructure, and company operating systems.",
   },
   {
     title: "Not a diagnosis engine",
-    desc: "DEXA does not diagnose medical conditions. It guides users through workflows, benefits, claims, and administrative processes.",
+    desc: "DeXa does not diagnose medical conditions. It guides users through workflows, benefits, claims, and administrative processes.",
   },
   {
     title: "Not uncontrolled automation",
-    desc: "DEXA operates inside approved rules, permissions, knowledge, and human approval gates. It does not act without governance.",
+    desc: "DeXa operates inside approved rules, permissions, knowledge, and human approval gates. It does not act without governance.",
   },
   {
     title: "Not one product feature",
-    desc: "DEXA is the intelligence processing engine behind the entire Mentor Global ecosystem, not a feature inside one product.",
+    desc: "DeXa is the intelligence processing engine behind the entire Mentor Global ecosystem, not a feature inside one product.",
   },
 ];
 
-export const dexaThinkingChain = [
+export const DeXaThinkingChain = [
   "User asks",
-  "DEXA identifies role",
-  "DEXA checks permissions",
-  "DEXA understands context",
-  "DEXA retrieves approved knowledge",
-  "DEXA applies rules",
-  "DEXA checks system state",
-  "DEXA selects workflow",
-  "DEXA coordinates agent or tool",
-  "DEXA recommends next action",
+  "DeXa identifies role",
+  "DeXa checks permissions",
+  "DeXa understands context",
+  "DeXa retrieves approved knowledge",
+  "DeXa applies rules",
+  "DeXa checks system state",
+  "DeXa selects workflow",
+  "DeXa coordinates agent or tool",
+  "DeXa recommends next action",
   "Human approves where needed",
-  "DEXA logs everything",
-  "DEXA monitors outcome",
+  "DeXa logs everything",
+  "DeXa monitors outcome",
 ];
 
-export const dexaOperatingStages = [
+export const DeXaOperatingStages = [
   {
     stage: "Understand",
-    desc: "DEXA identifies who is asking, what they need, what system state exists, what permissions they have, and what context surrounds the request.",
+    desc: "DeXa identifies who is asking, what they need, what system state exists, what permissions they have, and what context surrounds the request.",
   },
   {
     stage: "Reason",
-    desc: "DEXA retrieves approved knowledge, applies business rules, checks eligibility, evaluates confidence, and determines the best course of action.",
+    desc: "DeXa retrieves approved knowledge, applies business rules, checks eligibility, evaluates confidence, and determines the best course of action.",
   },
   {
     stage: "Act",
-    desc: "DEXA triggers the appropriate workflow, coordinates agents, calls tools and APIs, updates systems, and delivers the response or action to the user.",
+    desc: "DeXa triggers the appropriate workflow, coordinates agents, calls tools and APIs, updates systems, and delivers the response or action to the user.",
   },
   {
     stage: "Govern",
-    desc: "DEXA logs every step, enforces approval gates, checks confidence scores, routes sensitive decisions to humans, and feeds outcomes back for improvement.",
+    desc: "DeXa logs every step, enforces approval gates, checks confidence scores, routes sensitive decisions to humans, and feeds outcomes back for improvement.",
   },
 ];
 
-export const dexaPillarPanels = [
+export const DeXaPillarPanels = [
   {
     name: "Healthcare Infrastructure",
     items: [
@@ -127,7 +127,7 @@ export const dexaPillarPanels = [
       question:
         "Can I use Aga Khan Hospital for OPD without paying at the counter?",
       context:
-        "DEXA checks benefit rules, wallet limit, provider eligibility, authorization rules, and user profile before guiding the employee.",
+        "DeXa checks benefit rules, wallet limit, provider eligibility, authorization rules, and user profile before guiding the employee.",
     },
   },
   {
@@ -147,7 +147,7 @@ export const dexaPillarPanels = [
     example: {
       question: "Why is this business insurance case flagged?",
       context:
-        "DEXA checks questionnaire, claim history, documents, risk category, underwriting rules, and approval pathway.",
+        "DeXa checks questionnaire, claim history, documents, risk category, underwriting rules, and approval pathway.",
     },
   },
   {
@@ -167,7 +167,7 @@ export const dexaPillarPanels = [
     example: {
       question: "Why is today's settlement mismatch 42,000?",
       context:
-        "DEXA checks ledger entries, invoices, settlement file, claim approval status, and payment records.",
+        "DeXa checks ledger entries, invoices, settlement file, claim approval status, and payment records.",
     },
   },
   {
@@ -187,7 +187,7 @@ export const dexaPillarPanels = [
     example: {
       question: "Which AI workflows are failing most this week?",
       context:
-        "DEXA checks workflow logs, agent performance, escalation rates, confidence scores, and unresolved cases.",
+        "DeXa checks workflow logs, agent performance, escalation rates, confidence scores, and unresolved cases.",
     },
   },
   {
@@ -207,23 +207,23 @@ export const dexaPillarPanels = [
     example: {
       question: "Why is the insurance team behind target?",
       context:
-        "DEXA checks pipeline, meetings, proposal follow ups, conversion, margin target, and task discipline.",
+        "DeXa checks pipeline, meetings, proposal follow ups, conversion, margin target, and task discipline.",
     },
   },
 ];
 
-export const dexaChannels = [
-  "Website DEXA",
-  "Corporate Portal DEXA",
-  "Employee App DEXA",
-  "Provider Portal DEXA",
-  "Insurance Portal DEXA",
-  "Finance Portal DEXA",
-  "Operating System DEXA",
-  "Admin Console DEXA",
+export const DeXaChannels = [
+  "Website DeXa",
+  "Corporate Portal DeXa",
+  "Employee App DeXa",
+  "Provider Portal DeXa",
+  "Insurance Portal DeXa",
+  "Finance Portal DeXa",
+  "Operating System DeXa",
+  "Admin Console DeXa",
 ];
 
-export const dexaInterfaceTypes = [
+export const DeXaInterfaceTypes = [
   "Chat panel",
   "Guided wizard",
   "Recommendation engine",
@@ -240,7 +240,7 @@ export const dexaInterfaceTypes = [
   "Video guided assistant where applicable",
 ];
 
-export const dexaIntelligenceLayers = [
+export const DeXaIntelligenceLayers = [
   {
     name: "Identity and Permission Layer",
     desc: "Authenticates users, validates roles, checks tenant access, and enforces permission boundaries before any intelligence processing begins.",
@@ -275,7 +275,7 @@ export const dexaIntelligenceLayers = [
   },
 ];
 
-export const dexaAgentGroups = [
+export const DeXaAgentGroups = [
   {
     group: "Product Creation Agents",
     agents: [
@@ -365,13 +365,13 @@ export const approvalQueues = [
   "Executive decision",
 ];
 
-export const dexaFullScenarios = [
+export const DeXaFullScenarios = [
   {
     domain: "Healthcare Infrastructure",
     userRole: "Employee",
     question: "Why is my claim on hold?",
     checks:
-      "DEXA checks claim status, uploaded documents, benefit rules, missing document list, workflow stage.",
+      "DeXa checks claim status, uploaded documents, benefit rules, missing document list, workflow stage.",
     answer:
       "Your claim is on hold because the prescription document is missing. Please upload the prescription so the claims team can continue review.",
     actions: ["Upload Document", "View Claim", "Escalate to Claims Team"],
@@ -383,7 +383,7 @@ export const dexaFullScenarios = [
     userRole: "Underwriter",
     question: "Why is this business insurance case flagged?",
     checks:
-      "DEXA checks risk questionnaire, claim history, business category, missing documents, underwriting rules.",
+      "DeXa checks risk questionnaire, claim history, business category, missing documents, underwriting rules.",
     answer:
       "This case is flagged because the client declared high annual revenue, multiple locations, previous fire related claim history, and missing property valuation documents. Manual review is recommended before quote approval.",
     actions: ["View Risk Data", "Request Documents", "Send to Manual Review"],
@@ -394,7 +394,7 @@ export const dexaFullScenarios = [
     userRole: "Finance",
     question: "Why is today's settlement mismatch 42,000?",
     checks:
-      "DEXA checks settlement file, ledger entries, claim approval records, invoice numbers, payment status.",
+      "DeXa checks settlement file, ledger entries, claim approval records, invoice numbers, payment status.",
     answer:
       "The mismatch is linked to three transactions. Two have duplicate invoice numbers and one has a partial claim approval. Recommended action: review exception queue and approve revised settlement.",
     actions: ["View Exceptions", "Export Report", "Assign to Finance"],
@@ -403,9 +403,9 @@ export const dexaFullScenarios = [
   {
     domain: "AI Infrastructure",
     userRole: "Admin",
-    question: "Which DEXA workflows are failing most this week?",
+    question: "Which DeXa workflows are failing most this week?",
     checks:
-      "DEXA checks agent logs, workflow failures, API errors, low confidence responses, and escalation rates.",
+      "DeXa checks agent logs, workflow failures, API errors, low confidence responses, and escalation rates.",
     answer:
       "Most failures are coming from payment status checks and underwriting document extraction. Payment status checks failed due to API timeout. Underwriting extraction failed due to incomplete uploaded documents. Recommended action: review API health and update document upload guidance.",
     actions: ["View Agent Logs", "Review API Health", "Update Guidance"],
@@ -416,7 +416,7 @@ export const dexaFullScenarios = [
     userRole: "CEO",
     question: "Why is the insurance team behind target?",
     checks:
-      "DEXA checks CRM pipeline, meetings completed, proposal volume, follow up completion, conversion rate, and margin target.",
+      "DeXa checks CRM pipeline, meetings completed, proposal volume, follow up completion, conversion rate, and margin target.",
     answer:
       "Insurance distribution is behind target because qualified meetings dropped this week, proposal follow up completion is below threshold, and two high value opportunities are stuck in negotiation. Recommended actions: assign senior support to high value leads, increase daily presentations, and review pending proposals.",
     actions: ["View Pipeline", "Assign Senior Support", "Generate Action Plan"],
@@ -425,7 +425,7 @@ export const dexaFullScenarios = [
   },
 ];
 
-export const dexaArchitectureLayers = [
+export const DeXaArchitectureLayers = [
   {
     name: "User Interface Layer",
     items: [
@@ -569,20 +569,20 @@ export const dexaArchitectureLayers = [
   },
 ];
 
-export const dexaDeploymentModels = [
-  "Website DEXA",
-  "Portal DEXA",
-  "Employee App DEXA",
-  "Finance DEXA",
-  "Insurance DEXA",
-  "Healthcare DEXA",
-  "Operating System DEXA",
-  "AI Governance DEXA",
-  "White Label DEXA",
-  "API Connected DEXA",
+export const DeXaDeploymentModels = [
+  "Website DeXa",
+  "Portal DeXa",
+  "Employee App DeXa",
+  "Finance DeXa",
+  "Insurance DeXa",
+  "Healthcare DeXa",
+  "Operating System DeXa",
+  "AI Governance DeXa",
+  "White Label DeXa",
+  "API Connected DeXa",
 ];
 
-export const dexaUseCases = [
+export const DeXaUseCases = [
   {
     name: "Healthcare benefit guidance",
     who: "Employees",
@@ -745,7 +745,7 @@ export const dexaUseCases = [
   },
 ];
 
-export const dexaOutcomes = [
+export const DeXaOutcomes = [
   "Better user guidance",
   "Faster workflow routing",
   "Cleaner requirement discovery",

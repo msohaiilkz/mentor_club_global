@@ -15,14 +15,13 @@ import {
   stakeholders,
   journeys,
   modules,
-  dexaCapabilities,
-  dexaScenarios,
+  DeXaCapabilities,
   architectureLayers,
   deploymentModels,
   useCases,
   outcomes,
 } from "../../data/healthcare";
-import { dexaFullScenarios } from "../../data/dexa-page";
+import { DeXaFullScenarios } from "../../data/dexa-page";
 import { ChatSimulation } from "../../components/shared/ChatSimulation";
 import { MacbookMockup } from "../../components/shared/MacbookMockup";
 import { DeviceEcosystem } from "../../components/shared/DeviceEcosystem";
@@ -165,9 +164,9 @@ const HealthcareDashboard = () => {
               </defs>
             </svg>
           </div>
-            {["Jan", "Feb", "Mar", "Apr", "May", "Jun"].map((m) => (
-              <span key={m}>{m}</span>
-            ))}
+          {["Jan", "Feb", "Mar", "Apr", "May", "Jun"].map((m) => (
+            <span key={m}>{m}</span>
+          ))}
         </div>
 
         {/* AI Recommendation */}
@@ -241,28 +240,26 @@ const MentorHealthApp = () => {
   const { time } = HeroAnimationLoop();
 
   return (
-    <div className="w-full h-full bg-[#0048FF] flex flex-col font-sans p-5 text-white relative overflow-hidden">
+    <div className="w-full h-full bg-[#0048FF] flex flex-col font-sans p-4 text-white relative overflow-hidden">
       {/* Header */}
-      <div className="flex justify-between items-start mt-6">
-        <div className="flex flex-col gap-1">
-          <p className="text-white/60 text-xs font-bold">
-            Available Balance
-          </p>
-          <p className="text-xl font-black mt-0.5 tracking-tight">
-            <span className="text-xs mr-0.5">PKR</span>12,450
+      <div className="flex justify-between items-start mt-4">
+        <div className="flex flex-col gap-0.5">
+          <p className="text-white/60 text-[10px] font-bold">Available Balance</p>
+          <p className="text-lg font-black mt-0.5 tracking-tight">
+            <span className="text-[10px] mr-0.5">PKR</span>12,450
           </p>
         </div>
         <motion.div
           animate={{ opacity: [0.6, 1, 0.6], scale: [1, 1.05, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="px-2 py-0.5 bg-white/20 rounded-full text-xs font-black uppercase tracking-widest border border-white/20"
+          className="px-2 py-0.5 bg-white/20 rounded-full text-[10px] font-black uppercase tracking-widest border border-white/20"
         >
           Active
         </motion.div>
       </div>
 
       {/* Action Grid */}
-      <div className="grid grid-cols-2 gap-2 my-5">
+      <div className="grid grid-cols-2 gap-2 my-3">
         {[
           { label: "Hospital", Icon: Building2, highlight: false },
           { label: "Doctor", Icon: UserCircle2, highlight: false },
@@ -294,7 +291,7 @@ const MentorHealthApp = () => {
       </div>
 
       {/* Action Buttons */}
-      <div className="space-y-2 mt-auto mb-2">
+      <div className="space-y-1.5 mt-auto">
         {[
           { label: "Submit Claim", highlight: false },
           {
@@ -316,7 +313,7 @@ const MentorHealthApp = () => {
                 ? "0 0 20px rgba(255,255,255,0.2)"
                 : "none",
             }}
-            className="bg-white/10 rounded-lg py-3 px-3 text-center text-xs font-black uppercase tracking-widest border border-white/10 transition-all duration-500 cursor-pointer"
+            className="bg-white/10 rounded-lg py-2 px-3 text-center text-[10px] font-black uppercase tracking-widest border border-white/10 transition-all duration-500 cursor-pointer"
           >
             {btn.label}
           </motion.div>
@@ -354,26 +351,23 @@ function Hero() {
   return (
     <section
       data-testid="hc-hero"
-      className="relative bg-[#05050A] pt-32 pb-24 md:pt-40 md:pb-36 overflow-hidden"
+      className="relative bg-[#05050A] pt-32 pb-24 md:pt-40 md:pb-36"
     >
-      <div className="absolute top-1/4 -right-[10%] w-[320px] h-[320px] sm:w-[520px] sm:h-[520px] lg:w-[800px] lg:h-[800px] bg-[#0048FF]/10 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-[320px] h-[320px] sm:w-[520px] sm:h-[520px] lg:w-[800px] lg:h-[800px] bg-[#0048FF]/10 blur-[150px] rounded-full pointer-events-none overflow-hidden" />
       <div className="relative max-w-[1720px] mx-auto px-6 md:px-12">
-        <Link
+        {/* <Link
           to="/solutions"
           className="inline-flex items-center gap-2 text-sm text-[#8A8A93] hover:text-[#0048FF] transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" /> All Solutions
-        </Link>
+        </Link> */}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-24 items-center">
           <div>
             <ScrollReveal>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#0048FF] animate-pulse" />
-                <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-white/80">
-                  HEALTHCARE INFRASTRUCTURE
-                </span>
-              </div>
+              <p className="eyebrow mb-6 font-bold text-primary">
+                HEALTHCARE INFRASTRUCTURE
+              </p>
               <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-white tracking-tighter leading-[1.05]">
                 Infrastructure for Access, Claims, Benefits, and Finance
               </h1>
@@ -394,10 +388,10 @@ function Hero() {
                   Build Infrastructure <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
-                  to="/dexa"
+                  to="/DeXa"
                   className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-8 py-3 sm:py-4 border border-white/20 text-white font-semibold hover:bg-white/5 transition-all"
                 >
-                  Explore DEXA Intelligence
+                  Explore DeXa Intelligence
                 </Link>
               </div>
             </ScrollReveal>
@@ -408,7 +402,7 @@ function Hero() {
               <DeviceEcosystem
                 laptopContent={<HealthcareDashboard />}
                 phoneContent={<MentorHealthApp />}
-                // proofCards={proofCards}
+              // proofCards={proofCards}
               />
             </ScrollReveal>
           </div>
@@ -433,7 +427,7 @@ function ProblemSection() {
           {healthcareProblems.map((p, i) => (
             <ScrollReveal key={i} delay={i * 0.05}>
               <div className="bg-white p-6 md:p-8 card-hover h-full">
-                <span className="text-[#0048FF] text-xs font-bold">
+                <span className="text-[#0048FF] text-sm font-bold">
                   0{i + 1}
                 </span>
                 <p className="mt-3 text-base text-[#11111F] font-medium leading-relaxed">
@@ -468,7 +462,7 @@ function InfrastructureStack() {
               <div className="bg-[#11111F] border border-white/10 p-6 md:p-8">
                 <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
                   <div className="md:w-48 shrink-0">
-                    <span className="text-[#0048FF] text-xs font-bold">
+                    <span className="text-[#0048FF] text-sm font-bold">
                       0{idx + 1}
                     </span>
                     <h3 className="text-lg font-bold text-white mt-1">
@@ -528,13 +522,13 @@ function ConnectedRailsVisual() {
               ))}
             </div>
             {/* Powered by */}
-            <div className="mt-6 flex items-center justify-center gap-4">
+            <div className="mt-6 flex items-center justify-center gap-1.5">
               <span className="text-sm text-[#666666]">Powered by</span>
               <span className="text-sm font-bold text-[#0048FF]">
                 Mentor Innovation
               </span>
               <span className="text-sm text-[#666666]">and</span>
-              <span className="text-sm font-bold text-[#0048FF]">DEXA</span>
+              <span className="text-sm font-bold text-[#0048FF]">DeXa</span>
             </div>
           </div>
         </ScrollReveal>
@@ -608,7 +602,7 @@ function UserJourneys() {
                 <div className="flex flex-wrap items-center gap-2">
                   {j.steps.map((step, i) => (
                     <span key={step} className="flex items-center gap-2">
-                      <span className="text-xs px-3 py-1.5 bg-[#11111F]/[0.03] border border-[#11111F]/10 text-[#11111F] font-medium">
+                      <span className="text-sm px-3 py-1.5 bg-[#11111F]/[0.03] border border-[#11111F]/10 text-[#11111F] font-medium">
                         {step}
                       </span>
                       {i < j.steps.length - 1 && (
@@ -644,13 +638,13 @@ function CoreModules() {
           {modules.map((m, i) => (
             <ScrollReveal key={m.name} delay={i * 0.04}>
               <div className="bg-[#11111F] p-6 md:p-8 card-hover-dark h-full">
-                <span className="text-[#0048FF] text-xs font-bold">
+                <span className="text-[#0048FF] text-sm font-bold">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="text-base font-bold text-white mt-2 mb-3">
+                <h3 className="text-sm font-bold text-white mt-2 mb-3">
                   {m.name}
                 </h3>
-                <p className="text-xs text-[#8A8A93] leading-relaxed">
+                <p className="text-sm text-[#8A8A93] leading-relaxed">
                   {m.desc}
                 </p>
               </div>
@@ -662,29 +656,29 @@ function CoreModules() {
   );
 }
 
-function DexaIntelligence() {
+function DeXaIntelligence() {
   return (
-    <section data-testid="hc-dexa" className="bg-white py-24 md:py-32">
+    <section data-testid="hc-DeXa" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <p className="eyebrow mb-4">DEXA Intelligence</p>
+          <p className="eyebrow mb-4">DeXa Intelligence</p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
-            DEXA is the intelligence layer inside healthcare infrastructure
+            DeXa is the intelligence layer inside healthcare infrastructure
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <p className="mt-6 section-desc max-w-3xl">
-            DEXA turns healthcare infrastructure from a workflow system into a
-            guided operating layer. DEXA does not replace HR. DEXA does not
-            replace claims officers. DEXA does not diagnose. DEXA does not
-            answer from memory. DEXA operates inside approved rules, user
+            DeXa turns healthcare infrastructure from a workflow system into
+            a guided operating layer. DeXa does not replace HR. DeXa does
+            not replace claims officers. DeXa does not diagnose. DeXa does
+            not answer from memory. DeXa operates inside approved rules, user
             permissions, benefit logic, claims logic, provider data, wallet
             data, health credit rules, escalation workflows, and audit
             boundaries.
           </p>
         </ScrollReveal>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[1px] bg-[#11111F]/10">
-          {dexaCapabilities.map((cap, i) => (
+          {DeXaCapabilities.map((cap, i) => (
             <ScrollReveal key={cap.role} delay={i * 0.05}>
               <div className="bg-white p-6 card-hover h-full">
                 <p className="text-sm font-bold text-[#0048FF] mb-4">
@@ -692,7 +686,7 @@ function DexaIntelligence() {
                 </p>
                 <div className="space-y-2">
                   {cap.items.map((item) => (
-                    <p key={item} className="text-xs text-[#666666]">
+                    <p key={item} className="text-sm text-[#666666]">
                       {item}
                     </p>
                   ))}
@@ -706,16 +700,16 @@ function DexaIntelligence() {
   );
 }
 
-function DexaScenarios() {
+function DeXaScenarios() {
   return (
     <section
-      data-testid="hc-dexa-scenarios"
+      data-testid="hc-DeXa-scenarios"
       className="bg-[#0B0B14] py-24 md:py-32 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-[#0048FF]/[0.02]" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <p className="eyebrow mb-4">DEXA in Action</p>
+          <p className="eyebrow mb-4">DeXa in Action</p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight mb-12">
             From confusion to governed next action
           </h2>
@@ -724,7 +718,7 @@ function DexaScenarios() {
         <ScrollReveal delay={0.1}>
           <div className="relative mt-8">
             <MacbookMockup>
-              <ChatSimulation scenarios={dexaFullScenarios} />
+              <ChatSimulation scenarios={DeXaFullScenarios} />
             </MacbookMockup>
           </div>
         </ScrollReveal>
@@ -735,8 +729,8 @@ function DexaScenarios() {
               <h3 className="text-sm font-bold text-white mb-2">
                 Multi-Scenario Exploration
               </h3>
-              <p className="text-xs text-[#8A8A93] leading-relaxed">
-                Observe how DEXA handles operational scenarios across
+              <p className="text-sm text-[#8A8A93] leading-relaxed">
+                Observe how DeXa handles operational scenarios across
                 healthcare, insurance, fintech, and more.
               </p>
             </div>
@@ -744,8 +738,8 @@ function DexaScenarios() {
               <h3 className="text-sm font-bold text-white mb-2">
                 Governed Reasoning
               </h3>
-              <p className="text-xs text-[#8A8A93] leading-relaxed">
-                DEXA verifies permissions, retrieves approved knowledge, and
+              <p className="text-sm text-[#8A8A93] leading-relaxed">
+                DeXa verifies permissions, retrieves approved knowledge, and
                 applies business rules before responding.
               </p>
             </div>
@@ -753,7 +747,7 @@ function DexaScenarios() {
               <h3 className="text-sm font-bold text-white mb-2">
                 Actionable Intelligence
               </h3>
-              <p className="text-xs text-[#8A8A93] leading-relaxed">
+              <p className="text-sm text-[#8A8A93] leading-relaxed">
                 Every response concludes with governed next actions, routing
                 users directly into approved workflows.
               </p>
@@ -783,7 +777,7 @@ function Architecture() {
               >
                 <div className="md:col-span-3 p-5 md:p-6 border-b md:border-b-0 md:border-r border-[#11111F]/10 flex items-center">
                   <div>
-                    <span className="text-[#0048FF] text-xs font-bold">
+                    <span className="text-[#0048FF] text-sm font-bold">
                       L{idx + 1}
                     </span>
                     <p className="text-sm font-bold text-[#11111F] mt-1">
@@ -796,7 +790,7 @@ function Architecture() {
                     {layer.items.map((item) => (
                       <span
                         key={item}
-                        className="text-xs px-3 py-1 border border-[#11111F]/10 text-[#666666]"
+                        className="text-sm px-3 py-1 border border-[#11111F]/10 text-[#666666]"
                       >
                         {item}
                       </span>
@@ -832,7 +826,7 @@ function DeploymentModels() {
                 <h3 className="text-base font-bold text-white mb-3">
                   {d.name}
                 </h3>
-                <p className="text-xs text-[#8A8A93] leading-relaxed">
+                <p className="text-sm text-[#8A8A93] leading-relaxed">
                   {d.desc}
                 </p>
               </div>
@@ -861,7 +855,7 @@ function UseCasesSection() {
                 <h3 className="text-base font-bold text-[#11111F] mb-3">
                   {uc.name}
                 </h3>
-                <div className="space-y-1.5 text-xs text-[#666666]">
+                <div className="space-y-1.5 text-sm text-[#666666]">
                   <p>
                     <span className="text-[#0048FF] font-bold">Who:</span>{" "}
                     {uc.who}
@@ -875,8 +869,8 @@ function UseCasesSection() {
                     {uc.rail}
                   </p>
                   <p>
-                    <span className="text-[#0048FF] font-bold">DEXA:</span>{" "}
-                    {uc.dexa}
+                    <span className="text-[#0048FF] font-bold">DeXa:</span>{" "}
+                    {uc.DeXa}
                   </p>
                 </div>
               </div>
@@ -911,11 +905,16 @@ function OutcomesSection() {
           ))}
         </div>
         <ScrollReveal delay={0.3}>
-          <p className="mt-8 text-xs text-[#8A8A93]/50 max-w-3xl">
-            Outcomes are designed to reduce manual workload, improve visibility,
-            and support cost governance. These do not represent unsupported
-            guarantees.
-          </p>
+          <div className="mt-12 flex items-start gap-4 p-6 bg-white/[0.02] border-l-2 border-[#0048FF] max-w-4xl">
+            <p className="text-[13px] text-[#8A8A93] leading-relaxed">
+              <span className="text-[#0048FF] font-bold uppercase tracking-wider text-[10px] block mb-1">
+                Operational Context
+              </span>
+              Outcomes are designed to reduce manual workload, improve
+              visibility, and support cost governance. These do not represent
+              unsupported guarantees.
+            </p>
+          </div>
         </ScrollReveal>
       </div>
     </section>
@@ -937,7 +936,7 @@ function FinalCTA() {
             Mentor Global helps organizations move from fragmented healthcare
             administration to connected infrastructure powered by portals, apps,
             APIs, workflows, wallets, provider networks, claims engines, and
-            DEXA intelligence.
+            DeXa intelligence.
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
@@ -973,8 +972,8 @@ export default function HealthcareInfrastructure() {
       <WhoItServes />
       <UserJourneys />
       <CoreModules />
-      <DexaIntelligence />
-      <DexaScenarios />
+      <DeXaIntelligence />
+      <DeXaScenarios />
       <Architecture />
       <DeploymentModels />
       <UseCasesSection />

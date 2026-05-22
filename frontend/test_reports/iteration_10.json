@@ -1,6 +1,9 @@
 {
-  "summary": "Frontend-only testing of the comprehensive /subsidiaries page (SubsidiariesNew.jsx). Verified all 10 sections, required counts of items per section, hero headline, navigation label, and confirmed /dexa, /solutions, /contact still work without JS errors.",
-  "backend_issues": {"critical": [], "minor": []},
+  "summary": "Frontend-only testing of the comprehensive /subsidiaries page (SubsidiariesNew.jsx). Verified all 10 sections, required counts of items per section, hero headline, navigation label, and confirmed /DeXa, /solutions, /contact still work without JS errors.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
   "frontend_issues": {
     "ui_bugs": [],
     "integration_issues": [],
@@ -21,7 +24,7 @@
     "governance_components": "PASS - 10 components rendered",
     "final_cta": "PASS - Both 'Explore Partnership Opportunities' and 'Contact Mentor Global' present",
     "navbar_label": "PASS - 'Subsidiaries' (correctly spelled)",
-    "other_routes": "PASS - /dexa, /solutions, /contact all render without JS errors"
+    "other_routes": "PASS - /DeXa, /solutions, /contact all render without JS errors"
   },
   "test_report_links": [],
   "action_items": [],
@@ -31,7 +34,10 @@
     "Some lists use child.slice().map without key uniqueness risks (e.g., company.serves mapping uses indexOf to detect last element which is O(n^2) and brittle on duplicates). Low priority."
   ],
   "updated_files": [],
-  "success_rate": {"backend": "N/A (not tested)", "frontend": "100%"},
+  "success_rate": {
+    "backend": "N/A (not tested)",
+    "frontend": "100%"
+  },
   "seed_data_creation": "None",
   "retest_needed": false,
   "should_main_agent_self_test": false,

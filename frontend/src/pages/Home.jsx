@@ -60,13 +60,12 @@ function Hero() {
     <section
       data-testid="home-hero"
       className="relative min-h-screen flex flex-col justify-center bg-[#05050A] overflow-hidden"
-      style={{ minHeight: "100dvh" }}
     >
       {/* Right - Full Bleed Visual */}
       <EcosystemVisual />
 
       <div className="relative max-w-[1720px] mx-auto px-6 md:px-12 w-full z-10 pt-32 pb-48 lg:pt-0 lg:pb-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-200px)]" style={{ minHeight: "calc(100dvh - 200px)" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-200px)]">
           {/* Left - Text */}
           <div className="max-w-2xl">
             <ScrollReveal>
@@ -120,7 +119,7 @@ function Hero() {
 
       {/* Bottom Content Rail */}
       <div className="absolute bottom-0 left-0 w-full z-20 border-t border-white/10 bg-[#0A0A0F]/90 backdrop-blur-xl">
-        <div className="max-w-[1720px] mx-auto px-6 md:px-10 flex overflow-x-auto hide-scrollbar scroll-smooth" style={{ overscrollBehaviorX: "contain" }}>
+        <div className="max-w-[1720px] mx-auto px-6 md:px-10 flex overflow-x-auto hide-scrollbar scroll-smooth">
           {bottomCards.map((card, i) => (
             <Link
               key={i}
@@ -158,7 +157,7 @@ function Positioning() {
     },
     {
       label: "Intelligence Layer",
-      desc: "DEXA powers intelligent workflows, orchestration, monitoring, and decision support.",
+      desc: "DeXa powers intelligent workflows, orchestration, monitoring, and decision support.",
     },
     {
       label: "Market Execution Layer",
@@ -290,12 +289,10 @@ function Problem() {
           ))}
         </div>
         <ScrollReveal delay={0.5}>
-          <div className="mt-12 text-center">
-            <p className="text-base text-white/60">
-              This is not a surface problem.
-            </p>
-            <p className="text-lg font-bold text-white mt-1">
-              It is an <span className="text-[#0048FF]">infrastructure</span>{" "}
+          <div className="mt-16 text-center border-t border-white/5 pt-12">
+            <p className="text-lg md:text-xl text-white/80 font-medium tracking-tight">
+              This is not a surface problem. It is an{" "}
+              <span className="text-[#0048FF] font-bold">infrastructure</span>{" "}
               problem.
             </p>
           </div>
@@ -350,10 +347,10 @@ function Pillars() {
   );
 }
 
-function DexaSection() {
+function DeXaSection() {
   return (
     <section
-      data-testid="home-dexa"
+      data-testid="home-DeXa"
       className="relative bg-[#11111F] py-24 md:py-32 overflow-hidden"
     >
       <div className="absolute inset-0 blue-glow" />
@@ -362,16 +359,16 @@ function DexaSection() {
         <ScrollReveal>
           <p className="eyebrow mb-4">Intelligence Engine</p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
-            DEXA Makes Infrastructure Think, Guide, and Act
+            DeXa Makes Infrastructure Think, Guide, and Act
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.15}>
           <p className="mt-6 section-desc-dark max-w-2xl">
-            DEXA is the intelligence processing engine across Mentor Global. It
-            understands context, reasons across systems, coordinates workflows,
-            monitors execution, and powers intelligent operations across
-            healthcare, insurance, fintech, HealthRails, Mentor OS, and white
-            labelled client platforms.
+            DeXa is the intelligence processing engine across Mentor Global.
+            It understands context, reasons across systems, coordinates
+            workflows, monitors execution, and powers intelligent operations
+            across healthcare, insurance, fintech, HealthRails, Mentor OS, and
+            white labelled client platforms.
           </p>
         </ScrollReveal>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-white/10">
@@ -407,11 +404,11 @@ function DexaSection() {
         <ScrollReveal delay={0.3}>
           <div className="mt-10 text-center">
             <Link
-              to="/dexa"
-              data-testid="home-dexa-cta"
+              to="/DeXa"
+              data-testid="home-DeXa-cta"
               className="inline-flex items-center gap-2 text-base font-semibold text-[#0048FF] hover:text-white transition-colors"
             >
-              Explore DEXA <ArrowRight className="w-4 h-4" />
+              Explore DeXa <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </ScrollReveal>
@@ -480,9 +477,7 @@ function InnovationSection() {
               <div className="mt-12 grid grid-cols-2 gap-y-4 gap-x-6">
                 {capabilities.map((cap, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <span className="text-[#0048FF] text-xs font-bold">
-                      //
-                    </span>
+                    <span className="text-[#0048FF] text-xs font-bold">//</span>
                     <span className="text-base font-medium text-[#11111F]/80">
                       {cap}
                     </span>
@@ -732,17 +727,23 @@ function ScaleSection() {
         </div>
 
         <ScrollReveal delay={0.5}>
-          <p className="mt-8 text-sm text-[#8A8A93]/50 max-w-3xl leading-relaxed">
-            {scaleDisclaimer}
-          </p>
+          <div className="mt-12 p-6 bg-white/[0.02] border-l-2 border-[#0048FF] max-w-4xl backdrop-blur-sm">
+            <p className="text-[13px] text-[#8A8A93] leading-relaxed">
+              <span className="text-[#0048FF] font-bold uppercase tracking-wider text-[10px] block mb-2">
+                Operational Disclosure
+              </span>
+              {scaleDisclaimer}
+            </p>
+          </div>
         </ScrollReveal>
         <ScrollReveal delay={0.6}>
-          <div className="mt-12 text-center">
-            <p className="text-base text-white/60">
-              This is not theoretical infrastructure.
-            </p>
-            <p className="text-lg font-bold text-white mt-1">
-              This is infrastructure running across ecosystems.
+          <div className="mt-16 text-center border-t border-white/5 pt-12">
+            <p className="text-lg md:text-xl text-white/80 font-medium tracking-tight">
+              This is not theoretical infrastructure. This is{" "}
+              <span className="text-[#0048FF] font-bold">
+                infrastructure running
+              </span>{" "}
+              across ecosystems.
             </p>
           </div>
         </ScrollReveal>
@@ -869,7 +870,7 @@ export default function Home() {
       <Positioning />
       <Problem />
       <Pillars />
-      <DexaSection />
+      <DeXaSection />
       <InnovationSection />
       <ScaleSection />
       <GlobalPresenceSection />

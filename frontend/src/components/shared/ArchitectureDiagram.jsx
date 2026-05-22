@@ -45,7 +45,9 @@ export function ArchitectureDiagram() {
             <p className="text-[9px] uppercase tracking-wider font-bold text-[#8A8A93] mb-1 group-hover:text-[#8A2BE2] transition-colors text-center">
               Intelligence Processing
             </p>
-            <p className="text-xs font-bold text-[#11111F] text-center">DEXA</p>
+            <p className="text-xs font-bold text-[#11111F] text-center">
+              DeXa
+            </p>
           </div>
         </div>
       </div>
@@ -118,10 +120,10 @@ export function ArchitectureDiagram() {
                 >
                   {/* Left Accent Bar */}
                   <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-[#11111F]/5 group-hover/company:bg-[#0048FF] transition-colors duration-300" />
-                  
+
                   {/* Status Dot */}
                   <div className="w-1 h-1 rounded-full bg-[#0048FF]/20 group-hover/company:bg-[#0048FF] group-hover/company:shadow-[0_0_4px_rgba(0,72,255,0.6)] transition-all duration-300 flex-shrink-0" />
-                  
+
                   <span className="text-[8px] md:text-[9px] font-semibold text-[#11111F]/80 group-hover/company:text-[#11111F] leading-tight text-left">
                     {company}
                   </span>

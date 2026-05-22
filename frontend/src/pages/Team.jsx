@@ -10,13 +10,14 @@ import {
 } from "lucide-react";
 import { ScrollReveal } from "../components/shared/ScrollReveal";
 import {
-  founderQuote,
+  // founderQuote,
+  founderDeclaration,
   philosophyCards,
   architectureDomains,
   founderFeature,
   boardProfiles,
   executiveLeaders,
-  dexaProfile,
+  DeXaProfile,
   leaderProfiles,
   operatingModelFlow,
   matrixRows,
@@ -48,7 +49,7 @@ function PhotoFrame({ src, alt, name, size = "md", virtual = false }) {
       <div
         className={`${sizeMap[size]} relative bg-[#0a0a15] border border-[#0048FF]/30 overflow-hidden flex items-center justify-center`}
       >
-        {/* DEXA Intelligence Core — abstract */}
+        {/* DeXa Intelligence Core — abstract */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0048FF]/10 via-transparent to-[#0048FF]/5" />
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] rounded-full bg-[#0048FF]/20 blur-[40px]" />
         <div className="relative w-[55%] h-[55%] rounded-full border border-[#0048FF]/40 flex items-center justify-center">
@@ -67,7 +68,7 @@ function PhotoFrame({ src, alt, name, size = "md", virtual = false }) {
           />
         ))}
         <span className="absolute bottom-2 left-2 text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold">
-          DEXA Intelligence Core
+          DeXa Intelligence Core
         </span>
       </div>
     );
@@ -138,7 +139,9 @@ function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7">
             <ScrollReveal>
-              <p className="eyebrow mb-6 text-[#0048FF]">Leadership Architects</p>
+              <p className="eyebrow mb-6 text-[#0048FF]">
+                Leadership Architects
+              </p>
               <h1 className="text-[var(--fs-hero)] font-bold text-white tracking-tighter leading-[1.02]">
                 The Architects Building Global Health Fintech Infrastructure
               </h1>
@@ -147,7 +150,7 @@ function Hero() {
               <p className="mt-8 text-lg text-[#8A8A93] max-w-2xl leading-relaxed">
                 Mentor Global is led by operators, builders, product thinkers,
                 technology architects, healthcare leaders, finance strategists,
-                governance experts, and DEXA, the intelligence layer that
+                governance experts, and DeXa, the intelligence layer that
                 connects the system.
               </p>
             </ScrollReveal>
@@ -186,9 +189,7 @@ function Hero() {
                 <span className="text-sm uppercase tracking-[0.2em] font-bold text-[#0048FF]">
                   Leadership Architecture
                 </span>
-                <span className="text-sm text-[#8A8A93] ml-auto">
-                  Active
-                </span>
+                <span className="text-sm text-[#8A8A93] ml-auto">Active</span>
               </div>
 
               {/* Dr. Ali as center */}
@@ -221,24 +222,24 @@ function Hero() {
                 ))}
               </div>
 
-              {/* DEXA virtual */}
+              {/* DeXa virtual */}
               <div className="mt-3 border border-[#0048FF]/20 bg-[#0048FF]/[0.04] p-3 flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full border border-[#0048FF]/50 flex items-center justify-center flex-shrink-0">
                   <div className="w-2 h-2 bg-[#0048FF] rounded-full" />
                 </div>
                 <div>
-                   <p className="text-sm uppercase tracking-[0.15em] text-[#0048FF] font-bold">
+                  <p className="text-sm uppercase tracking-[0.15em] text-[#0048FF] font-bold">
                     Virtual Intelligence Layer
                   </p>
                   <p className="text-sm text-white font-semibold">
-                    DEXA · AI Intelligence Architecture
+                    DeXa · AI Intelligence Architecture
                   </p>
                 </div>
               </div>
 
               {/* Infrastructure nodes */}
               <div className="mt-3 pt-3 border-t border-white/10">
-                 <p className="text-sm uppercase tracking-[0.2em] text-white/40 mb-2 font-bold">
+                <p className="text-sm uppercase tracking-[0.2em] text-white/40 mb-2 font-bold">
                   Infrastructure Nodes
                 </p>
                 <div className="flex flex-wrap gap-1.5">
@@ -249,7 +250,7 @@ function Hero() {
                     "AI",
                     "Company OS",
                   ].map((n) => (
-                     <span
+                    <span
                       key={n}
                       className="text-sm px-2 py-0.5 border border-white/10 text-white/70"
                     >
@@ -263,7 +264,7 @@ function Hero() {
         </div>
 
         <ScrollReveal delay={0.35}>
-           <p className="mt-14 text-base uppercase tracking-[0.25em] text-white/30 font-bold border-t border-white/10 pt-8">
+          <p className="mt-14 text-base uppercase tracking-[0.25em] text-white/30 font-bold border-t border-white/10 pt-8">
             This team is building infrastructure, not managing departments.
           </p>
         </ScrollReveal>
@@ -313,14 +314,16 @@ function FounderQuote() {
           <ScrollReveal delay={0.18} className="md:col-span-8">
             <Quote className="w-10 h-10 text-[#0048FF]/30 mb-6" />
             <blockquote className="text-[var(--fs-2xl)] font-semibold text-white leading-[1.3] tracking-tight">
-              “{founderQuote.text}”
+              {founderDeclaration.text}
             </blockquote>
             <div className="mt-10 flex items-center gap-4 pt-8 border-t border-white/10">
               <div>
                 <p className="text-base font-bold text-white italic">
-                  — {founderQuote.author}
+                  {founderDeclaration.author}
                 </p>
-                <p className="text-base text-[#8A8A93] mt-1">{founderQuote.role}</p>
+                <p className="text-base text-[#8A8A93] mt-1">
+                  {founderDeclaration.role}
+                </p>
               </div>
             </div>
           </ScrollReveal>
@@ -334,10 +337,7 @@ function FounderQuote() {
 
 function LeadershipPhilosophy() {
   return (
-    <section
-      data-testid="team-philosophy"
-      className="bg-white py-24 md:py-32"
-    >
+    <section data-testid="team-philosophy" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-5">
@@ -361,7 +361,7 @@ function LeadershipPhilosophy() {
             {philosophyCards.map((c, i) => (
               <ScrollReveal key={c.title} delay={i * 0.08}>
                 <div className="bg-white p-7 h-full border-t border-[#0048FF] border-t-2">
-                   <span className="text-[#0048FF] text-base font-bold">
+                  <span className="text-[#0048FF] text-base font-bold">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="text-base font-bold text-[#11111F] mt-3 mb-3 leading-snug">
@@ -420,23 +420,25 @@ function ArchitectureMap() {
 
               {/* Center hub */}
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[150px] bg-[#0048FF] flex flex-col items-center justify-center text-center px-3">
-                 <p className="text-sm uppercase tracking-[0.2em] text-white/70 font-bold">
+                <p className="text-sm uppercase tracking-[0.2em] text-white/70 font-bold">
                   Center
                 </p>
                 <p className="text-base font-bold text-white mt-1 leading-tight">
                   Mentor Global
                 </p>
-                 <p className="text-sm text-white/70 mt-2 leading-tight">
+                <p className="text-sm text-white/70 mt-2 leading-tight">
                   Infrastructure Mission
                 </p>
               </div>
 
               {/* Nodes */}
               {architectureDomains.map((a, i) => {
-                const angle = (i * (2 * Math.PI)) / architectureDomains.length - Math.PI / 2;
+                const angle =
+                  (i * (2 * Math.PI)) / architectureDomains.length -
+                  Math.PI / 2;
                 const cx = radius * Math.cos(angle);
                 const cy = radius * Math.sin(angle);
-                const isDexa = a.name === "DEXA";
+                const isDeXa = a.name === "DeXa";
                 return (
                   <div
                     key={a.name}
@@ -448,13 +450,12 @@ function ArchitectureMap() {
                     }}
                   >
                     <div
-                      className={`w-[170px] border p-3 text-center ${
-                        isDexa
-                          ? "border-[#0048FF]/40 bg-[#0048FF]/10"
-                          : "border-white/15 bg-white/[0.03]"
-                      }`}
+                      className={`w-[170px] border p-3 text-center ${isDeXa
+                        ? "border-[#0048FF]/40 bg-[#0048FF]/10"
+                        : "border-white/15 bg-white/[0.03]"
+                        }`}
                     >
-                       <p className="text-sm uppercase tracking-[0.15em] text-[#0048FF] font-bold mb-1">
+                      <p className="text-sm uppercase tracking-[0.15em] text-[#0048FF] font-bold mb-1">
                         {a.short}
                       </p>
                       <p className="text-sm font-bold text-white leading-tight">
@@ -471,17 +472,16 @@ function ArchitectureMap() {
         {/* Mobile/tablet list */}
         <div className="lg:hidden mt-16 grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-white/10">
           {architectureDomains.map((a) => {
-            const isDexa = a.name === "DEXA";
+            const isDeXa = a.name === "DeXa";
             return (
               <div
                 key={a.name}
-                className={`p-5 ${
-                  isDexa
-                    ? "bg-[#0048FF]/10 border-l-2 border-l-[#0048FF]"
-                    : "bg-[#11111F]"
-                }`}
+                className={`p-5 ${isDeXa
+                  ? "bg-[#0048FF]/10 border-l-2 border-l-[#0048FF]"
+                  : "bg-[#11111F]"
+                  }`}
               >
-                 <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-2">
+                <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-2">
                   {a.short}
                 </p>
                 <p className="text-base font-bold text-white mb-1">{a.name}</p>
@@ -530,16 +530,16 @@ function FounderFeature() {
               <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-2">
                 Architecture Domain
               </p>
-               <p className="text-base font-bold text-[#11111F] leading-snug">
+              <p className="text-base font-bold text-[#11111F] leading-snug">
                 {founderFeature.architectureDomain}
               </p>
               <div className="mt-5 pt-5 border-t border-[#11111F]/10">
-                 <p className="text-base uppercase tracking-[0.2em] text-[#666666] font-bold mb-3">
+                <p className="text-base uppercase tracking-[0.2em] text-[#666666] font-bold mb-3">
                   Infrastructure Pillars
                 </p>
                 <div className="flex flex-wrap gap-1.5">
                   {founderFeature.pillars.map((p) => (
-                     <span
+                    <span
                       key={p}
                       className="text-sm px-2.5 py-1 border border-[#0048FF]/30 text-[#0048FF] font-semibold"
                     >
@@ -549,13 +549,16 @@ function FounderFeature() {
                 </div>
               </div>
               <div className="mt-5 pt-5 border-t border-[#11111F]/10 flex flex-wrap gap-2">
-                <LinkedInButton url={founderFeature.linkedin} testId="founder-linkedin" />
+                <LinkedInButton
+                  url={founderFeature.linkedin}
+                  testId="founder-linkedin"
+                />
                 <a
                   href="#founder-profile"
-                   className="inline-flex items-center gap-2 px-4 py-2 bg-[#0048FF] text-white text-base font-semibold hover:bg-[#0030CC] transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#0048FF] text-white text-base font-semibold hover:bg-[#0030CC] transition-colors"
                   data-testid="founder-read-profile"
                 >
-                   Read Founder Profile <ArrowRight className="w-4 h-4" />
+                  Read Founder Profile <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -564,7 +567,7 @@ function FounderFeature() {
           {/* Content */}
           <ScrollReveal className="lg:col-span-7" delay={0.15}>
             <div id="founder-profile">
-               <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
+              <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
                 Profile Summary
               </p>
               <p className="text-base md:text-lg text-[#11111F] leading-relaxed">
@@ -573,7 +576,7 @@ function FounderFeature() {
 
               <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
-                   <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
+                  <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
                     Experience
                   </p>
                   <ul className="space-y-3">
@@ -591,12 +594,12 @@ function FounderFeature() {
                   </ul>
                 </div>
                 <div>
-                   <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
+                  <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
                     What he is building for Mentor Global
                   </p>
                   <ul className="space-y-3">
                     {founderFeature.building.map((e) => (
-                       <li
+                      <li
                         key={e}
                         className="flex gap-3 text-base text-[#11111F] leading-relaxed"
                       >
@@ -612,10 +615,10 @@ function FounderFeature() {
 
               <div className="mt-10 border-l-2 border-[#0048FF] pl-6 py-2">
                 <p className="text-base md:text-lg text-[#11111F] italic leading-relaxed">
-                  “{founderQuote.text}”
+                  “{founderDeclaration.text}”
                 </p>
                 <p className="mt-4 text-base font-bold text-[#11111F]">
-                  — {founderQuote.author}
+                  — {founderDeclaration.author}
                 </p>
               </div>
             </div>
@@ -630,10 +633,7 @@ function FounderFeature() {
 
 function BoardLeadership() {
   return (
-    <section
-      data-testid="team-board"
-      className="bg-[#f8f8f9] py-24 md:py-32"
-    >
+    <section data-testid="team-board" className="bg-[#f8f8f9] py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Board Leadership</p>
@@ -647,20 +647,20 @@ function BoardLeadership() {
             <ScrollReveal key={p.name} delay={i * 0.08}>
               <div className="bg-white p-8 h-full">
                 <div className="flex items-center justify-between mb-6">
-                   <span className="text-base uppercase tracking-[0.2em] text-[#0048FF] font-bold">
+                  <span className="text-base uppercase tracking-[0.2em] text-[#0048FF] font-bold">
                     Board Director
                   </span>
-                   <span className="text-base text-[#666666] font-mono">
+                  <span className="text-base text-[#666666] font-mono">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
                 <h3 className="text-lg font-bold text-[#11111F] leading-snug">
                   {p.name}
                 </h3>
-                 <p className="text-base text-[#0048FF] font-semibold mt-1 mb-6">
+                <p className="text-base text-[#0048FF] font-semibold mt-1 mb-6">
                   {p.title}
                 </p>
-                 <p className="text-base uppercase tracking-[0.2em] text-[#666666] font-bold mb-3">
+                <p className="text-base uppercase tracking-[0.2em] text-[#666666] font-bold mb-3">
                   Board Role
                 </p>
                 <ul className="space-y-2">
@@ -687,10 +687,7 @@ function BoardLeadership() {
 
 function ExecutiveLeadership() {
   return (
-    <section
-      data-testid="team-executive"
-      className="bg-white py-24 md:py-32"
-    >
+    <section data-testid="team-executive" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Executive Leadership</p>
@@ -704,42 +701,37 @@ function ExecutiveLeadership() {
           {executiveLeaders.map((l, i) => (
             <ScrollReveal key={l.name} delay={i * 0.06}>
               <div
-                className={`p-6 h-full ${
-                  l.virtual ? "bg-[#11111F] text-white" : "bg-white"
-                }`}
+                className={`p-6 h-full ${l.virtual ? "bg-[#11111F] text-white" : "bg-white"
+                  }`}
               >
                 <div className="flex items-center justify-between mb-5">
-                   <span
-                    className={`text-base uppercase tracking-[0.2em] font-bold ${
-                      l.virtual ? "text-[#0048FF]" : "text-[#0048FF]"
-                    }`}
+                  <span
+                    className={`text-base uppercase tracking-[0.2em] font-bold ${l.virtual ? "text-[#0048FF]" : "text-[#0048FF]"
+                      }`}
                   >
                     {l.virtual ? "Virtual Layer" : "Executive"}
                   </span>
-                   <span
-                    className={`text-base font-mono ${
-                      l.virtual ? "text-white/40" : "text-[#666666]"
-                    }`}
+                  <span
+                    className={`text-base font-mono ${l.virtual ? "text-white/40" : "text-[#666666]"
+                      }`}
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
                 <h3
-                  className={`text-base font-bold leading-snug ${
-                    l.virtual ? "text-white" : "text-[#11111F]"
-                  }`}
+                  className={`text-base font-bold leading-snug ${l.virtual ? "text-white" : "text-[#11111F]"
+                    }`}
                 >
                   {l.name}
                 </h3>
-                 <p
-                  className={`text-base font-semibold mt-2 leading-snug ${
-                    l.virtual ? "text-[#0048FF]" : "text-[#0048FF]"
-                  }`}
+                <p
+                  className={`text-base font-semibold mt-2 leading-snug ${l.virtual ? "text-[#0048FF]" : "text-[#0048FF]"
+                    }`}
                 >
                   {l.title}
                 </p>
                 {l.subtitle && (
-                   <p className="text-sm text-white/60 mt-1 italic">
+                  <p className="text-sm text-white/60 mt-1 italic">
                     {l.subtitle}
                   </p>
                 )}
@@ -752,25 +744,25 @@ function ExecutiveLeadership() {
   );
 }
 
-/* ---------- SECTION 8: DEXA VIRTUAL INTELLIGENCE OFFICER ---------- */
+/* ---------- SECTION 8: DeXa VIRTUAL INTELLIGENCE OFFICER ---------- */
 
-function DexaSection() {
+function DeXaSection() {
   return (
     <section
-      data-testid="team-dexa"
+      data-testid="team-DeXa"
       className="bg-[#0a0a15] py-24 md:py-32 relative overflow-hidden"
     >
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-[#0048FF]/[0.08] blur-[160px]" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow text-[#0048FF] mb-4">
-            DEXA · Virtual Intelligence Officer
+            DeXa · Virtual Intelligence Officer
           </p>
           <h2 className="text-[var(--fs-4xl)] font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
-            {dexaProfile.name}, {dexaProfile.title}
+            {DeXaProfile.name}, {DeXaProfile.title}
           </h2>
           <p className="text-lg text-[#0048FF] mt-3 font-semibold">
-            {dexaProfile.subtitle}
+            {DeXaProfile.subtitle}
           </p>
         </ScrollReveal>
 
@@ -778,8 +770,8 @@ function DexaSection() {
           <ScrollReveal className="lg:col-span-5" delay={0.1}>
             <PhotoFrame
               src={null}
-              alt="DEXA Intelligence Core"
-              name="DEXA"
+              alt="DeXa Intelligence Core"
+              name="DeXa"
               size="xl"
               virtual
             />
@@ -787,30 +779,30 @@ function DexaSection() {
               <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-2">
                 Architecture Domain
               </p>
-               <p className="text-base font-bold text-white leading-snug">
-                {dexaProfile.architectureDomain}
+              <p className="text-base font-bold text-white leading-snug">
+                {DeXaProfile.architectureDomain}
               </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal className="lg:col-span-7" delay={0.15}>
-             <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
+            <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
               Profile Summary
             </p>
             <p className="text-base md:text-lg text-white leading-relaxed">
-              {dexaProfile.summary}
+              {DeXaProfile.summary}
             </p>
-             <p className="mt-4 text-base text-[#8A8A93] leading-relaxed italic">
-              {dexaProfile.distinction}
+            <p className="mt-4 text-base text-[#8A8A93] leading-relaxed italic">
+              {DeXaProfile.distinction}
             </p>
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                 <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
+                <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
                   Experience — Deployed Across
                 </p>
                 <ul className="space-y-2.5">
-                  {dexaProfile.experience.map((e) => (
+                  {DeXaProfile.experience.map((e) => (
                     <li
                       key={e}
                       className="flex gap-3 text-sm text-white/85 leading-relaxed"
@@ -822,11 +814,11 @@ function DexaSection() {
                 </ul>
               </div>
               <div>
-                 <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
-                  What DEXA is building for Mentor Global
+                <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
+                  What DeXa is building for Mentor Global
                 </p>
                 <ul className="space-y-2.5">
-                  {dexaProfile.building.map((e) => (
+                  {DeXaProfile.building.map((e) => (
                     <li
                       key={e}
                       className="flex gap-3 text-sm text-white/85 leading-relaxed"
@@ -842,13 +834,16 @@ function DexaSection() {
             <div className="mt-10 border border-[#0048FF]/30 bg-[#0048FF]/[0.05] p-6">
               <div className="flex items-start gap-3 mb-4">
                 <ShieldCheck className="w-5 h-5 text-[#0048FF] flex-shrink-0 mt-0.5" />
-                 <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold">
+                <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold">
                   Governance Positioning
                 </p>
               </div>
-               <ul className="space-y-2">
-                {dexaProfile.governance.map((g) => (
-                  <li key={g} className="text-base text-white/85 leading-relaxed">
+              <ul className="space-y-2">
+                {DeXaProfile.governance.map((g) => (
+                  <li
+                    key={g}
+                    className="text-base text-white/85 leading-relaxed"
+                  >
                     — {g}
                   </li>
                 ))}
@@ -857,9 +852,11 @@ function DexaSection() {
 
             <div className="mt-8 border-l-2 border-[#0048FF] pl-6 py-2">
               <p className="text-xl md:text-2xl text-white italic leading-relaxed">
-                “{dexaProfile.quote}”
+                “{DeXaProfile.quote}”
               </p>
-               <p className="mt-3 text-base font-bold text-[#0048FF]">— DEXA</p>
+              <p className="mt-3 text-base font-bold text-[#0048FF]">
+                — DeXa
+              </p>
             </div>
           </ScrollReveal>
         </div>
@@ -887,7 +884,7 @@ function LeaderCard({ leader, index }) {
             size="xl"
           />
           <div className="absolute top-4 left-4 bg-[#0048FF] px-3 py-1">
-             <span className="text-xs uppercase tracking-[0.2em] text-white font-bold">
+            <span className="text-xs uppercase tracking-[0.2em] text-white font-bold">
               {String(index + 1).padStart(2, "0")} · Architect
             </span>
           </div>
@@ -903,19 +900,19 @@ function LeaderCard({ leader, index }) {
           </p>
           <div className="mt-4 inline-flex items-center gap-2 self-start border border-[#0048FF]/30 px-3 py-1">
             <span className="w-1 h-1 bg-[#0048FF] rounded-full" />
-             <span className="text-sm uppercase tracking-[0.15em] text-[#0048FF] font-bold">
+            <span className="text-sm uppercase tracking-[0.15em] text-[#0048FF] font-bold">
               {leader.architectureDomain}
             </span>
           </div>
 
-           <p className="mt-6 text-base text-[#11111F] leading-relaxed whitespace-pre-line">
+          <p className="mt-6 text-base text-[#11111F] leading-relaxed whitespace-pre-line">
             {leader.summary}
           </p>
 
           {expanded && (
             <div className="mt-6 border-t border-[#11111F]/10 pt-6 space-y-6">
               <div>
-                 <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-3">
+                <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-3">
                   Experience
                 </p>
                 <ul className="space-y-2">
@@ -931,7 +928,7 @@ function LeaderCard({ leader, index }) {
                 </ul>
               </div>
               <div>
-                 <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-3">
+                <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-3">
                   What they are building for Mentor Global
                 </p>
                 <ul className="space-y-2">
@@ -947,7 +944,7 @@ function LeaderCard({ leader, index }) {
                 </ul>
               </div>
               <div>
-                 <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-3">
+                <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-3">
                   Infrastructure Pillars
                 </p>
                 <div className="flex flex-wrap gap-1.5">
@@ -968,13 +965,16 @@ function LeaderCard({ leader, index }) {
             <p className="text-sm md:text-base text-[#11111F] italic leading-relaxed">
               “{leader.quote}”
             </p>
-             <p className="mt-2 text-sm font-bold text-[#11111F]">
+            <p className="mt-2 text-sm font-bold text-[#11111F]">
               — {leader.name}
             </p>
           </div>
 
           <div className="mt-6 pt-5 border-t border-[#11111F]/10 flex flex-wrap gap-2">
-            <LinkedInButton url={leader.linkedin} testId={`linkedin-${leader.id}`} />
+            <LinkedInButton
+              url={leader.linkedin}
+              testId={`linkedin-${leader.id}`}
+            />
             <button
               data-testid={`expand-${leader.id}`}
               onClick={() => setExpanded(!expanded)}
@@ -1042,9 +1042,8 @@ function OperatingModel() {
           {operatingModelFlow.map((s, i) => (
             <ScrollReveal key={s.label} delay={i * 0.04}>
               <div
-                className={`grid grid-cols-12 items-center border-b border-white/10 last:border-b-0 hover:bg-white/[0.02] transition-colors ${
-                  i === operatingModelFlow.length - 1 ? "border-b-0" : ""
-                }`}
+                className={`grid grid-cols-12 items-center border-b border-white/10 last:border-b-0 hover:bg-white/[0.02] transition-colors ${i === operatingModelFlow.length - 1 ? "border-b-0" : ""
+                  }`}
               >
                 <div className="col-span-2 md:col-span-1 bg-[#0048FF]/5 border-r border-white/10 p-5 text-center">
                   <span className="text-lg md:text-2xl font-bold text-[#0048FF] font-mono">
@@ -1100,7 +1099,7 @@ function OwnershipMatrix() {
             <table className="w-full min-w-[900px] text-sm">
               <thead>
                 <tr className="bg-[#11111F] text-white">
-                   <th className="text-left px-5 py-4 text-sm uppercase tracking-[0.2em] font-bold border-r border-white/10">
+                  <th className="text-left px-5 py-4 text-sm uppercase tracking-[0.2em] font-bold border-r border-white/10">
                     Infrastructure Layer
                   </th>
                   {matrixColumns.map((c) => (
@@ -1119,9 +1118,8 @@ function OwnershipMatrix() {
                   return (
                     <tr
                       key={row}
-                      className={`border-t border-[#11111F]/10 ${
-                        ri % 2 === 0 ? "bg-white" : "bg-[#f8f8f9]"
-                      }`}
+                      className={`border-t border-[#11111F]/10 ${ri % 2 === 0 ? "bg-white" : "bg-[#f8f8f9]"
+                        }`}
                     >
                       <td className="px-5 py-4 text-sm font-bold text-[#11111F] border-r border-[#11111F]/10">
                         {row}
@@ -1135,14 +1133,15 @@ function OwnershipMatrix() {
                             className="text-center px-3 py-4 border-r border-[#11111F]/10 last:border-r-0"
                           >
                             {empty ? (
-                              <span className="text-[#11111F]/20 text-xs">—</span>
+                              <span className="text-[#11111F]/20 text-xs">
+                                —
+                              </span>
                             ) : (
                               <span
-                                className={`inline-block px-2 py-0.5 text-sm font-bold ${
-                                  v === "DEXA"
-                                    ? "bg-[#0048FF]/10 text-[#0048FF] border border-[#0048FF]/30"
-                                    : "bg-[#11111F]/5 text-[#11111F]"
-                                }`}
+                                className={`inline-block px-2 py-0.5 text-sm font-bold ${v === "DeXa"
+                                  ? "bg-[#0048FF]/10 text-[#0048FF] border border-[#0048FF]/30"
+                                  : "bg-[#11111F]/5 text-[#11111F]"
+                                  }`}
                               >
                                 {v}
                               </span>
@@ -1162,7 +1161,7 @@ function OwnershipMatrix() {
           <p className="mt-4 text-sm text-[#666666] italic">
             Ali = Dr. Ali Azeem Rajwani · Navroz = Navroz Mansiya · Rafique =
             Rafique Awan · Jawwad = Jawwad Razvi · Khubaib = Syed Khubaib Hikmat
-            · Sarmad = Sarmad Siddiqui · Ovais = Ovais Khan · DEXA = Virtual
+            · Sarmad = Sarmad Siddiqui · Ovais = Ovais Khan · DeXa = Virtual
             Intelligence Layer.
           </p>
         </ScrollReveal>
@@ -1191,13 +1190,15 @@ function BuilderCredibility() {
           {credibilityCards.map((c, i) => (
             <ScrollReveal key={c.title} delay={i * 0.05}>
               <div className="bg-white p-6 h-full card-hover">
-                 <span className="text-[#0048FF] text-sm font-bold font-mono">
+                <span className="text-[#0048FF] text-sm font-bold font-mono">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="text-sm font-bold text-[#11111F] mt-3 mb-3 leading-snug">
                   {c.title}
                 </h3>
-                 <p className="text-sm text-[#666666] leading-relaxed">{c.desc}</p>
+                <p className="text-sm text-[#666666] leading-relaxed">
+                  {c.desc}
+                </p>
               </div>
             </ScrollReveal>
           ))}
@@ -1221,19 +1222,19 @@ function GovernanceNote() {
             <div className="flex items-start gap-4">
               <ShieldCheck className="w-8 h-8 text-[#0048FF] flex-shrink-0" />
               <div>
-                 <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-2">
+                <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-2">
                   Governance Note
                 </p>
                 <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight leading-snug mb-5">
-                  DEXA is intelligence, not a statutory officer
+                  DeXa is intelligence, not a statutory officer
                 </h3>
                 <p className="text-sm md:text-base text-white/85 leading-relaxed">
                   {governanceDisclaimer}
                 </p>
                 <p className="mt-4 text-sm text-[#8A8A93] leading-relaxed italic">
-                  DEXA is included as a virtual leadership identity to represent
-                  the intelligence layer inside Mentor Global. It supports
-                  leadership. It does not replace leadership.
+                  DeXa is included as a virtual leadership identity to
+                  represent the intelligence layer inside Mentor Global. It
+                  supports leadership. It does not replace leadership.
                 </p>
               </div>
             </div>
@@ -1263,13 +1264,13 @@ function FutureAdvisors() {
           {futurePlaceholders.map((f, i) => (
             <ScrollReveal key={f} delay={i * 0.04}>
               <div className="bg-white p-6 h-full border-t-2 border-t-[#0048FF]/20 hover:border-t-[#0048FF] transition-colors">
-                 <span className="text-[#0048FF]/60 text-sm font-bold font-mono">
+                <span className="text-[#0048FF]/60 text-sm font-bold font-mono">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="text-sm font-bold text-[#11111F] mt-3 mb-2 leading-snug">
                   {f}
                 </h3>
-                 <p className="text-sm uppercase tracking-[0.15em] text-[#666666] font-bold">
+                <p className="text-sm uppercase tracking-[0.15em] text-[#666666] font-bold">
                   Invitations Opening Soon
                 </p>
               </div>
@@ -1348,7 +1349,7 @@ export default function Team() {
       <FounderFeature />
       <BoardLeadership />
       <ExecutiveLeadership />
-      <DexaSection />
+      <DeXaSection />
       <LeaderProfiles />
       <OperatingModel />
       <OwnershipMatrix />

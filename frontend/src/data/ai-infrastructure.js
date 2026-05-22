@@ -186,7 +186,7 @@ export const aiRails = [
   },
 ];
 
-export const dexaPrinciples = [
+export const DeXaPrinciples = [
   "Understand before acting",
   "Retrieve approved knowledge before answering",
   "Apply deterministic rules where needed",
@@ -199,7 +199,7 @@ export const dexaPrinciples = [
   "Improve through feedback",
 ];
 
-export const dexaPipeline = [
+export const DeXaPipeline = [
   "Input",
   "Context",
   "Knowledge",
@@ -213,7 +213,7 @@ export const dexaPipeline = [
   "Feedback",
 ];
 
-export const dexaLayers = [
+export const DeXaLayers = [
   {
     name: "Input and Context Layer",
     desc: "Captures structured and unstructured inputs including user messages, system events, workflow signals, platform state, documents, and operational data. Builds comprehensive context including user role, intent, permissions, history, and current workflow status.",
@@ -240,7 +240,7 @@ export const dexaLayers = [
   },
 ];
 
-export const dexaPillars = [
+export const DeXaPillars = [
   {
     name: "Healthcare AI Infrastructure",
     items: [
@@ -416,7 +416,7 @@ export const aiScenarios = [
     userRole: "User",
     question: "Why is this claim on hold?",
     context:
-      "DEXA checks claim status, uploaded documents, benefit rules, missing document list, workflow stage.",
+      "DeXa checks claim status, uploaded documents, benefit rules, missing document list, workflow stage.",
     answer:
       "This claim is on hold because the prescription document is missing. Please upload the prescription so the claims team can continue review.",
     actions: ["Upload Document", "View Claim", "Escalate to Claims Team"],
@@ -436,7 +436,7 @@ export const aiScenarios = [
     userRole: "Underwriter",
     question: "Why is this business insurance case flagged?",
     context:
-      "DEXA checks risk questionnaire, claim history, business category, missing documents, underwriting rules.",
+      "DeXa checks risk questionnaire, claim history, business category, missing documents, underwriting rules.",
     answer:
       "This case is flagged because the client declared high annual revenue, multiple locations, previous fire related claim history, and missing property valuation documents. Manual review is recommended before quote approval.",
     actions: ["View Risk Data", "Request Documents", "Send to Manual Review"],
@@ -456,7 +456,7 @@ export const aiScenarios = [
     userRole: "Finance",
     question: "Why is today's settlement mismatch 42,000?",
     context:
-      "DEXA checks settlement file, ledger entries, claim approval records, invoice numbers, payment status.",
+      "DeXa checks settlement file, ledger entries, claim approval records, invoice numbers, payment status.",
     answer:
       "The mismatch is linked to three transactions. Two have duplicate invoice numbers and one has a partial claim approval. Recommended action: review exception queue and approve revised settlement.",
     actions: ["View Exceptions", "Export Report", "Assign to Finance"],
@@ -476,7 +476,7 @@ export const aiScenarios = [
     userRole: "CEO",
     question: "Which sales team is behind target and why?",
     context:
-      "DEXA checks CRM pipeline, BD activity, meetings completed, follow ups, conversion rate, margin target.",
+      "DeXa checks CRM pipeline, BD activity, meetings completed, follow ups, conversion rate, margin target.",
     answer:
       "Insurance distribution is behind target because qualified meetings dropped this week and follow up completion is below threshold. Recommended actions: increase daily presentations, review pending proposals, and assign senior support to high value leads.",
     actions: ["View Dashboard", "Assign Task", "Generate Action Plan"],
@@ -497,7 +497,7 @@ export const aiScenarios = [
     question:
       "Build a provider portal for clinics with appointment, billing, and claims modules.",
     context:
-      "DEXA checks product idea, required modules, user roles, workflows, integrations, design needs.",
+      "DeXa checks product idea, required modules, user roles, workflows, integrations, design needs.",
     answer:
       "I can structure this as a provider portal with appointment booking, patient profile, billing, claims submission, payment status, and admin dashboard. Next step: complete technical discovery and approve the scope before build starts.",
     actions: [
@@ -522,11 +522,11 @@ export const aiArchitectureLayers = [
   {
     name: "Experience Layer",
     items: [
-      "Website DEXA panel",
-      "Corporate portal DEXA",
-      "Employee app DEXA",
-      "Internal operations DEXA",
-      "HealthRails DEXA",
+      "Website DeXa panel",
+      "Corporate portal DeXa",
+      "Employee app DeXa",
+      "Internal operations DeXa",
+      "HealthRails DeXa",
       "Mentor OS leadership window",
       "Client platform assistant",
       "Admin console",
@@ -655,19 +655,19 @@ export const aiArchitectureLayers = [
 export const aiDeploymentModels = [
   {
     name: "Embedded inside Mentor Global platforms",
-    desc: "DEXA intelligence natively integrated into healthcare, insurance, fintech, and operating system platforms.",
+    desc: "DeXa intelligence natively integrated into healthcare, insurance, fintech, and operating system platforms.",
   },
   {
     name: "Embedded inside white labelled client platforms",
-    desc: "DEXA deployed within client-branded platforms with client-specific knowledge and rules.",
+    desc: "DeXa deployed within client-branded platforms with client-specific knowledge and rules.",
   },
   {
     name: "Portal assistant deployment",
-    desc: "DEXA panels embedded within corporate, employee, provider, and partner portals.",
+    desc: "DeXa panels embedded within corporate, employee, provider, and partner portals.",
   },
   {
     name: "Internal operations assistant",
-    desc: "DEXA supporting internal teams with claims processing, underwriting, finance, and HR operations.",
+    desc: "DeXa supporting internal teams with claims processing, underwriting, finance, and HR operations.",
   },
   {
     name: "Agent orchestration layer",
@@ -679,7 +679,7 @@ export const aiDeploymentModels = [
   },
   {
     name: "API connected AI layer",
-    desc: "DEXA intelligence accessible via APIs for integration into external systems.",
+    desc: "DeXa intelligence accessible via APIs for integration into external systems.",
   },
   {
     name: "Client specific knowledge deployment",

@@ -36,12 +36,12 @@ export default function Navbar() {
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => setDropdownOpen(false), 200);
+    timeoutRef.current = setTimeout(() => setDropdownOpen(false), 400);
   };
 
   const isDark =
     location.pathname === "/" ||
-    location.pathname === "/dexa" ||
+    location.pathname === "/DeXa" ||
     location.pathname === "/solutions" ||
     location.pathname.startsWith("/solutions/") ||
     location.pathname === "/subsidiaries" ||
@@ -50,13 +50,14 @@ export default function Navbar() {
     location.pathname === "/culture" ||
     location.pathname === "/test-mobile-flow";
 
-  const navBg = scrolled || isOpen
-    ? isDark
-      ? "bg-[#050508]/95 backdrop-blur-xl"
-      : "bg-white/95 backdrop-blur-md"
-    : isDark
-      ? "bg-transparent"
-      : "bg-white";
+  const navBg =
+    scrolled || isOpen
+      ? isDark
+        ? "bg-[#050508]/95 backdrop-blur-xl"
+        : "bg-white/95 backdrop-blur-md"
+      : isDark
+        ? "bg-transparent"
+        : "bg-white";
 
   const textColor =
     isDark && !scrolled && !isOpen
@@ -73,7 +74,7 @@ export default function Navbar() {
   const navLinks = [
     { label: "Home", path: "/" },
     { label: "Solutions", path: "/solutions", hasDropdown: true },
-    { label: "DEXA", path: "/dexa" },
+    { label: "DeXa", path: "/DeXa" },
     { label: "Subsidiaries", path: "/subsidiaries" },
     { label: "About", path: "/about" },
     { label: "Team", path: "/team" },
@@ -92,7 +93,7 @@ export default function Navbar() {
           <Link
             to="/"
             data-testid="navbar-logo"
-            className="flex items-center shrink-0"
+            className="flex items-center shrink-0 outline-none focus:outline-none"
           >
             <img
               src={logo}
@@ -102,11 +103,11 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-0 xl:gap-1">
+          <div className="hidden lg:flex items-center gap-0 xl:gap-1 self-stretch">
             {navLinks.map((link) => (
               <div
                 key={link.path}
-                className="relative"
+                className="relative h-full flex items-center"
                 onMouseEnter={link.hasDropdown ? handleMouseEnter : undefined}
                 onMouseLeave={link.hasDropdown ? handleMouseLeave : undefined}
                 ref={link.hasDropdown ? dropdownRef : undefined}
@@ -115,12 +116,11 @@ export default function Navbar() {
                   to={link.path}
                   data-testid={`nav-${link.label.toLowerCase().replace(/\s/g, "-")}`}
                   className={`px-3 xl:px-4 py-2 text-[13px] xl:text-sm font-medium transition-colors flex items-center gap-1
-                    ${
-                      location.pathname === link.path ||
+                    ${location.pathname === link.path ||
                       (link.hasDropdown &&
                         location.pathname.startsWith("/solutions"))
-                        ? "text-[#0048FF]"
-                        : `${textColor} hover:text-[#0048FF]`
+                      ? "text-[#0048FF]"
+                      : `${textColor} hover:text-[#0048FF]`
                     }`}
                 >
                   {link.label}
@@ -130,16 +130,15 @@ export default function Navbar() {
                 {/* Dropdown */}
                 {link.hasDropdown && (
                   <div
-                    className={`absolute top-full left-0 mt-0 w-80 bg-white border border-[#11111F]/10 shadow-lg transition-all duration-200 ${
-                      dropdownOpen
-                        ? "opacity-100 translate-y-0 pointer-events-auto"
-                        : "opacity-0 -translate-y-2 pointer-events-none"
-                    }`}
+                    className={`absolute top-[calc(100%-8px)] left-0 pt-[8px] w-80 transition-all duration-200 ${dropdownOpen
+                      ? "opacity-100 translate-y-0 pointer-events-auto"
+                      : "opacity-0 -translate-y-2 pointer-events-none"
+                      }`}
                     data-testid="solutions-dropdown"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                   >
-                    <div className="py-2">
+                    <div className="bg-white border border-[#11111F]/10 shadow-lg py-2">
                       <Link
                         to="/solutions"
                         className="flex items-center justify-between px-5 py-3 text-sm font-semibold text-[#11111F] hover:bg-[#0048FF]/5 border-b border-[#11111F]/5"
@@ -152,11 +151,10 @@ export default function Navbar() {
                           key={sol.slug}
                           to={sol.path}
                           data-testid={`dropdown-${sol.slug}`}
-                          className={`block px-5 py-3 text-sm transition-colors hover:bg-[#0048FF]/5 ${
-                            location.pathname === sol.path
-                              ? "text-[#0048FF] font-medium"
-                              : "text-[#11111F]/80"
-                          }`}
+                          className={`block px-5 py-3 text-sm transition-colors hover:bg-[#0048FF]/5 ${location.pathname === sol.path
+                            ? "text-[#0048FF] font-medium"
+                            : "text-[#11111F]/80"
+                            }`}
                         >
                           {sol.title}
                         </Link>
@@ -180,11 +178,8 @@ export default function Navbar() {
           {/* Mobile Toggle */}
           <button
             data-testid="mobile-menu-toggle"
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isOpen}
             onClick={() => setIsOpen(!isOpen)}
             className={`lg:hidden p-2 ${textColor}`}
-            style={{ touchAction: "manipulation" }}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -195,9 +190,9 @@ export default function Navbar() {
       {isOpen && (
         <div
           data-testid="mobile-menu"
-          className={`lg:hidden fixed inset-0 top-[64px] md:top-[80px] z-[90] overflow-y-auto transition-all duration-300 ${
-            isDark ? "bg-[#050508] text-white" : "bg-white text-[#11111F]"
-          }`}
+          className={`lg:hidden fixed inset-0 top-[64px] md:top-[80px] z-[90] overflow-y-auto transition-all duration-300 ${isDark ? "bg-[#050508] text-white" : "bg-white text-[#11111F]"
+            }`}
+          style={{ height: "calc(100vh - 64px)" }}
         >
           <div className="px-6 py-8 flex flex-col gap-1">
             {navLinks.map((link) => (
@@ -206,9 +201,8 @@ export default function Navbar() {
                   <>
                     <button
                       onClick={() => setDropdownOpen(!dropdownOpen)}
-                      className={`w-full flex items-center justify-between py-3 text-lg font-semibold border-b ${
-                        isDark ? "border-white/5" : "border-[#11111F]/5"
-                      }`}
+                      className={`w-full flex items-center justify-between py-3 text-lg font-semibold border-b ${isDark ? "border-white/5" : "border-[#11111F]/5"
+                        }`}
                     >
                       {link.label}{" "}
                       <ChevronDown
@@ -221,11 +215,10 @@ export default function Navbar() {
                           <Link
                             key={sol.slug}
                             to={sol.path}
-                            className={`block py-2.5 text-base transition-colors ${
-                              isDark
-                                ? "text-white/70 hover:text-[#0048FF]"
-                                : "text-[#11111F]/70 hover:text-[#0048FF]"
-                            }`}
+                            className={`block py-2.5 text-base transition-colors ${isDark
+                              ? "text-white/70 hover:text-[#0048FF]"
+                              : "text-[#11111F]/70 hover:text-[#0048FF]"
+                              }`}
                           >
                             {sol.title}
                           </Link>
@@ -236,9 +229,8 @@ export default function Navbar() {
                 ) : (
                   <Link
                     to={link.path}
-                    className={`block py-3 text-lg font-semibold border-b hover:text-[#0048FF] ${
-                      isDark ? "border-white/5" : "border-[#11111F]/5"
-                    }`}
+                    className={`block py-3 text-lg font-semibold border-b hover:text-[#0048FF] ${isDark ? "border-white/5" : "border-[#11111F]/5"
+                      }`}
                   >
                     {link.label}
                   </Link>

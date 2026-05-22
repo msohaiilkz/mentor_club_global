@@ -33,8 +33,8 @@ import {
   osJourneys,
   osModules,
   growthOSFlow,
-  dexaOSCapabilities,
-  dexaOSScenarios,
+  DeXaOSCapabilities,
+  DeXaOSScenarios,
   osArchitectureLayers,
   osDeploymentModels,
   osUseCases,
@@ -52,13 +52,13 @@ function Hero() {
       <div className="absolute bottom-0 left-0 w-[260px] h-[260px] sm:w-[420px] sm:h-[420px] lg:w-[600px] lg:h-[600px] rounded-full bg-[#8B5CF6]/[0.03] blur-[140px] pointer-events-none" />
 
       <div className="relative max-w-[1720px] mx-auto px-6 md:px-12">
-        <Link
+        {/* <Link
           to="/solutions"
           className="inline-flex items-center gap-2 text-sm text-[#8A8A93] hover:text-[#0048FF] transition-colors mb-12 group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />{" "}
           Back to All Solutions
-        </Link>
+        </Link> */}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
@@ -76,8 +76,8 @@ function Hero() {
               <p className="mt-8 hero-desc">
                 Deploy one AI enabled operating system that connects revenue,
                 teams, tasks, projects, HR, training, finance, Growth OS,
-                leadership visibility, and DEXA intelligence into one execution
-                environment.
+                leadership visibility, and DeXa intelligence into one
+                execution environment.
               </p>
             </ScrollReveal>
 
@@ -252,7 +252,7 @@ function ConnectedLoop() {
           <p className="mt-6 text-sm text-[#666666]">
             Powered by{" "}
             <span className="font-bold text-[#0048FF]">Mentor Innovation</span>{" "}
-            and <span className="font-bold text-[#0048FF]">DEXA</span>
+            and <span className="font-bold text-[#0048FF]">DeXa</span>
           </p>
         </ScrollReveal>
       </div>
@@ -462,22 +462,22 @@ function GrowthOS() {
   );
 }
 
-function DexaIntelligence() {
+function DeXaIntelligence() {
   return (
     <section
-      data-testid="os-dexa"
+      data-testid="os-DeXa"
       className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden"
     >
       <div className="absolute inset-0 blue-glow-subtle" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <p className="eyebrow mb-4">DEXA Intelligence</p>
+          <p className="eyebrow mb-4">DeXa Intelligence</p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
-            DEXA is the intelligence layer inside Mentor OS
+            DeXa is the intelligence layer inside Mentor OS
           </h2>
         </ScrollReveal>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[1px] bg-white/10">
-          {dexaOSCapabilities.map((cap, i) => (
+          {DeXaOSCapabilities.map((cap, i) => (
             <ScrollReveal key={cap.role} delay={i * 0.05}>
               <div className="bg-[#11111F] p-5 card-hover-dark h-full">
                 <p className="text-sm font-bold text-[#0048FF] mb-3">
@@ -499,7 +499,7 @@ function DexaIntelligence() {
   );
 }
 
-function DexaScenarios() {
+function DeXaScenarios() {
   return (
     <section
       data-testid="os-scenarios"
@@ -508,7 +508,7 @@ function DexaScenarios() {
       <div className="absolute inset-0 bg-[#0048FF]/[0.02]" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <p className="eyebrow mb-4">DEXA in Action</p>
+          <p className="eyebrow mb-4">DeXa in Action</p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight mb-12">
             From operating confusion to governed next action
           </h2>
@@ -517,7 +517,7 @@ function DexaScenarios() {
         <ScrollReveal delay={0.1}>
           <div className="relative mt-8">
             <MacbookMockup>
-              <ChatSimulation scenarios={dexaOSScenarios} />
+              <ChatSimulation scenarios={DeXaOSScenarios} />
             </MacbookMockup>
           </div>
         </ScrollReveal>
@@ -590,10 +590,10 @@ function DeploymentModels() {
           {osDeploymentModels.map((d, i) => (
             <ScrollReveal key={d.name} delay={i * 0.02}>
               <div className="bg-white p-5 card-hover h-full">
-                <h3 className="text-xs font-bold text-[#11111F] mb-2">
+                <h3 className="text-sm font-bold text-[#11111F] mb-2">
                   {d.name}
                 </h3>
-                <p className="text-[10px] text-[#666666] leading-relaxed">
+                <p className="text-sm text-[#666666] leading-relaxed">
                   {d.desc}
                 </p>
               </div>
@@ -624,8 +624,8 @@ function UseCasesSection() {
           {osUseCases.map((uc, i) => (
             <ScrollReveal key={uc.name} delay={i * 0.02}>
               <div className="bg-[#11111F] p-5 card-hover-dark h-full">
-                <h3 className="text-xs font-bold text-white mb-2">{uc.name}</h3>
-                <div className="space-y-1 text-[10px] text-[#8A8A93]">
+                <h3 className="text-sm font-bold text-white mb-2">{uc.name}</h3>
+                <div className="space-y-1 text-sm text-[#8A8A93]">
                   <p>
                     <span className="text-[#0048FF] font-bold">Who:</span>{" "}
                     {uc.who}
@@ -635,8 +635,8 @@ function UseCasesSection() {
                     {uc.rail}
                   </p>
                   <p>
-                    <span className="text-[#0048FF] font-bold">DEXA:</span>{" "}
-                    {uc.dexa}
+                    <span className="text-[#0048FF] font-bold">DeXa:</span>{" "}
+                    {uc.DeXa}
                   </p>
                 </div>
               </div>
@@ -671,12 +671,17 @@ function OutcomesSection() {
           ))}
         </div>
         <ScrollReveal delay={0.3}>
-          <p className="mt-8 text-xs text-[#666666]/60 max-w-3xl">
-            Designed to improve visibility, support execution discipline, reduce
-            manual reporting dependency, strengthen governance, and support
-            system driven performance. These do not represent unsupported
-            claims.
-          </p>
+          <div className="mt-12 flex items-start gap-4 p-6 bg-[#11111F]/[0.02] border-l-2 border-[#0048FF] max-w-4xl">
+            <p className="text-[13px] text-[#8A8A93] leading-relaxed">
+              <span className="text-[#0048FF] font-bold uppercase tracking-wider text-[10px] block mb-1">
+                Infrastructure Objectives
+              </span>
+              Designed to improve visibility, support execution discipline,
+              reduce manual reporting dependency, strengthen governance, and
+              support system driven performance. These do not represent
+              unsupported claims.
+            </p>
+          </div>
         </ScrollReveal>
       </div>
     </section>
@@ -702,7 +707,7 @@ function FinalCTA() {
             Mentor Global helps companies move from fragmented tools and manual
             reporting to one AI enabled operating infrastructure powered by CRM,
             PRM, task execution, Team App, Work Intelligence, Training, HR,
-            Finance ERP, Growth OS, integrations, governance, and DEXA
+            Finance ERP, Growth OS, integrations, governance, and DeXa
             leadership intelligence.
           </p>
         </ScrollReveal>
@@ -741,8 +746,8 @@ export default function CompanyOperatingInfrastructure() {
       <Journeys />
       <CoreModules />
       <GrowthOS />
-      <DexaIntelligence />
-      <DexaScenarios />
+      <DeXaIntelligence />
+      <DeXaScenarios />
       <Architecture />
       <DeploymentModels />
       <UseCasesSection />

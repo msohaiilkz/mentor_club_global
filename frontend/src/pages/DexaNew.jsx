@@ -19,35 +19,35 @@ import {
   Workflow,
 } from "lucide-react";
 import { ScrollReveal } from "../components/shared/ScrollReveal";
-import { DexaHeroChat } from "../components/shared/DexaHeroChat";
+import { DeXaHeroChat } from "../components/shared/DexaHeroChat";
 import { ChatSimulation } from "../components/shared/ChatSimulation";
-import { DexaInMotion } from "../components/shared/DexaInMotion";
+import { DeXaInMotion } from "../components/shared/DexaInMotion";
 import { MacbookMockup } from "../components/shared/MacbookMockup";
 import { IpadMockup } from "../components/shared/IpadMockup";
 import {
-  dexaProblems,
-  dexaWhatIs,
-  dexaWhatIsNot,
-  dexaThinkingChain,
-  dexaOperatingStages,
-  dexaPillarPanels,
-  dexaChannels,
-  dexaInterfaceTypes,
-  dexaIntelligenceLayers,
-  dexaAgentGroups,
+  DeXaProblems,
+  DeXaWhatIs,
+  DeXaWhatIsNot,
+  DeXaThinkingChain,
+  DeXaOperatingStages,
+  DeXaPillarPanels,
+  DeXaChannels,
+  DeXaInterfaceTypes,
+  DeXaIntelligenceLayers,
+  DeXaAgentGroups,
   governanceCards,
   approvalQueues,
-  dexaFullScenarios,
-  dexaArchitectureLayers,
-  dexaDeploymentModels,
-  dexaUseCases,
-  dexaOutcomes,
+  DeXaFullScenarios,
+  DeXaArchitectureLayers,
+  DeXaDeploymentModels,
+  DeXaUseCases,
+  DeXaOutcomes,
 } from "../data/dexa-page";
 
 function Hero() {
   return (
     <section
-      data-testid="dexa-hero"
+      data-testid="DeXa-hero"
       className="relative bg-[#0B0B14] pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden"
     >
       <div className="absolute top-1/4 left-1/3 w-[320px] h-[320px] sm:w-[460px] sm:h-[460px] lg:w-[600px] lg:h-[600px] rounded-full bg-[#0048FF]/[0.08] blur-[160px]" />
@@ -57,45 +57,45 @@ function Hero() {
             <ScrollReveal>
               <p className="eyebrow mb-6">Intelligence Processing Engine</p>
               <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-white tracking-tighter leading-[1.05]">
-                DEXA, The Intelligence Processing Engine Behind Mentor Global
+                DeXa - The Intelligence Processing Engine Behind Mentor Global
               </h1>
             </ScrollReveal>
             <ScrollReveal delay={0.15}>
               <p className="mt-8 hero-desc max-w-2xl text-lg md:text-xl">
-                DEXA understands context, retrieves approved knowledge, applies
-                rules, coordinates agents, triggers workflows, requests human
-                approval, monitors execution, and turns healthcare, insurance,
-                fintech, AI, and company operating infrastructure into
-                intelligent systems.
+                DeXa understands context, retrieves approved knowledge,
+                applies rules, coordinates agents, triggers workflows, requests
+                human approval, monitors execution, and turns healthcare,
+                insurance, fintech, AI, and company operating infrastructure
+                into intelligent systems.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <p className="mt-4 text-base text-white/50 max-w-xl italic">
-                DEXA is not the chat window. DEXA is the intelligence layer
-                behind the action.
+                DeXa is not the chat window. DeXa is the intelligence
+                layer behind the action.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.35}>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/contact"
-                  data-testid="dexa-hero-cta"
+                  data-testid="DeXa-hero-cta"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0048FF] text-white font-semibold hover:bg-[#0030CC] transition-all hover:scale-105 active:scale-95 shadow-lg shadow-[#0048FF]/20"
                 >
-                  Explore DEXA <ArrowRight className="w-5 h-5" />
+                  Explore DeXa <ArrowRight className="w-5 h-5" />
                 </Link>
                 <a
-                  href="#dexa-video"
+                  href="#DeXa-video"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors"
                 >
-                  Watch DEXA in Action
+                  Watch DeXa in Action
                 </a>
               </div>
             </ScrollReveal>
           </div>
           <ScrollReveal delay={0.2} direction="left">
             <div className="relative h-[420px] sm:h-[520px] lg:h-[650px]">
-              <DexaHeroChat />
+              <DeXaHeroChat />
             </div>
           </ScrollReveal>
         </div>
@@ -104,19 +104,19 @@ function Hero() {
   );
 }
 
-function WhatDexaIs() {
+function WhatDeXaIs() {
   return (
-    <section data-testid="dexa-what-is" className="bg-white py-24 md:py-32">
+    <section data-testid="DeXa-what-is" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <p className="eyebrow mb-4">What DEXA Is</p>
+          <p className="eyebrow mb-4">What DeXa Is</p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
-            DEXA is the intelligence layer behind the action
+            DeXa is the intelligence layer behind the action
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <p className="mt-6 section-desc max-w-3xl">
-            DEXA receives information from people, portals, apps, documents,
+            DeXa receives information from people, portals, apps, documents,
             workflows, APIs, dashboards, and system events. It understands the
             meaning of that information, checks the user's role, retrieves
             approved knowledge, applies business rules, reasons over the
@@ -124,7 +124,7 @@ function WhatDexaIs() {
           </p>
         </ScrollReveal>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-[#11111F]/10">
-          {dexaWhatIs.map((c, i) => (
+          {DeXaWhatIs.map((c, i) => (
             <ScrollReveal key={c.title} delay={i * 0.04}>
               <div className="bg-white p-5 md:p-6 card-hover h-full">
                 <span className="text-[#0048FF] text-base font-bold">
@@ -145,26 +145,24 @@ function WhatDexaIs() {
   );
 }
 
-function WhatDexaIsNot() {
+function WhatDeXaIsNot() {
   return (
     <section
-      data-testid="dexa-what-is-not"
+      data-testid="DeXa-what-is-not"
       className="bg-[#11111F] py-24 md:py-32"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <p className="eyebrow mb-4">What DEXA Is Not</p>
+          <p className="eyebrow mb-4">What DeXa Is Not</p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight">
-            DEXA is bigger than a chatbot
+            DeXa is bigger than a chatbot
           </h2>
         </ScrollReveal>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-white/10">
-          {dexaWhatIsNot.map((c, i) => (
+          {DeXaWhatIsNot.map((c, i) => (
             <ScrollReveal key={c.title} delay={i * 0.05}>
               <div className="bg-[#11111F] p-6 card-hover-dark h-full">
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {c.title}
-                </h3>
+                <h3 className="text-xl font-bold text-white mb-2">{c.title}</h3>
                 <p className="text-base text-[#8A8A93] leading-relaxed">
                   {c.desc}
                 </p>
@@ -179,7 +177,7 @@ function WhatDexaIsNot() {
 
 function ProblemSection() {
   return (
-    <section data-testid="dexa-problems" className="bg-white py-24 md:py-32">
+    <section data-testid="DeXa-problems" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">The Problem</p>
@@ -189,7 +187,7 @@ function ProblemSection() {
           </h2>
         </ScrollReveal>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-[#11111F]/10">
-          {dexaProblems.map((p, i) => (
+          {DeXaProblems.map((p, i) => (
             <ScrollReveal key={i} delay={i * 0.03}>
               <div className="bg-white p-5 card-hover h-full">
                 <span className="text-[#0048FF] text-base font-bold">
@@ -207,10 +205,10 @@ function ProblemSection() {
   );
 }
 
-function HowDexaThinks() {
+function HowDeXaThinks() {
   return (
     <section
-      data-testid="dexa-thinking"
+      data-testid="DeXa-thinking"
       className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden"
     >
       <div className="absolute inset-0 blue-glow-subtle" />
@@ -218,17 +216,17 @@ function HowDexaThinks() {
         <ScrollReveal>
           <p className="eyebrow mb-4">Processing Chain</p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight">
-            How DEXA turns a question into governed action
+            How DeXa turns a question into governed action
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <div className="mt-12 flex flex-wrap items-center gap-1.5">
-            {dexaThinkingChain.map((step, i) => (
+            {DeXaThinkingChain.map((step, i) => (
               <span key={step} className="flex items-center gap-1.5">
                 <span className="text-base px-3 py-2 bg-white/5 border border-white/10 text-white font-medium">
                   {step}
                 </span>
-                {i < dexaThinkingChain.length - 1 && (
+                {i < DeXaThinkingChain.length - 1 && (
                   <ChevronRight className="w-3 h-3 text-[#0048FF]" />
                 )}
               </span>
@@ -243,7 +241,7 @@ function HowDexaThinks() {
 function OperatingModel() {
   return (
     <section
-      data-testid="dexa-operating-model"
+      data-testid="DeXa-operating-model"
       className="bg-white py-24 md:py-32"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -254,7 +252,7 @@ function OperatingModel() {
           </h2>
         </ScrollReveal>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-[#11111F]/10">
-          {dexaOperatingStages.map((s, i) => (
+          {DeXaOperatingStages.map((s, i) => (
             <ScrollReveal key={s.stage} delay={i * 0.08}>
               <div className="bg-white p-6 md:p-8 card-hover h-full">
                 <span className="text-[#0048FF] text-3xl font-bold">
@@ -275,10 +273,10 @@ function OperatingModel() {
   );
 }
 
-function DexaAcrossPillars() {
+function DeXaAcrossPillars() {
   return (
     <section
-      data-testid="dexa-pillars"
+      data-testid="DeXa-pillars"
       className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden"
     >
       <div className="absolute bottom-0 right-0 w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] lg:w-[500px] lg:h-[500px] rounded-full bg-[#0048FF]/[0.04] blur-[140px]" />
@@ -290,7 +288,7 @@ function DexaAcrossPillars() {
           </h2>
         </ScrollReveal>
         <div className="mt-16 space-y-6">
-          {dexaPillarPanels.map((pillar, idx) => (
+          {DeXaPillarPanels.map((pillar, idx) => (
             <ScrollReveal key={pillar.name} delay={idx * 0.05}>
               <div className="border border-white/10 p-6 md:p-8">
                 <h3 className="text-xl font-bold text-white mb-4">
@@ -332,7 +330,7 @@ function DexaAcrossPillars() {
 
 const terminalSequences = [
   // Sequence 1: Boot & System Ready
-  { text: "> Initializing DEXA Engine v3.0...", type: "action" },
+  { text: "> Initializing DeXa Engine v3.0...", type: "action" },
   {
     text: "  [Thinking] I need to establish secure websocket connections to all active portals...",
     type: "thought",
@@ -409,7 +407,7 @@ const terminalSequences = [
   { text: "> Transaction Complete. Awaiting payload.", type: "prompt" },
 ];
 
-function DexaCodeTerminal() {
+function DeXaCodeTerminal() {
   const [lines, setLines] = useState([]);
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
@@ -489,7 +487,7 @@ function DexaCodeTerminal() {
             <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
           </div>
           <span className="ml-4 text-sm text-white/40 font-mono tracking-widest uppercase">
-            dexa_reasoning_engine
+            DeXa_reasoning_engine
           </span>
         </div>
 
@@ -529,7 +527,7 @@ function DexaCodeTerminal() {
 
 const channelsData = [
   {
-    name: "Website DEXA",
+    name: "Website DeXa",
     useCase:
       "Helps visitors explore solutions, understand offerings, and route inquiries.",
     tag: "Visitor",
@@ -537,7 +535,7 @@ const channelsData = [
     position: "left",
   },
   {
-    name: "Corporate Portal DEXA",
+    name: "Corporate Portal DeXa",
     useCase:
       "Helps HR and leadership understand claims, utilization, employee risk, and benefit strategy.",
     tag: "HR",
@@ -545,7 +543,7 @@ const channelsData = [
     position: "left",
   },
   {
-    name: "Employee App DEXA",
+    name: "Employee App DeXa",
     useCase:
       "Guides employees on benefits, eligibility, claims, care access, and reimbursements.",
     tag: "Employee",
@@ -553,7 +551,7 @@ const channelsData = [
     position: "left",
   },
   {
-    name: "Provider Portal DEXA",
+    name: "Provider Portal DeXa",
     useCase:
       "Assists providers with approvals, eligibility, billing rules, POS queries, and service workflows.",
     tag: "Provider",
@@ -561,7 +559,7 @@ const channelsData = [
     position: "left",
   },
   {
-    name: "Insurance Portal DEXA",
+    name: "Insurance Portal DeXa",
     useCase:
       "Supports underwriting, policy logic, claims review, exclusions, and renewals.",
     tag: "Insurer",
@@ -569,7 +567,7 @@ const channelsData = [
     position: "right",
   },
   {
-    name: "Finance Portal DEXA",
+    name: "Finance Portal DeXa",
     useCase:
       "Helps with settlements, reconciliation, reimbursements, payment flows, and cost visibility.",
     tag: "Finance",
@@ -577,7 +575,7 @@ const channelsData = [
     position: "right",
   },
   {
-    name: "Operating System DEXA",
+    name: "Operating System DeXa",
     useCase:
       "Supports internal teams with tasks, workflows, approvals, monitoring, and execution.",
     tag: "Operations",
@@ -585,7 +583,7 @@ const channelsData = [
     position: "right",
   },
   {
-    name: "Admin Console DEXA",
+    name: "Admin Console DeXa",
     useCase:
       "Enables governance, permissions, configuration, audit trails, and platform control.",
     tag: "Admin",
@@ -670,9 +668,7 @@ const interfaceSurfaces = [
         <div className="grid grid-cols-2 gap-2">
           <div className="bg-white/5 p-2 rounded-lg border border-white/10">
             <p className="text-sm text-white/40 mb-1">Risk Level</p>
-            <p className="text-base text-amber-400 font-bold">
-              Moderate High
-            </p>
+            <p className="text-base text-amber-400 font-bold">Moderate High</p>
           </div>
           <div className="bg-white/5 p-2 rounded-lg border border-white/10">
             <p className="text-sm text-white/40 mb-1">Confidence</p>
@@ -746,18 +742,12 @@ const interfaceSurfaces = [
         </div>
         <div className="space-y-3">
           <div>
-            <p className="text-sm text-white/40 uppercase mb-0.5">
-              High Risk
-            </p>
+            <p className="text-sm text-white/40 uppercase mb-0.5">High Risk</p>
             <p className="text-base font-bold text-white">18%</p>
           </div>
           <div>
-            <p className="text-sm text-white/40 uppercase mb-0.5">
-              Top Driver
-            </p>
-            <p className="text-base text-white/80 leading-tight">
-              Chronic OPD
-            </p>
+            <p className="text-sm text-white/40 uppercase mb-0.5">Top Driver</p>
+            <p className="text-base text-white/80 leading-tight">Chronic OPD</p>
           </div>
         </div>
       </div>
@@ -901,12 +891,12 @@ function IntelligenceCursorTheatre() {
             INTELLIGENCE CURSOR
           </p>
           <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6 tracking-tight">
-            DEXA is the living cursor of Mentor Global
+            DeXa is the living cursor of Mentor Global
           </h3>
           <p className="text-[#8A8A93] leading-relaxed">
-            It does not wait inside a chat box. DEXA moves across every screen,
-            reads context, opens the right workflow, applies rules, and guides
-            users toward the next best action.
+            It does not wait inside a chat box. DeXa moves across every
+            screen, reads context, opens the right workflow, applies rules, and
+            guides users toward the next best action.
           </p>
         </div>
       </ScrollReveal>
@@ -934,7 +924,7 @@ function IntelligenceCursorTheatre() {
         <AnimatePresence>
           {activeSurface && (
             <motion.div
-              layoutId="dexa-cursor"
+              layoutId="DeXa-cursor"
               className="absolute z-30 pointer-events-none"
               initial={false}
               transition={{ type: "spring", damping: 20, stiffness: 100 }}
@@ -1084,10 +1074,10 @@ function IntelligenceCursorTheatre() {
   );
 }
 
-function DexaChannelsSection() {
+function DeXaChannelsSection() {
   return (
     <section
-      data-testid="dexa-channels"
+      data-testid="DeXa-channels"
       className="bg-[#050508] py-24 md:py-32 relative overflow-hidden"
     >
       {/* Background Ambience */}
@@ -1101,10 +1091,10 @@ function DexaChannelsSection() {
               CHANNELS
             </p>
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-6">
-              DEXA Lives Inside Every Workflow
+              DeXa Lives Inside Every Workflow
             </h2>
             <p className="text-[#8A8A93] leading-relaxed">
-              DEXA appears across websites, portals, apps, dashboards,
+              DeXa appears across websites, portals, apps, dashboards,
               documents, approvals, and operating systems—giving every user the
               right intelligence at the right moment.
             </p>
@@ -1151,7 +1141,7 @@ function DexaChannelsSection() {
             {/* Center Node */}
             <div className="relative flex justify-center py-16 lg:py-0 z-20">
               <ScrollReveal delay={0.2}>
-                <DexaCodeTerminal />
+                <DeXaCodeTerminal />
               </ScrollReveal>
             </div>
 
@@ -1201,16 +1191,16 @@ function DexaChannelsSection() {
 
 function IntelligenceLayers() {
   return (
-    <section data-testid="dexa-layers" className="bg-[#11111F] py-24 md:py-32">
+    <section data-testid="DeXa-layers" className="bg-[#11111F] py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Intelligence Stack</p>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
-            The intelligence stack behind DEXA
+            The intelligence stack behind DeXa
           </h2>
         </ScrollReveal>
         <div className="mt-16 border border-white/10">
-          {dexaIntelligenceLayers.map((layer, idx) => (
+          {DeXaIntelligenceLayers.map((layer, idx) => (
             <ScrollReveal key={layer.name} delay={idx * 0.04}>
               <div
                 className={`grid grid-cols-1 md:grid-cols-12 ${idx > 0 ? "border-t border-white/10" : ""}`}
@@ -1239,19 +1229,19 @@ function IntelligenceLayers() {
 
 function AgenticPods() {
   return (
-    <section data-testid="dexa-agents" className="bg-white py-24 md:py-32">
+    <section data-testid="DeXa-agents" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Agentic AI</p>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight">
-            Specialist AI pods coordinated by DEXA
+            Specialist AI pods coordinated by DeXa
           </h2>
         </ScrollReveal>
         <div className="mt-16 space-y-10">
-          {dexaAgentGroups.map((group, gIdx) => (
+          {DeXaAgentGroups.map((group, gIdx) => (
             <ScrollReveal key={group.group} delay={gIdx * 0.06}>
               <div>
-                <p className="text-xs uppercase tracking-[0.2em] font-bold text-[#0048FF] mb-4">
+                <p className="text-sm uppercase tracking-[0.2em] font-bold text-[#0048FF] mb-4">
                   {group.group}
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-[#11111F]/10">
@@ -1263,7 +1253,7 @@ function AgenticPods() {
                       <h4 className="text-sm font-bold text-[#11111F] mb-2">
                         {agent.name}
                       </h4>
-                      <p className="text-xs text-[#666666] leading-relaxed">
+                      <p className="text-sm text-[#666666] leading-relaxed">
                         {agent.desc}
                       </p>
                     </div>
@@ -1281,7 +1271,7 @@ function AgenticPods() {
 function GovernanceSection() {
   return (
     <section
-      data-testid="dexa-governance"
+      data-testid="DeXa-governance"
       className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden"
     >
       <div className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full bg-[#0048FF]/[0.04] blur-[120px]" />
@@ -1289,7 +1279,7 @@ function GovernanceSection() {
         <ScrollReveal>
           <p className="eyebrow mb-4">Governance and Trust</p>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
-            DEXA acts only when knowledge, rules, permissions, and approvals
+            DeXa acts only when knowledge, rules, permissions, and approvals
             allow it
           </h2>
         </ScrollReveal>
@@ -1309,7 +1299,7 @@ function GovernanceSection() {
 
 function HumanApproval() {
   return (
-    <section data-testid="dexa-approval" className="bg-white py-24 md:py-32">
+    <section data-testid="DeXa-approval" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Human Control</p>
@@ -1323,9 +1313,9 @@ function HumanApproval() {
               <div className="bg-white p-4 card-hover h-full">
                 <div className="flex items-center gap-1.5 mb-2">
                   <div className="w-1.5 h-1.5 bg-amber-400" />
-                  <span className="text-[10px] text-[#666666]">Pending</span>
+                  <span className="text-sm text-[#666666]">Pending</span>
                 </div>
-                <p className="text-xs text-[#11111F] font-medium">{q}</p>
+                <p className="text-sm text-[#11111F] font-medium">{q}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -1338,13 +1328,13 @@ function HumanApproval() {
 function RealScenarios() {
   return (
     <section
-      data-testid="dexa-scenarios"
+      data-testid="DeXa-scenarios"
       className="bg-[#0B0B14] py-24 md:py-32 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-[#0048FF]/[0.02]" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <p className="eyebrow mb-4">DEXA in Action</p>
+          <p className="eyebrow mb-4">DeXa in Action</p>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-12">
             From confusion to governed next action
           </h2>
@@ -1353,7 +1343,7 @@ function RealScenarios() {
         <ScrollReveal delay={0.1}>
           <div className="relative mt-8">
             <MacbookMockup>
-              <ChatSimulation scenarios={dexaFullScenarios} />
+              <ChatSimulation scenarios={DeXaFullScenarios} />
             </MacbookMockup>
           </div>
         </ScrollReveal>
@@ -1364,18 +1354,18 @@ function RealScenarios() {
               <h3 className="text-sm font-bold text-white mb-2">
                 Multi-Scenario Exploration
               </h3>
-              <p className="text-xs text-[#8A8A93] leading-relaxed">
+              <p className="text-sm text-[#8A8A93] leading-relaxed">
                 Use the navigation controls in the chat header to explore how
-                DEXA handles different operational scenarios across healthcare,
-                insurance, and more.
+                DeXa handles different operational scenarios across
+                healthcare, insurance, and more.
               </p>
             </div>
             <div className="p-6 border border-white/10 bg-white/[0.02]">
               <h3 className="text-sm font-bold text-white mb-2">
                 Governed Reasoning
               </h3>
-              <p className="text-xs text-[#8A8A93] leading-relaxed">
-                Observe the "Active Checks" phase where DEXA verifies
+              <p className="text-sm text-[#8A8A93] leading-relaxed">
+                Observe the "Active Checks" phase where DeXa verifies
                 permissions, retrieves knowledge, and applies business rules
                 before responding.
               </p>
@@ -1384,7 +1374,7 @@ function RealScenarios() {
               <h3 className="text-sm font-bold text-white mb-2">
                 Actionable Intelligence
               </h3>
-              <p className="text-xs text-[#8A8A93] leading-relaxed">
+              <p className="text-sm text-[#8A8A93] leading-relaxed">
                 Every response concludes with governed next actions, routing
                 users directly into approved workflows or requesting human
                 approval.
@@ -1400,7 +1390,7 @@ function RealScenarios() {
 function Architecture() {
   return (
     <section
-      data-testid="dexa-architecture"
+      data-testid="DeXa-architecture"
       className="bg-white py-24 md:py-32"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -1411,7 +1401,7 @@ function Architecture() {
           </h2>
         </ScrollReveal>
         <div className="mt-16 border border-[#11111F]/10">
-          {dexaArchitectureLayers.map((layer, idx) => (
+          {DeXaArchitectureLayers.map((layer, idx) => (
             <ScrollReveal key={layer.name} delay={idx * 0.02}>
               <div
                 className={`grid grid-cols-1 md:grid-cols-12 ${idx > 0 ? "border-t border-[#11111F]/10" : ""}`}
@@ -1448,18 +1438,18 @@ function Architecture() {
 function UseCasesSection() {
   return (
     <section
-      data-testid="dexa-use-cases"
+      data-testid="DeXa-use-cases"
       className="bg-[#11111F] py-24 md:py-32"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Use Cases</p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
-            DEXA use cases across Mentor Global infrastructure
+            DeXa use cases across Mentor Global infrastructure
           </h2>
         </ScrollReveal>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-white/10">
-          {dexaUseCases.map((uc, i) => (
+          {DeXaUseCases.map((uc, i) => (
             <ScrollReveal key={uc.name} delay={i * 0.02}>
               <div className="bg-[#11111F] p-4 card-hover-dark h-full">
                 <h3 className="text-base font-bold text-white mb-1.5">
@@ -1546,7 +1536,7 @@ function OutcomesSection() {
 
   return (
     <section
-      data-testid="dexa-outcomes"
+      data-testid="DeXa-outcomes"
       className="bg-white py-24 md:py-32 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -1561,10 +1551,10 @@ function OutcomesSection() {
                 </span>
               </div>
               <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.1] mb-8">
-                What DEXA should deliver
+                What DeXa should deliver
               </h2>
               <p className="section-desc max-w-xl mb-12">
-                DEXA improves how organizations guide users, route workflows,
+                DeXa improves how organizations guide users, route workflows,
                 make decisions, govern actions, and operate across systems with
                 greater intelligence, consistency, and trust.
               </p>
@@ -1574,9 +1564,8 @@ function OutcomesSection() {
               {zones.map((zone, idx) => (
                 <ScrollReveal key={zone.id} delay={idx * 0.05}>
                   <div
-                    className={`p-6 border border-[#11111F]/10 rounded-sm transition-all duration-300 hover:shadow-md hover:border-[#0048FF]/30 ${
-                      activeZone === zone.id ? "bg-[#FAFAFA]" : ""
-                    }`}
+                    className={`p-6 border border-[#11111F]/10 rounded-sm transition-all duration-300 hover:shadow-md hover:border-[#0048FF]/30 ${activeZone === zone.id ? "bg-[#FAFAFA]" : ""
+                      }`}
                     onMouseEnter={() => setActiveZone(zone.id)}
                     onMouseLeave={() => setActiveZone(null)}
                   >
@@ -1623,7 +1612,10 @@ function OutcomesSection() {
           {/* Right Side: High-Fidelity Animated System Visual - iPad Mockup */}
           <div className="relative flex justify-center lg:justify-end">
             <ScrollReveal delay={0.2} direction="left" className="w-full">
-              <IpadMockup orientation="landscape" className="max-w-2xl lg:mr-0 lg:ml-auto">
+              <IpadMockup
+                orientation="landscape"
+                className="max-w-2xl lg:mr-0 lg:ml-auto"
+              >
                 <div className="relative w-full h-full bg-[#05050A] overflow-hidden min-h-[400px] flex items-center justify-center">
                   {/* Background Grid */}
                   <div
@@ -1706,7 +1698,7 @@ function OutcomesSection() {
                             <Cpu className="w-10 h-10 text-[#0048FF] mb-3" />
                           </motion.div>
                           <span className="text-xs font-bold text-white tracking-[0.3em] uppercase mb-1">
-                            DEXA
+                            DeXa
                           </span>
                           <span className="text-xs font-bold text-white/40 tracking-[0.2em] uppercase">
                             System Active
@@ -1741,31 +1733,33 @@ function OutcomesSection() {
                             />
                           </linearGradient>
                         </defs>
-                        {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
-                          <g
-                            key={i}
-                            transform={`rotate(${angle}, ${128 * 1.5}, ${128 * 1.5})`}
-                          >
-                            <motion.line
-                              x1={128 * 1.5}
-                              y1={128 * 1.5}
-                              x2={280 * 1.5}
-                              y2={128 * 1.5}
-                              stroke="url(#beam-gradient-ipad)"
-                              strokeWidth="1.5"
-                              animate={{
-                                strokeDashoffset: [0, -300],
-                                opacity: [0, 0.5, 0],
-                              }}
-                              transition={{
-                                duration: 3,
-                                repeat: Infinity,
-                                delay: i * 0.3,
-                              }}
-                              strokeDasharray="60 240"
-                            />
-                          </g>
-                        ))}
+                        {[0, 45, 90, 135, 180, 225, 270, 315].map(
+                          (angle, i) => (
+                            <g
+                              key={i}
+                              transform={`rotate(${angle}, ${128 * 1.5}, ${128 * 1.5})`}
+                            >
+                              <motion.line
+                                x1={128 * 1.5}
+                                y1={128 * 1.5}
+                                x2={280 * 1.5}
+                                y2={128 * 1.5}
+                                stroke="url(#beam-gradient-ipad)"
+                                strokeWidth="1.5"
+                                animate={{
+                                  strokeDashoffset: [0, -300],
+                                  opacity: [0, 0.5, 0],
+                                }}
+                                transition={{
+                                  duration: 3,
+                                  repeat: Infinity,
+                                  delay: i * 0.3,
+                                }}
+                                strokeDasharray="60 240"
+                              />
+                            </g>
+                          ),
+                        )}
                       </svg>
 
                       {/* Dynamic Label Callouts */}
@@ -1830,7 +1824,7 @@ function OutcomesSection() {
 function FinalCTA() {
   return (
     <section
-      data-testid="dexa-final-cta"
+      data-testid="DeXa-final-cta"
       className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden"
     >
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] lg:w-[500px] lg:h-[500px] rounded-full bg-[#0048FF]/[0.05] blur-[140px]" />
@@ -1842,8 +1836,8 @@ function FinalCTA() {
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <p className="mt-6 text-base text-[#8A8A93] max-w-2xl mx-auto leading-relaxed">
-            DEXA helps Mentor Global infrastructure understand context, retrieve
-            approved knowledge, apply rules, coordinate agents, trigger
+            DeXa helps Mentor Global infrastructure understand context,
+            retrieve approved knowledge, apply rules, coordinate agents, trigger
             workflows, monitor execution, and guide users toward governed next
             actions.
           </p>
@@ -1852,14 +1846,14 @@ function FinalCTA() {
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              data-testid="dexa-final-build-cta"
+              data-testid="DeXa-final-build-cta"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0048FF] text-white font-semibold hover:bg-[#0030CC] transition-colors"
             >
-              Build With DEXA <ArrowRight className="w-5 h-5" />
+              Build With DeXa <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               to="/contact"
-              data-testid="dexa-final-talk-cta"
+              data-testid="DeXa-final-talk-cta"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors"
             >
               Talk to Mentor Global <ArrowRight className="w-5 h-5" />
@@ -1871,18 +1865,18 @@ function FinalCTA() {
   );
 }
 
-export default function DexaPage() {
+export default function DeXaPage() {
   return (
-    <main data-testid="dexa-page">
+    <main data-testid="DeXa-page">
       <Hero />
-      <DexaInMotion />
-      <WhatDexaIs />
-      <WhatDexaIsNot />
+      <DeXaInMotion />
+      <WhatDeXaIs />
+      <WhatDeXaIsNot />
       <ProblemSection />
-      <HowDexaThinks />
+      <HowDeXaThinks />
       <OperatingModel />
-      <DexaAcrossPillars />
-      <DexaChannelsSection />
+      <DeXaAcrossPillars />
+      <DeXaChannelsSection />
       <IntelligenceLayers />
       <AgenticPods />
       <GovernanceSection />

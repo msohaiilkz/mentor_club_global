@@ -7,7 +7,7 @@ import {
   ChevronUp,
   ShieldCheck,
   Quote,
-  Sparkles,
+  // Sparkles,
   Network,
   Users,
 } from "lucide-react";
@@ -17,20 +17,22 @@ import { MatrixRain } from "../components/shared/MatrixRain";
 import teamGroupTest from "../assets/team-group-test.png";
 import teamBgTest from "../assets/team-group-test-1.jpg";
 import groupPhoto from "../assets/group2.jpeg";
+import DeXaImg from "../assets/dexa.png";
 import {
-  founderDeclaration,
-  founderQuote,
+  // founderDeclaration,
+  // founderQuote,
   philosophyCards,
   architectureDomains,
   founderFeature,
-  boardProfiles,
-  executiveLeaders,
-  dexaProfile,
+  navrozFeature,
+  // boardProfiles,
+  // executiveLeaders,
+  DeXaProfile,
   leaderProfiles,
-  operatingModelFlow,
-  ownershipMatrix,
-  matrixRows,
-  matrixColumns,
+  // operatingModelFlow,
+  // ownershipMatrix,
+  // matrixRows,
+  // matrixColumns,
   credibilityCards,
   governanceDisclaimer,
   futurePlaceholders,
@@ -59,9 +61,8 @@ function PremiumAvatar({ name, square = false }) {
     .toUpperCase();
   return (
     <div
-      className={`relative w-full ${
-        square ? "aspect-square" : "h-full"
-      } overflow-hidden rounded-none`}
+      className={`relative w-full ${square ? "aspect-square" : "h-full"
+        } overflow-hidden rounded-none`}
       style={{
         background:
           "radial-gradient(ellipse at 30% 20%, #1a1a2e 0%, #0a0a15 60%, #000 100%)",
@@ -108,7 +109,7 @@ function PremiumAvatar({ name, square = false }) {
       <div className="absolute top-4 left-4 flex items-center gap-2">
         <div
           className="w-1.5 h-1.5 rounded-none"
-          style={{ background: INDIGO, boxShadow: `0 0 12px ${INDIGO}` }}
+          style={{ background: BLUE, boxShadow: `0 0 12px ${BLUE}` }}
         />
         <span className="text-sm uppercase tracking-[0.2em] text-white/50 font-bold">
           Architect Identity
@@ -125,15 +126,14 @@ function LeaderPhoto({ photo, name, square = false }) {
   if (photo) {
     return (
       <div
-        className={`relative w-full ${
-          square ? "aspect-square" : "h-full"
-        } overflow-hidden rounded-none bg-[#0a0a15]`}
+        className={`relative w-full ${square ? "aspect-square" : "h-full"
+          } overflow-hidden rounded-none bg-[#0a0a15]`}
       >
         <img
           src={photo}
           alt={name}
           className="w-full h-full object-cover object-center transition-all duration-500"
-          // style={{ filter: "grayscale(0.85) contrast(1.05)" }}
+        // style={{ filter: "grayscale(0.85) contrast(1.05)" }}
         />
         {/* <div
           className="absolute inset-0 pointer-events-none"
@@ -148,136 +148,6 @@ function LeaderPhoto({ photo, name, square = false }) {
     );
   }
   return <PremiumAvatar name={name} square={square} />;
-}
-
-/* DEXA intelligence core — abstract, glowing, orbital */
-function DexaCore({ size = "lg" }) {
-  const sizeMap = {
-    md: "w-48 h-48",
-    lg: "w-full aspect-square max-w-[440px]",
-  };
-  return (
-    <div
-      className={`${sizeMap[size]} relative rounded-none overflow-hidden`}
-      style={{
-        background:
-          "radial-gradient(ellipse at center, #0a0a25 0%, #050510 70%, #000 100%)",
-      }}
-    >
-      {/* outer indigo halo */}
-      <motion.div
-        animate={{
-          opacity: [0.1, 0.2, 0.1],
-          scale: [1, 1.1, 1],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(circle at 50% 50%, rgba(99,102,241,0.15) 0%, transparent 60%)",
-        }}
-      />
-
-      {/* orbit rings */}
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[78%] h-[78%] rounded-full border border-[#0048FF]/10"
-      />
-      <motion.div
-        animate={{ rotate: -360 }}
-        transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[58%] h-[58%] rounded-full border border-[#6366F1]/15"
-      />
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[38%] h-[38%] rounded-full border border-[#0048FF]/20"
-      />
-
-      {/* core pulse */}
-      <motion.div
-        animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.8, 1, 0.8],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[22%] h-[22%] rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle, #6366F1 0%, #0048FF 50%, transparent 85%)",
-          boxShadow:
-            "0 0 60px rgba(99,102,241,0.4), 0 0 120px rgba(0,72,255,0.3)",
-        }}
-      />
-
-      {/* orbital nodes */}
-      {[0, 1, 2, 3, 4, 5].map((i) => {
-        const a = (i * (Math.PI * 2)) / 6;
-        return (
-          <motion.div
-            key={i}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-0 pointer-events-none"
-          >
-            <div
-              className="absolute w-2 h-2 rounded-none"
-              style={{
-                left: `${50 + 39 * Math.cos(a)}%`,
-                top: `${50 + 39 * Math.sin(a)}%`,
-                transform: "translate(-50%,-50%)",
-                background: i % 2 === 0 ? BLUE : INDIGO,
-                boxShadow: `0 0 10px ${i % 2 === 0 ? BLUE : INDIGO}`,
-              }}
-            />
-          </motion.div>
-        );
-      })}
-
-      {/* Floating data particles */}
-      {[...Array(12)].map((_, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{
-            opacity: [0, 0.7, 0],
-            scale: [0, 1.2, 0],
-            x: [0, (Math.random() - 0.5) * 320],
-            y: [0, (Math.random() - 0.5) * 320],
-          }}
-          transition={{
-            duration: 3 + Math.random() * 4,
-            repeat: Infinity,
-            delay: i * 0.4,
-            ease: "easeOut",
-          }}
-          className="absolute left-1/2 top-1/2 w-[1.5px] h-[1.5px] rounded-none bg-white"
-        />
-      ))}
-
-      <div className="absolute top-4 left-4 flex items-center gap-2">
-        <div
-          className="w-1.5 h-1.5 rounded-none animate-pulse"
-          style={{ background: INDIGO, boxShadow: `0 0 12px ${INDIGO}` }}
-        />
-        <span className="text-sm uppercase tracking-[0.2em] text-white/60 font-bold">
-          DEXA Intelligence Core
-        </span>
-      </div>
-      <div className="absolute bottom-4 right-4 text-sm uppercase tracking-[0.15em] text-white/40 font-mono">
-        AI · Governed
-      </div>
-    </div>
-  );
 }
 
 /* ========================== SECTION 1: HERO ========================== */
@@ -321,7 +191,7 @@ function Hero() {
               <p className="mt-8 hero-desc max-w-2xl">
                 Mentor Global is led by operators, builders, product thinkers,
                 technology architects, healthcare leaders, finance strategists,
-                governance experts, and DEXA, the intelligence layer that
+                governance experts, and DeXa, the intelligence layer that
                 connects the system.
               </p>
             </ScrollReveal>
@@ -504,7 +374,7 @@ function Hero() {
                       Virtual Intelligence Layer
                     </p>
                     <p className="text-sm text-white font-semibold">
-                      DEXA · AI Intelligence
+                      DeXa · AI Intelligence
                     </p>
                   </div>
                 </div>
@@ -683,7 +553,7 @@ function LeadershipPhilosophy() {
 /* ===================== SECTION 4: ARCHITECTURE MAP ===================== */
 
 function ArchitectureMap() {
-  const radius = 250;
+  const radius = 280;
   return (
     <section
       data-testid="team-architecture-map"
@@ -702,7 +572,7 @@ function ArchitectureMap() {
             Leadership Architecture Map
           </p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
-            Ten Human Architects. One Virtual Intelligence Officer. One
+            Eleven Human Architects. One Virtual Intelligence Officer. One
             Infrastructure Mission.
           </h2>
         </ScrollReveal>
@@ -806,7 +676,7 @@ function ArchitectureMap() {
                     Math.PI / 2;
                   const cx = radius * Math.cos(angle);
                   const cy = radius * Math.sin(angle);
-                  const isDexa = a.virtual;
+                  const isDeXa = a.virtual;
                   return (
                     <div
                       key={a.name}
@@ -818,26 +688,26 @@ function ArchitectureMap() {
                       }}
                     >
                       <div
-                        className="w-[185px] rounded-none border p-3 text-center backdrop-blur-md transition-all duration-300 hover:translate-y-[-2px]"
+                        className="w-[260px] rounded-none border p-3 text-center backdrop-blur-md transition-all duration-300 hover:translate-y-[-2px]"
                         style={{
-                          borderColor: isDexa
+                          borderColor: isDeXa
                             ? "rgba(99,102,241,0.5)"
                             : "rgba(255,255,255,0.12)",
-                          background: isDexa
+                          background: isDeXa
                             ? "linear-gradient(135deg, rgba(99,102,241,0.12) 0%, rgba(0,72,255,0.06) 100%)"
                             : "linear-gradient(160deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))",
-                          boxShadow: isDexa
+                          boxShadow: isDeXa
                             ? "0 0 20px rgba(99,102,241,0.25)"
                             : undefined,
                         }}
                       >
                         <p
-                          className="text-xs uppercase tracking-[0.15em] font-bold mb-1"
-                          style={{ color: isDexa ? INDIGO : BLUE }}
+                          className="text-[11px] uppercase tracking-[0.15em] font-bold mb-1"
+                          style={{ color: BLUE }}
                         >
                           {a.domain}
                         </p>
-                        <p className="text-sm font-bold text-white leading-tight">
+                        <p className="text-[13px] font-bold text-white leading-tight">
                           {a.name}
                         </p>
                       </div>
@@ -852,23 +722,23 @@ function ArchitectureMap() {
         {/* Mobile/tablet grid */}
         <div className="lg:hidden mt-14 grid grid-cols-1 md:grid-cols-2 gap-3">
           {architectureDomains.map((a) => {
-            const isDexa = a.virtual;
+            const isDeXa = a.virtual;
             return (
               <div
                 key={a.name}
                 className="rounded-none border p-5"
                 style={{
-                  borderColor: isDexa
+                  borderColor: isDeXa
                     ? "rgba(99,102,241,0.5)"
                     : "rgba(255,255,255,0.1)",
-                  background: isDexa
+                  background: isDeXa
                     ? "linear-gradient(135deg, rgba(99,102,241,0.10) 0%, rgba(0,72,255,0.04) 100%)"
                     : "rgba(255,255,255,0.02)",
                 }}
               >
                 <p
                   className="text-xs uppercase tracking-[0.2em] font-bold mb-2"
-                  style={{ color: isDexa ? INDIGO : BLUE }}
+                  style={{ color: BLUE }}
                 >
                   {a.domain}
                 </p>
@@ -884,6 +754,157 @@ function ArchitectureMap() {
 
 /* ====================== SECTION 5: FOUNDER FEATURE ====================== */
 
+function FounderProfile({ profile, isSecondary = false }) {
+  return (
+    <div
+      className={`grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 ${isSecondary ? "mt-24 pt-24 border-t border-[#11111F]/10" : "mt-16"}`}
+    >
+      {/* Left */}
+      <ScrollReveal className="lg:col-span-5" delay={0.1}>
+        <div className="aspect-[4/5] max-w-[460px]">
+          <LeaderPhoto photo={profile.photo} name={profile.name} />
+        </div>
+        <div className="mt-6 rounded-none border border-[#11111F]/10 p-6 bg-[#f8f8f9]">
+          <p
+            className="text-sm uppercase tracking-[0.2em] font-bold mb-2"
+            style={{ color: BLUE }}
+          >
+            Architecture Domain
+          </p>
+          <p className="text-base font-bold text-[#11111F] leading-snug">
+            {profile.architectureDomain}
+          </p>
+
+          <div className="mt-5 pt-5 border-t border-[#11111F]/10">
+            <p className="text-sm uppercase tracking-[0.2em] text-[#666666] font-bold mb-3">
+              Infrastructure Pillars
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {profile.pillars.map((p) => (
+                <span
+                  key={p}
+                  className="text-sm px-2.5 py-1 rounded-none font-semibold"
+                  style={{
+                    border: `1px solid ${BLUE}40`,
+                    color: BLUE,
+                  }}
+                >
+                  {p}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-5 pt-5 border-t border-[#11111F]/10">
+            <a
+              href={`#profile-${profile.id || profile.name.split(" ")[0].toLowerCase()}`}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-none text-white text-base font-semibold hover:opacity-90 transition-opacity"
+              style={{ background: BLUE }}
+            >
+              Read Profile <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      {/* Right */}
+      <ScrollReveal className="lg:col-span-7" delay={0.15}>
+        <div
+          id={`profile-${profile.id || profile.name.split(" ")[0].toLowerCase()}`}
+        >
+          <p
+            className="text-sm uppercase tracking-[0.25em] font-bold mb-4"
+            style={{ color: BLUE }}
+          >
+            Profile Summary
+          </p>
+          <div className="space-y-4 text-base md:text-lg text-[#11111F] leading-relaxed">
+            {Array.isArray(profile.summary) ? (
+              profile.summary.map((para, idx) => <p key={idx}>{para}</p>)
+            ) : (
+              <p>{profile.summary}</p>
+            )}
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+              <p
+                className="text-sm uppercase tracking-[0.25em] font-bold mb-4"
+                style={{ color: BLUE }}
+              >
+                Experience
+              </p>
+              <ul className="space-y-3">
+                {profile.experience.map((e) => (
+                  <li
+                    key={e}
+                    className="flex gap-3 text-base text-[#11111F] leading-relaxed"
+                  >
+                    <span
+                      className="flex-shrink-0 font-bold"
+                      style={{ color: BLUE }}
+                    >
+                      ▸
+                    </span>
+                    <span>{e}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p
+                className="text-sm uppercase tracking-[0.25em] font-bold mb-4"
+                style={{ color: BLUE }}
+              >
+                What{" "}
+                {profile.name.split(" ")[0] === "Dr."
+                  ? "he"
+                  : profile.name.split(" ")[0]}{" "}
+                is building
+              </p>
+              <ul className="space-y-3">
+                {profile.building.map((e) => (
+                  <li
+                    key={e}
+                    className="flex gap-3 text-base text-[#11111F] leading-relaxed"
+                  >
+                    <span
+                      className="flex-shrink-0 font-bold"
+                      style={{ color: BLUE }}
+                    >
+                      ▸
+                    </span>
+                    <span>{e}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div
+            className="mt-10 rounded-none p-7 border-l-4"
+            style={{
+              background: "#f8f8f9",
+              borderLeftColor: BLUE,
+            }}
+          >
+            <Quote className="w-7 h-7 mb-4" style={{ color: `${BLUE}40` }} />
+            <p className="text-base md:text-lg text-[#11111F] italic leading-relaxed">
+              “{profile.quote?.text || profile.quote}”
+            </p>
+            <p className="mt-4 text-base font-bold text-[#11111F]">
+              — {profile.name}
+            </p>
+            <p className="text-sm text-[#8A8A93] uppercase tracking-widest mt-1">
+              {profile.title}
+            </p>
+          </div>
+        </div>
+      </ScrollReveal>
+    </div>
+  );
+}
+
 function FounderFeatureSection() {
   return (
     <section
@@ -896,160 +917,12 @@ function FounderFeatureSection() {
         <ScrollReveal>
           <p className="eyebrow mb-4">Founder Feature</p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05]">
-            {founderFeature.name}
+            Founders & Strategic Architects
           </h2>
-          <p className="mt-3 text-base font-semibold" style={{ color: BLUE }}>
-            {founderFeature.title}
-          </p>
         </ScrollReveal>
 
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
-          {/* Left */}
-          <ScrollReveal className="lg:col-span-5" delay={0.1}>
-            <div className="aspect-[4/5] max-w-[460px]">
-              <LeaderPhoto
-                photo={founderFeature.photo}
-                name={founderFeature.name}
-              />
-            </div>
-            <div className="mt-6 rounded-none border border-[#11111F]/10 p-6 bg-[#f8f8f9]">
-              <p
-                className="text-sm uppercase tracking-[0.2em] font-bold mb-2"
-                style={{ color: BLUE }}
-              >
-                Architecture Domain
-              </p>
-              <p className="text-base font-bold text-[#11111F] leading-snug">
-                {founderFeature.architectureDomain}
-              </p>
-
-              <div className="mt-5 pt-5 border-t border-[#11111F]/10">
-                <p className="text-sm uppercase tracking-[0.2em] text-[#666666] font-bold mb-3">
-                  Infrastructure Pillars
-                </p>
-                <div className="flex flex-wrap gap-1.5">
-                  {founderFeature.pillars.map((p) => (
-                    <span
-                      key={p}
-                      className="text-sm px-2.5 py-1 rounded-none font-semibold"
-                      style={{
-                        border: `1px solid ${BLUE}40`,
-                        color: BLUE,
-                      }}
-                    >
-                      {p}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-5 pt-5 border-t border-[#11111F]/10">
-                <a
-                  href="#founder-profile"
-                  data-testid="founder-read-profile"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-none text-white text-base font-semibold hover:opacity-90 transition-opacity"
-                  style={{ background: BLUE }}
-                >
-                  Read Founder Profile <ArrowRight className="w-3.5 h-3.5" />
-                </a>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          {/* Right */}
-          <ScrollReveal className="lg:col-span-7" delay={0.15}>
-            <div id="founder-profile">
-              <p
-                className="text-sm uppercase tracking-[0.25em] font-bold mb-4"
-                style={{ color: BLUE }}
-              >
-                Profile Summary
-              </p>
-              <div className="space-y-4 text-base md:text-lg text-[#11111F] leading-relaxed">
-                {Array.isArray(founderFeature.summary) ? (
-                  founderFeature.summary.map((para, idx) => (
-                    <p key={idx}>{para}</p>
-                  ))
-                ) : (
-                  <p>{founderFeature.summary}</p>
-                )}
-              </div>
-
-              <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div>
-                  <p
-                    className="text-sm uppercase tracking-[0.25em] font-bold mb-4"
-                    style={{ color: BLUE }}
-                  >
-                    Experience
-                  </p>
-                  <ul className="space-y-3">
-                    {founderFeature.experience.map((e) => (
-                      <li
-                        key={e}
-                        className="flex gap-3 text-base text-[#11111F] leading-relaxed"
-                      >
-                        <span
-                          className="flex-shrink-0 font-bold"
-                          style={{ color: BLUE }}
-                        >
-                          ▸
-                        </span>
-                        <span>{e}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <p
-                    className="text-sm uppercase tracking-[0.25em] font-bold mb-4"
-                    style={{ color: BLUE }}
-                  >
-                    What he is building for Mentor Global
-                  </p>
-                  <ul className="space-y-3">
-                    {founderFeature.building.map((e) => (
-                      <li
-                        key={e}
-                        className="flex gap-3 text-base text-[#11111F] leading-relaxed"
-                      >
-                        <span
-                          className="flex-shrink-0 font-bold"
-                          style={{ color: BLUE }}
-                        >
-                          ▸
-                        </span>
-                        <span>{e}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div
-                className="mt-10 rounded-none p-7 border-l-4"
-                style={{
-                  background: "#f8f8f9",
-                  borderLeftColor: BLUE,
-                }}
-              >
-                <Quote
-                  className="w-7 h-7 mb-4"
-                  style={{ color: `${BLUE}40` }}
-                />
-                <p className="text-base md:text-lg text-[#11111F] italic leading-relaxed">
-                  “{founderQuote.text}”
-                </p>
-                <p className="mt-4 text-base font-bold text-[#11111F]">
-                  — {founderQuote.author}
-                </p>
-                <p className="text-sm text-[#8A8A93] uppercase tracking-widest mt-1">
-                  {founderQuote.role}
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
+        <FounderProfile profile={founderFeature} />
+        <FounderProfile profile={navrozFeature} isSecondary />
       </div>
     </section>
   );
@@ -1136,125 +1009,16 @@ function FounderFeatureSection() {
 
 // function ExecutiveLeadershipSection() {
 //   return (
-//     <section
-//       data-testid="team-executive"
-//       className="py-24 md:py-32"
-//       style={{ background: NEAR_BLACK }}
-//     >
-//       <div className="max-w-7xl mx-auto px-6 md:px-12">
-//         <ScrollReveal>
-//           <p className="eyebrow mb-4 font-bold" style={{ color: INDIGO }}>
-//             Executive Leadership
-//           </p>
-//           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
-//             Executive Leadership Across Product, Technology, Health Operations,
-//             Finance, and Governance
-//           </h2>
-//         </ScrollReveal>
 
-//         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-//           {executiveLeaders
-//             .filter((l) => !l.virtual)
-//             .map((l, i) => (
-//               <ScrollReveal key={l.name} delay={i * 0.06}>
-//                 <div
-//                   className="group h-full rounded-none border border-white/10 p-6 backdrop-blur-md transition-all duration-300 hover:border-[#6366F1]/40 hover:translate-y-[-2px]"
-//                   style={{
-//                     background:
-//                       "linear-gradient(160deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)",
-//                   }}
-//                 >
-//                   <div className="flex items-center justify-between mb-5">
-//                     <span
-//                       className="text-[9px] uppercase tracking-[0.2em] font-bold"
-//                       style={{ color: BLUE }}
-//                     >
-//                       Executive
-//                     </span>
-//                     <span className="text-xs font-mono text-white/40">
-//                       {String(i + 1).padStart(2, "0")}
-//                     </span>
-//                   </div>
-//                   <h3 className="text-base font-bold text-white leading-snug">
-//                     {l.name}
-//                   </h3>
-//                   <p
-//                     className="text-xs font-semibold mt-2 leading-snug"
-//                     style={{ color: BLUE }}
-//                   >
-//                     {l.title}
-//                   </p>
-//                   {l.subtitle && (
-//                     <p className="mt-1 text-[10px] text-white/50 italic">
-//                       {l.subtitle}
-//                     </p>
-//                   )}
-//                 </div>
-//               </ScrollReveal>
-//             ))}
-//         </div>
-
-//         {/* DEXA — visually distinct */}
-//         <ScrollReveal delay={0.15}>
-//           <div
-//             className="mt-6 rounded-none p-7 md:p-9 backdrop-blur-md border"
-//             style={{
-//               borderColor: "rgba(99,102,241,0.4)",
-//               background:
-//                 "linear-gradient(135deg, rgba(99,102,241,0.10) 0%, rgba(0,72,255,0.05) 50%, rgba(99,102,241,0.08) 100%)",
-//               boxShadow: "0 0 60px rgba(99,102,241,0.15)",
-//             }}
-//           >
-//             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-//               <div className="md:col-span-2 flex justify-center">
-//                 <DexaCore size="md" />
-//               </div>
-//               <div className="md:col-span-10">
-//                 <div className="flex items-center gap-3 mb-3">
-//                   <div
-//                     className="w-2 h-2 rounded-none animate-pulse"
-//                     style={{
-//                       background: INDIGO,
-//                       boxShadow: `0 0 10px ${INDIGO}`,
-//                     }}
-//                   />
-//                   <span
-//                     className="text-[10px] uppercase tracking-[0.25em] font-bold"
-//                     style={{ color: INDIGO }}
-//                   >
-//                     Virtual Intelligence Layer
-//                   </span>
-//                 </div>
-//                 <h3 className="text-2xl md:text-3xl font-bold text-white leading-snug">
-//                   DEXA, Group Chief AI Intelligence Officer
-//                 </h3>
-//                 <p
-//                   className="mt-2 text-sm font-semibold"
-//                   style={{ color: INDIGO }}
-//                 >
-//                   AI Intelligence, Workflow Reasoning and Decision Support
-//                   Architecture
-//                 </p>
-//                 <p className="mt-4 text-sm text-white/75 leading-relaxed max-w-3xl">
-//                   Connects intelligence, workflows, insight, context,
-//                   monitoring, and governance across the Mentor Global
-//                   infrastructure.
-//                 </p>
-//               </div>
-//             </div>
-//           </div>
-//         </ScrollReveal>
-//       </div>
-//     </section>
 //   );
 // }
 
-/* ===================== SECTION 8: DEXA PROFILE SECTION ===================== */
+/* ===================== SECTION 8: DeXa PROFILE SECTION ===================== */
 
-function DexaProfileSection() {
+function DeXaProfileSection() {
   return (
     <section
-      data-testid="team-dexa"
+      data-testid="team-DeXa"
       className="relative py-24 md:py-32 overflow-hidden"
       style={{ background: NAVY }}
     >
@@ -1267,7 +1031,7 @@ function DexaProfileSection() {
       <div
         className="absolute inset-0 opacity-[0.05]"
         style={{
-          backgroundImage: `linear-gradient(${INDIGO} 1px, transparent 1px), linear-gradient(90deg, ${INDIGO} 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(${BLUE} 1px, transparent 1px), linear-gradient(90deg, ${BLUE} 1px, transparent 1px)`,
           backgroundSize: "100px 100px",
         }}
       />
@@ -1288,31 +1052,63 @@ function DexaProfileSection() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow font-bold mb-4 text-primary">
-            DEXA, Virtual Intelligence Officer
+            DeXa, Virtual Intelligence Officer
           </p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
-            DEXA, Group Chief AI Intelligence Officer
+            DeXa, Group Chief AI Intelligence Officer
           </h2>
           <p className="mt-3 text-lg font-semibold text-primary">
-            {dexaProfile.subtitle}
+            {DeXaProfile.subtitle}
           </p>
         </ScrollReveal>
 
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
           <ScrollReveal className="lg:col-span-5" delay={0.1}>
-            <DexaCore size="lg" />
+            <div className="relative group">
+              {/* Background Glow */}
+              <div className="absolute -inset-10 bg-primary/20 blur-[100px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+
+              <div className="relative aspect-[4/5] w-full overflow-hidden border border-white/10 backdrop-blur-md bg-[#0a0a15]">
+                <img
+                  src={DeXaImg}
+                  alt="DeXa - Virtual Intelligence Officer"
+                  className="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a15]/80 via-transparent to-transparent" />
+
+                {/* Status Badge Overlay */}
+                <div className="absolute top-6 left-6 flex items-center gap-2 px-3 py-1.5 bg-[#0a0a15]/60 backdrop-blur-md border border-white/10">
+                  <div className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white">
+                    Neural Link Active
+                  </span>
+                </div>
+
+                <div className="absolute bottom-6 right-6 text-[10px] uppercase tracking-[0.15em] text-white/40 font-mono">
+                  V-IO_CORE_2.4.0
+                </div>
+              </div>
+            </div>
+
             <div
-              className="mt-6 rounded-none border p-6 backdrop-blur-md"
+              className="mt-8 rounded-none border p-6 backdrop-blur-md relative overflow-hidden"
               style={{
                 borderColor: "rgba(255,255,255,0.1)",
                 background: "rgba(255,255,255,0.02)",
               }}
             >
-              <p className="text-sm uppercase tracking-[0.2em] font-bold mb-2 text-primary">
+              <div className="absolute top-0 right-0 w-16 h-16 opacity-10">
+                <Network className="w-full h-full text-primary" />
+              </div>
+              <p className="text-sm uppercase tracking-[0.2em] font-bold mb-2 text-primary flex items-center gap-2">
+                <div className="w-4 h-[1px] bg-primary/40" />
                 Architecture Domain
               </p>
               <p className="text-sm font-bold text-white leading-snug">
-                {dexaProfile.architectureDomain}
+                {DeXaProfile.architectureDomain}
               </p>
             </div>
           </ScrollReveal>
@@ -1322,11 +1118,11 @@ function DexaProfileSection() {
               Profile Summary
             </p>
             <p className="text-base md:text-lg text-white leading-relaxed">
-              {dexaProfile.summary}
+              {DeXaProfile.summary}
             </p>
             <div className="mt-6">
               <p className="text-sm text-[#8A8A93] leading-relaxed">
-                {dexaProfile.distinction}
+                {DeXaProfile.distinction}
               </p>
             </div>
 
@@ -1336,7 +1132,7 @@ function DexaProfileSection() {
                   Experience deployed across
                 </p>
                 <ul className="space-y-2.5">
-                  {dexaProfile.experience.map((e) => (
+                  {DeXaProfile.experience.map((e) => (
                     <li
                       key={e}
                       className="flex gap-3 text-base text-white/85 leading-relaxed"
@@ -1349,10 +1145,10 @@ function DexaProfileSection() {
               </div>
               <div>
                 <p className="text-sm uppercase tracking-[0.25em] font-bold mb-4 text-primary">
-                  What DEXA is building for Mentor Global
+                  What DeXa is building for Mentor Global
                 </p>
                 <ul className="space-y-2.5">
-                  {dexaProfile.building.map((e) => (
+                  {DeXaProfile.building.map((e) => (
                     <li
                       key={e}
                       className="flex gap-3 text-base text-white/85 leading-relaxed"
@@ -1380,8 +1176,11 @@ function DexaProfileSection() {
                 </p>
               </div>
               <ul className="space-y-2">
-                {dexaProfile.governance.map((g) => (
-                  <li key={g} className="text-base text-white/85 leading-relaxed">
+                {DeXaProfile.governance.map((g) => (
+                  <li
+                    key={g}
+                    className="text-base text-white/85 leading-relaxed"
+                  >
                     — {g}
                   </li>
                 ))}
@@ -1391,14 +1190,14 @@ function DexaProfileSection() {
             <div
               className="mt-8 rounded-none pl-7 py-5"
               style={{
-                borderLeft: `3px solid ${INDIGO}`,
-                background: "rgba(99,102,241,0.04)",
+                borderLeft: `3px solid ${BLUE}`,
+                background: "rgba(0,72,255,0.04)",
               }}
             >
-              <p className="text-xl md:text-2xl text-white italic leading-relaxed">
-                “{dexaProfile.quote}”
+              <p className="text-sm md:text-base text-white italic leading-relaxed">
+                “{DeXaProfile.quote}”
               </p>
-              <p className="mt-3 text-base font-bold text-primary">— DEXA</p>
+              <p className="mt-3 text-sm font-bold text-primary">— DeXa</p>
             </div>
           </ScrollReveal>
         </div>
@@ -1415,7 +1214,7 @@ function LeaderProfile({ leader, index }) {
   return (
     <div
       data-testid={`leader-card-${leader.id}`}
-      className="rounded-3xl border border-white/10 backdrop-blur-md overflow-hidden transition-all duration-300 hover:border-[#6366F1]/40"
+      className="border border-white/10 backdrop-blur-md overflow-hidden transition-all duration-300 hover:border-[#6366F1]/40"
       style={{
         background:
           "linear-gradient(160deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)",
@@ -1425,9 +1224,8 @@ function LeaderProfile({ leader, index }) {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
         {/* Photo */}
         <div
-          className={`lg:col-span-5 p-6 lg:p-8 ${
-            isReversed ? "lg:order-2" : ""
-          }`}
+          className={`lg:col-span-5 p-6 lg:p-8 ${isReversed ? "lg:order-2" : ""
+            }`}
         >
           <div className="aspect-[4/5] w-full">
             <LeaderPhoto photo={leader.photo} name={leader.name} />
@@ -1436,8 +1234,8 @@ function LeaderProfile({ leader, index }) {
             <span
               className="px-3 py-1 rounded-none text-sm uppercase tracking-[0.2em] font-bold"
               style={{
-                background: "rgba(99,102,241,0.12)",
-                color: INDIGO,
+                background: "rgba(0, 72, 255, 0.12)",
+                color: BLUE,
               }}
             >
               Architect {index + 1}
@@ -1450,9 +1248,8 @@ function LeaderProfile({ leader, index }) {
 
         {/* Content */}
         <div
-          className={`lg:col-span-7 p-7 lg:p-10 flex flex-col ${
-            isReversed ? "lg:order-1" : ""
-          }`}
+          className={`lg:col-span-7 p-7 lg:p-10 flex flex-col ${isReversed ? "lg:order-1" : ""
+            }`}
         >
           <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight">
             {leader.name}
@@ -1466,11 +1263,11 @@ function LeaderProfile({ leader, index }) {
           <div
             className="mt-4 inline-flex items-center gap-2 self-start rounded-none px-3.5 py-1.5"
             style={{
-              border: `1px solid ${INDIGO}40`,
-              background: "rgba(99,102,241,0.06)",
+              border: `1px solid ${BLUE}40`,
+              background: "rgba(0,72,255,0.06)",
             }}
           >
-            <span className="w-1.5 h-1.5 rounded-none text-primary">▸</span>
+            {/* <span className="w-1.5 h-1.5 rounded-none text-primary">▸</span> */}
             <span className="text-sm uppercase tracking-[0.15em] font-bold text-primary">
               {leader.architectureDomain}
             </span>
@@ -1516,9 +1313,7 @@ function LeaderProfile({ leader, index }) {
                       key={e}
                       className="flex gap-2 text-sm text-white/80 leading-relaxed"
                     >
-                      <span className="flex-shrink-0" style={{ color: BLUE }}>
-                        ▸
-                      </span>
+                      <span className="flex-shrink-0 text-primary">▸</span>
                       <span>{e}</span>
                     </li>
                   ))}
@@ -1619,7 +1414,7 @@ function LeaderProfilesSection() {
 //             How the Leadership Team Works as One System
 //           </h2>
 //         </ScrollReveal>
-// 
+//
 //         <div className="mt-16 rounded-none border border-white/10 backdrop-blur-md overflow-hidden">
 //           {operatingModelFlow.map((s, i) => (
 //             <ScrollReveal key={s.stage} delay={i * 0.03}>
@@ -1728,13 +1523,13 @@ function LeaderProfilesSection() {
 //                 <div className="flex flex-wrap gap-1.5">
 //                   {(ownershipMatrix[row] || []).map((leader, idx) => {
 //                     if (leader === "—") return null;
-//                     const isDexa = leader === "DEXA";
+//                     const isDeXa = leader === "DeXa";
 //                     return (
 //                       <span
 //                         key={idx}
 //                         className="text-sm px-2.5 py-1 rounded-none font-semibold transition-colors"
 //                         style={
-//                           isDexa
+//                           isDeXa
 //                             ? {
 //                                 background: "rgba(99,102,241,0.10)",
 //                                 color: INDIGO,
@@ -1812,7 +1607,7 @@ function BuilderCredibility() {
   );
 }
 
-/* ============== SECTION 13: GOVERNANCE NOTE ABOUT DEXA ============== */
+/* ============== SECTION 13: GOVERNANCE NOTE ABOUT DeXa ============== */
 
 function GovernanceNote() {
   return (
@@ -1838,7 +1633,7 @@ function GovernanceNote() {
                   Governance Note
                 </p>
                 <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight leading-snug mb-5">
-                  DEXA is intelligence, not statutory authority
+                  DeXa is intelligence, not statutory authority
                 </h3>
                 <p className="text-sm md:text-base text-white/85 leading-relaxed">
                   {governanceDisclaimer}
@@ -1907,24 +1702,26 @@ function FinalCTA() {
       {/* structural grid background */}
       <div
         className="absolute inset-0 opacity-[0.05]"
-        style={{
-          backgroundImage: `linear-gradient(${INDIGO} 1px, transparent 1px), linear-gradient(90deg, ${INDIGO} 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-        }}
+        style={
+          {
+            // backgroundImage: `linear-gradient(${INDIGO} 1px, transparent 1px), linear-gradient(90deg, ${INDIGO} 1px, transparent 1px)`,
+            // backgroundSize: "60px 60px",
+          }
+        }
       />
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] sm:w-[700px] sm:h-[700px] lg:w-[1100px] lg:h-[1100px] rounded-full blur-[200px]"
         style={{ background: "rgba(99,102,241,0.10)" }}
       />
       {/* orbital rings */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] sm:w-[520px] sm:h-[520px] lg:w-[700px] lg:h-[700px] rounded-full border border-white/5" />
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] sm:w-[360px] sm:h-[360px] lg:w-[480px] lg:h-[480px] rounded-full border border-[#6366F1]/15" />
+      {/* <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] sm:w-[520px] sm:h-[520px] lg:w-[700px] lg:h-[700px] rounded-full border border-white/5" />
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] sm:w-[360px] sm:h-[360px] lg:w-[480px] lg:h-[480px] rounded-full border border-[#6366F1]/15" /> */}
       <div className="relative max-w-5xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
           <p className="eyebrow font-bold mb-4 text-primary">
             Partner With Leadership
           </p>
-          <h2 className="text-[var(--fs-hero)] font-bold text-white tracking-tighter leading-[1.05]">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#ffffff] tracking-tight max-w-4xl mx-auto">
             Partner With the Architects Building Global Health Fintech
             Infrastructure
           </h2>
@@ -1984,7 +1781,7 @@ export default function Team() {
       <FounderFeatureSection />
       {/* <BoardLeadershipSection /> */}
       {/* <ExecutiveLeadershipSection /> */}
-      <DexaProfileSection />
+      <DeXaProfileSection />
       <LeaderProfilesSection />
       {/* <OperatingModelSection /> */}
       {/* <OwnershipMap /> */}

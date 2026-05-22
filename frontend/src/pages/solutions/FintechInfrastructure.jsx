@@ -33,8 +33,8 @@ import {
   cardCapabilities,
   healthcareUseCases,
   insuranceUseCases,
-  dexaFinanceCapabilities,
-  dexaFinanceScenarios,
+  DeXaFinanceCapabilities,
+  DeXaFinanceScenarios,
   fintechArchitectureLayers,
   fintechDeploymentModels,
   fintechUseCases,
@@ -171,15 +171,15 @@ const MoneyMovementArchitecture = () => {
             }}
           />
 
-          {/* Integrated DEXA System Bar */}
+          {/* Integrated DeXa System Bar */}
           <div className="absolute top-0 inset-x-0 h-14 border-b border-[#6366F1]/20 bg-[#0A0A14] flex items-center justify-between px-6 z-[40]">
             <div className="flex items-center gap-3">
-              <div className="w-7 h-7 border border-[#6366F1]/30 flex items-center justify-center bg-[#6366F1]/10">
+              {/* <div className="w-7 h-7 border border-[#6366F1]/30 flex items-center justify-center bg-[#6366F1]/10">
                 <Cpu className="w-4 h-4 text-[#6366F1]" />
-              </div>
+              </div> */}
               <div className="flex flex-col">
                 <span className="text-xs font-black tracking-[0.2em] text-[#6366F1] uppercase">
-                  DEXA Intelligence
+                  DeXa Intelligence
                 </span>
                 <span className="text-[10px] text-[#8A8A93] -mt-0.5 uppercase tracking-tighter">
                   Financial OS Governance
@@ -309,7 +309,7 @@ const MoneyMovementArchitecture = () => {
                         <rail.icon
                           className={`w-3 ${hoveredRail?.id === rail.id ? "text-[#0048FF]" : "text-white/40"}`}
                         />
-                        <span className="text-xs font-bold text-white/50 uppercase tracking-tighter">
+                        <span className="text-[8px] text-white/50">
                           {rail.label.split(" ")[0]}
                         </span>
                       </motion.div>
@@ -409,9 +409,7 @@ const MoneyMovementArchitecture = () => {
                 <span className="text-xs text-[#8A8A93] uppercase tracking-widest font-bold">
                   Node
                 </span>
-                <span className="text-xs text-[#6366F1] font-mono">
-                  FIN-01
-                </span>
+                <span className="text-xs text-[#6366F1] font-mono">FIN-01</span>
               </div>
             </div>
           </div>
@@ -432,13 +430,13 @@ function Hero() {
       <div className="absolute bottom-0 left-0 w-[260px] h-[260px] sm:w-[420px] sm:h-[420px] lg:w-[600px] lg:h-[600px] rounded-full bg-[#6366F1]/[0.03] blur-[140px] pointer-events-none" />
 
       <div className="relative max-w-[1720px] mx-auto px-6 md:px-12">
-        <Link
+        {/* <Link
           to="/solutions"
           className="inline-flex items-center gap-2 text-sm text-[#8A8A93] hover:text-[#0048FF] transition-colors mb-12 group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />{" "}
           Back to All Solutions
-        </Link>
+        </Link> */}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
@@ -465,7 +463,7 @@ function Hero() {
               <p className="mt-6 text-sm sm:text-base text-[#8A8A93] max-w-xl leading-relaxed">
                 Mentor Global does not build isolated payment screens. It builds
                 financial infrastructure that connects money movement with
-                rules, workflows, ledgers, approvals, reporting, and DEXA
+                rules, workflows, ledgers, approvals, reporting, and DeXa
                 powered intelligence.
               </p>
             </ScrollReveal>
@@ -481,10 +479,10 @@ function Hero() {
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
-                  to="/dexa"
+                  to="/DeXa"
                   className="inline-flex items-center justify-center gap-3 px-10 py-5 border border-white/20 text-white font-bold hover:bg-white/5 transition-all hover:translate-y-[-2px]"
                 >
-                  Explore DEXA Financial Intelligence
+                  Explore DeXa Financial Intelligence
                 </Link>
               </div>
             </ScrollReveal>
@@ -609,7 +607,7 @@ function ConnectedRailsVisual() {
               Mentor Innovation
             </span>
             <span className="text-xs text-[#666666]">and</span>
-            <span className="text-xs font-bold text-[#0048FF]">DEXA</span>
+            <span className="text-xs font-bold text-[#0048FF]">DeXa</span>
           </div>
         </ScrollReveal>
       </div>
@@ -635,13 +633,15 @@ function WhoItServes() {
           {fintechStakeholders.map((s, i) => (
             <ScrollReveal key={s.name} delay={i * 0.03}>
               <div className="bg-[#11111F] p-5 card-hover-dark h-full">
-                <h3 className="text-xs font-bold text-white mb-2">{s.name}</h3>
-                <p className="text-[10px] text-[#8A8A93] mb-1.5">
+                <h3 className="text-sm font-bold text-white mb-2">{s.name}</h3>
+                <p className="text-sm text-[#8A8A93] mb-1.5">
                   <span className="text-[#0048FF] font-bold">Pain:</span>{" "}
                   {s.pain}
                 </p>
-                <p className="text-[10px] text-[#8A8A93]">
-                  <span className="text-[#0048FF] font-bold">Outcome:</span>{" "}
+                <p className="text-sm text-[#8A8A93]">
+                  <span className="text-[#0048FF] text-sm font-bold">
+                    Outcome:
+                  </span>{" "}
                   {s.outcome}
                 </p>
               </div>
@@ -716,7 +716,7 @@ function CoreModules() {
                 <h3 className="text-sm font-bold text-white mt-1.5 mb-2">
                   {m.name}
                 </h3>
-                <p className="text-[11px] text-[#8A8A93] leading-relaxed">
+                <p className="text-sm text-[#8A8A93] leading-relaxed">
                   {m.desc}
                 </p>
               </div>
@@ -797,7 +797,7 @@ function WalletSection() {
               </div>
               <div className="mt-4 p-3 border border-[#0048FF]/20 bg-[#0048FF]/5">
                 <p className="text-[10px] text-[#0048FF] font-bold mb-1">
-                  DEXA
+                  DeXa
                 </p>
                 <p className="text-[10px] text-[#666666]">
                   Your OPD benefit has PKR 12,000 remaining this month.
@@ -833,29 +833,119 @@ function CardSection() {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <div className="bg-gradient-to-br from-[#11111F] to-[#0048FF]/20 border border-[#0048FF]/30 p-8 relative overflow-hidden">
-              <div className="absolute top-4 right-4 text-[10px] font-bold text-[#0048FF]">
-                MENTOR
+            <div className="bg-gradient-to-br from-[#0A0A0F] via-[#11111F] to-[#0048FF]/30 border border-[#0048FF]/20 p-8 relative overflow-hidden rounded-2xl aspect-[1.6/1] shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col justify-between group">
+              {/* Material Texture / Noise Overlay */}
+              <div
+                className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+                }}
+              />
+
+              {/* Decorative Glows */}
+              <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#0048FF]/15 rounded-full blur-[100px] transition-all duration-1000 group-hover:bg-[#0048FF]/25 group-hover:scale-110" />
+              <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-[#0048FF]/10 rounded-full blur-[60px]" />
+
+              {/* Large Background Watermark (High-End Merged Effect) */}
+              <div className="absolute -bottom-10 -right-6 text-[160px] font-black tracking-tighter italic rotate-[-12deg] pointer-events-none select-none transition-all duration-1000">
+                <span className="opacity-[0.03] text-white group-hover:opacity-[0.06] transition-opacity duration-700">
+                  MENTOR
+                </span>
+                {/* Subtle light sweep on the watermark */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[2000ms] ease-in-out" />
               </div>
-              <div className="mb-12">
-                <div className="w-10 h-7 border border-white/30 rounded-sm" />
-              </div>
-              <p className="text-white/60 text-xs tracking-[0.3em] mb-1">
-                **** **** **** 4291
-              </p>
-              <p className="text-white text-sm font-bold">
-                Health Benefit Card
-              </p>
-              <div className="mt-6 flex justify-between items-end">
-                <div>
-                  <p className="text-[10px] text-white/40">Balance</p>
-                  <p className="text-white font-bold">PKR 32,000</p>
+
+              {/* Top Section */}
+              <div className="relative z-10 flex justify-between items-start">
+                <div className="space-y-5">
+                  {/* EMV Chip Visual - More detailed */}
+                  <div className="w-12 h-9 bg-gradient-to-br from-amber-400/40 via-amber-200/30 to-amber-500/40 rounded-lg border border-amber-200/20 overflow-hidden relative shadow-[inset_0_1px_2px_rgba(255,255,255,0.2)]">
+                    <div className="absolute top-1/2 left-0 right-0 h-[0.5px] bg-black/20" />
+                    <div className="absolute top-0 bottom-0 left-1/3 w-[0.5px] bg-black/20" />
+                    <div className="absolute top-0 bottom-0 right-1/3 w-[0.5px] bg-black/20" />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)]" />
+                  </div>
+
+                  {/* Contactless Symbol Mockup */}
+                  <div className="flex items-center gap-1 opacity-40 group-hover:opacity-60 transition-opacity">
+                    {[1, 2, 3, 4].map((i) => (
+                      <div
+                        key={i}
+                        className="h-3 w-[1.5px] rounded-full bg-white"
+                        style={{ opacity: 1 - i * 0.2, height: 8 + i * 2 }}
+                      />
+                    ))}
+                  </div>
                 </div>
-                <div>
-                  <p className="text-[10px] text-white/40">Limit</p>
-                  <p className="text-white/80 text-sm">PKR 50,000</p>
+
+                <div className="text-right flex flex-col items-end">
+                  <div className="relative group/logo">
+                    {/* The Main Etched Logo */}
+                    <span className="text-4xl font-black italic tracking-tighter transition-all duration-700 block relative">
+                      <span className="bg-clip-text text-transparent bg-gradient-to-br from-white via-white/40 to-white/5 group-hover:from-white group-hover:via-white/70 group-hover:to-white/10 transition-all duration-700">
+                        MENTOR
+                      </span>
+                      {/* Inner glow effect */}
+                      <span className="absolute inset-0 bg-clip-text text-transparent bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.4),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        MENTOR
+                      </span>
+                    </span>
+                    {/* Refined Shadow/Etch Depth */}
+                    <span className="absolute inset-0 text-4xl font-black italic tracking-tighter text-black/20 blur-[1px] -z-10 translate-y-[0.5px] translate-x-[0.5px]">
+                      MENTOR
+                    </span>
+                    <span className="absolute inset-0 text-4xl font-black italic tracking-tighter text-white/5 blur-[3px] -z-20 translate-y-[1.5px]">
+                      MENTOR
+                    </span>
+                  </div>
+                  <div className="mt-0.5 relative">
+                    <div className="absolute inset-0 bg-[#0048FF] blur-md opacity-20 group-hover:opacity-40 transition-opacity" />
+                    <span className="relative text-[9px] font-black text-[#0048FF] tracking-[0.4em] uppercase">
+                      Platinum
+                    </span>
+                  </div>
                 </div>
               </div>
+
+              {/* Bottom Section */}
+              <div className="relative z-10 mt-auto">
+                <div className="mb-8">
+                  <p className="text-white/90 text-xl md:text-2xl font-mono tracking-[0.3em] mb-1 drop-shadow-lg">
+                    **** **** **** 4291
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#0048FF] animate-pulse" />
+                    <p className="text-white/40 text-[10px] uppercase tracking-[0.25em] font-bold">
+                      Health Benefit Card
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex justify-between items-end border-t border-white/10 pt-5">
+                  <div className="space-y-1">
+                    <p className="text-[10px] text-white/30 uppercase tracking-widest font-medium">
+                      Current Balance
+                    </p>
+                    <p className="text-white font-bold text-lg tracking-tight">
+                      PKR 32,000
+                    </p>
+                  </div>
+                  <div className="text-right space-y-1">
+                    <p className="text-[10px] text-white/30 uppercase tracking-widest font-medium">
+                      Usage Limit
+                    </p>
+                    <p className="text-white/70 font-bold text-sm tracking-tight">
+                      PKR 50,000
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Dynamic Lens Flare Effect on Hover */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none bg-[radial-gradient(circle_at_var(--mouse-x,50%)_var(--mouse-y,50%),rgba(255,255,255,0.08),transparent_50%)]" />
+
+              {/* Subtle Scanline Overlay */}
+              <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.03),rgba(0,255,0,0.01),rgba(0,0,255,0.03))] bg-[length:100%_2px,3px_100%]" />
             </div>
           </ScrollReveal>
         </div>
@@ -884,7 +974,7 @@ function HealthcareUseCasesSection() {
                 <h3 className="text-sm font-bold text-[#11111F] mb-2">
                   {uc.name}
                 </h3>
-                <div className="space-y-1 text-[11px] text-[#666666]">
+                <div className="space-y-1 text-sm text-[#666666]">
                   <p>
                     <span className="text-[#0048FF] font-bold">Who:</span>{" "}
                     {uc.who}
@@ -894,8 +984,8 @@ function HealthcareUseCasesSection() {
                     {uc.rail}
                   </p>
                   <p>
-                    <span className="text-[#0048FF] font-bold">DEXA:</span>{" "}
-                    {uc.dexa}
+                    <span className="text-[#0048FF] font-bold">DeXa:</span>{" "}
+                    {uc.DeXa}
                   </p>
                 </div>
               </div>
@@ -925,14 +1015,18 @@ function InsuranceUseCasesSection() {
           {insuranceUseCases.map((uc, i) => (
             <ScrollReveal key={uc.name} delay={i * 0.03}>
               <div className="bg-[#11111F] p-5 card-hover-dark h-full">
-                <h3 className="text-xs font-bold text-white mb-2">{uc.name}</h3>
-                <div className="space-y-1 text-[10px] text-[#8A8A93]">
+                <h3 className="text-sm font-bold text-white mb-2">{uc.name}</h3>
+                <div className="space-y-1 text-sm text-[#8A8A93]">
                   <p>
-                    <span className="text-[#0048FF] font-bold">Who:</span>{" "}
+                    <span className="text-[#0048FF] text-sm font-bold">
+                      Who:
+                    </span>{" "}
                     {uc.who}
                   </p>
                   <p>
-                    <span className="text-[#0048FF] font-bold">Rail:</span>{" "}
+                    <span className="text-[#0048FF] text-sm font-bold">
+                      Rail:
+                    </span>{" "}
                     {uc.rail}
                   </p>
                 </div>
@@ -945,29 +1039,29 @@ function InsuranceUseCasesSection() {
   );
 }
 
-function DexaIntelligence() {
+function DeXaIntelligence() {
   return (
-    <section data-testid="fin-dexa" className="bg-white py-24 md:py-32">
+    <section data-testid="fin-DeXa" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <p className="eyebrow mb-4">DEXA Intelligence</p>
+          <p className="eyebrow mb-4">DeXa Intelligence</p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
-            DEXA is the intelligence layer inside financial infrastructure
+            DeXa is the intelligence layer inside financial infrastructure
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <p className="mt-6 section-desc max-w-3xl">
-            DEXA turns financial infrastructure from a transaction system into a
-            guided operating layer. DEXA does not approve payments
-            independently. DEXA does not bypass finance controls. DEXA does not
-            replace finance teams. DEXA does not make unsupported lending
-            decisions. DEXA operates inside approved rules, limits, workflows,
-            permissions, finance logic, credit rules, payroll rules, expense
-            rules, settlement rules, and escalation boundaries.
+            DeXa turns financial infrastructure from a transaction system
+            into a guided operating layer. DeXa does not approve payments
+            independently. DeXa does not bypass finance controls. DeXa
+            does not replace finance teams. DeXa does not make unsupported
+            lending decisions. DeXa operates inside approved rules, limits,
+            workflows, permissions, finance logic, credit rules, payroll rules,
+            expense rules, settlement rules, and escalation boundaries.
           </p>
         </ScrollReveal>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[1px] bg-[#11111F]/10">
-          {dexaFinanceCapabilities.map((cap, i) => (
+          {DeXaFinanceCapabilities.map((cap, i) => (
             <ScrollReveal key={cap.role} delay={i * 0.05}>
               <div className="bg-white p-5 card-hover h-full">
                 <p className="text-sm font-bold text-[#0048FF] mb-3">
@@ -975,7 +1069,7 @@ function DexaIntelligence() {
                 </p>
                 <div className="space-y-1.5">
                   {cap.items.map((item) => (
-                    <p key={item} className="text-[11px] text-[#666666]">
+                    <p key={item} className="text-sm text-[#666666]">
                       {item}
                     </p>
                   ))}
@@ -989,16 +1083,16 @@ function DexaIntelligence() {
   );
 }
 
-function DexaScenarios() {
+function DeXaScenarios() {
   return (
     <section
-      data-testid="fin-dexa-scenarios"
+      data-testid="fin-DeXa-scenarios"
       className="bg-[#0B0B14] py-24 md:py-32 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-[#0048FF]/[0.02]" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <p className="eyebrow mb-4">DEXA in Action</p>
+          <p className="eyebrow mb-4">DeXa in Action</p>
           <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight mb-12">
             From financial confusion to governed next action
           </h2>
@@ -1007,7 +1101,7 @@ function DexaScenarios() {
         <ScrollReveal delay={0.1}>
           <div className="relative mt-8">
             <MacbookMockup>
-              <ChatSimulation scenarios={dexaFinanceScenarios} />
+              <ChatSimulation scenarios={DeXaFinanceScenarios} />
             </MacbookMockup>
           </div>
         </ScrollReveal>
@@ -1018,25 +1112,25 @@ function DexaScenarios() {
               <h3 className="text-sm font-bold text-white mb-2">
                 Governed Financial Reasoning
               </h3>
-              <p className="text-xs text-[#8A8A93] leading-relaxed">
-                DEXA verifies wallet balances, settlement schedules, and expense
-                policies before recommending any financial action.
+              <p className="text-sm text-[#8A8A93] leading-relaxed">
+                DeXa verifies wallet balances, settlement schedules, and
+                expense policies before recommending any financial action.
               </p>
             </div>
             <div className="p-6 border border-white/10 bg-white/[0.02]">
               <h3 className="text-sm font-bold text-white mb-2">
                 Infrastructure Integration
               </h3>
-              <p className="text-xs text-[#8A8A93] leading-relaxed">
-                DEXA operates directly inside your financial rails, linking to
-                ledgers, payroll files, and reconciliation engines.
+              <p className="text-sm text-[#8A8A93] leading-relaxed">
+                DeXa operates directly inside your financial rails, linking
+                to ledgers, payroll files, and reconciliation engines.
               </p>
             </div>
             <div className="p-6 border border-white/10 bg-white/[0.02]">
               <h3 className="text-sm font-bold text-white mb-2">
                 Human in the Loop
               </h3>
-              <p className="text-xs text-[#8A8A93] leading-relaxed">
+              <p className="text-sm text-[#8A8A93] leading-relaxed">
                 Critical financial exceptions are routed to finance managers and
                 controllers with full diagnostic context.
               </p>
@@ -1066,10 +1160,10 @@ function Architecture() {
               >
                 <div className="md:col-span-3 p-4 md:p-5 border-b md:border-b-0 md:border-r border-[#11111F]/10 flex items-center">
                   <div>
-                    <span className="text-[#0048FF] text-xs font-bold">
+                    <span className="text-[#0048FF] text-sm font-bold">
                       L{idx + 1}
                     </span>
-                    <p className="text-xs font-bold text-[#11111F] mt-0.5">
+                    <p className="text-sm font-bold text-[#11111F] mt-0.5">
                       {layer.name}
                     </p>
                   </div>
@@ -1079,7 +1173,7 @@ function Architecture() {
                     {layer.items.map((item) => (
                       <span
                         key={item}
-                        className="text-[11px] px-2 py-0.5 border border-[#11111F]/10 text-[#666666]"
+                        className="text-sm px-2 py-0.5 border border-[#11111F]/10 text-[#666666]"
                       >
                         {item}
                       </span>
@@ -1112,8 +1206,8 @@ function DeploymentModels() {
           {fintechDeploymentModels.map((d, i) => (
             <ScrollReveal key={d.name} delay={i * 0.03}>
               <div className="bg-[#11111F] p-5 card-hover-dark h-full">
-                <h3 className="text-xs font-bold text-white mb-2">{d.name}</h3>
-                <p className="text-[10px] text-[#8A8A93] leading-relaxed">
+                <h3 className="text-sm font-bold text-white mb-2">{d.name}</h3>
+                <p className="text-sm text-[#8A8A93] leading-relaxed">
                   {d.desc}
                 </p>
               </div>
@@ -1142,18 +1236,24 @@ function UseCasesSection() {
                 <h3 className="text-sm font-bold text-[#11111F] mb-2">
                   {uc.name}
                 </h3>
-                <div className="space-y-1 text-[11px] text-[#666666]">
+                <div className="space-y-1 text-sm text-[#666666]">
                   <p>
-                    <span className="text-[#0048FF] font-bold">Who:</span>{" "}
+                    <span className="text-[#0048FF] text-sm font-bold">
+                      Who:
+                    </span>{" "}
                     {uc.who}
                   </p>
                   <p>
-                    <span className="text-[#0048FF] font-bold">Rail:</span>{" "}
+                    <span className="text-[#0048FF] text-sm font-bold">
+                      Rail:
+                    </span>{" "}
                     {uc.rail}
                   </p>
                   <p>
-                    <span className="text-[#0048FF] font-bold">DEXA:</span>{" "}
-                    {uc.dexa}
+                    <span className="text-[#0048FF] text-sm font-bold">
+                      DeXa:
+                    </span>{" "}
+                    {uc.DeXa}
                   </p>
                 </div>
               </div>
@@ -1216,7 +1316,7 @@ function FinalCTA() {
             workflows to connected fintech infrastructure powered by Mentor
             Wallet, Mentor Card, QR payments, payroll rails, expense controls,
             ledgers, settlements, reconciliation, credit workflows, embedded
-            APIs, and DEXA financial intelligence.
+            APIs, and DeXa financial intelligence.
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
@@ -1256,8 +1356,8 @@ export default function FintechInfrastructure() {
       <CardSection />
       <HealthcareUseCasesSection />
       <InsuranceUseCasesSection />
-      <DexaIntelligence />
-      <DexaScenarios />
+      <DeXaIntelligence />
+      <DeXaScenarios />
       <Architecture />
       <DeploymentModels />
       <UseCasesSection />

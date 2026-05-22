@@ -38,7 +38,7 @@ export function DeviceEcosystem({
   className = "",
 }) {
   return (
-    <div className={`relative w-full min-h-[500px] md:min-h-[600px] flex items-center justify-center ${className}`}>
+    <div className={`relative w-full min-h-[560px] md:min-h-[720px] flex items-center justify-center pb-16 md:pb-20 ${className}`}>
       {/* Laptop — centered, dominant */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -51,12 +51,12 @@ export function DeviceEcosystem({
         </MacbookMockup>
       </motion.div>
 
-      {/* Phone — tilted, overlapping from bottom-left, adjusted for mobile to prevent overflow */}
+      {/* Phone — tilted, overlapping from bottom-left */}
       <motion.div
         initial={{ opacity: 0, x: -50, rotate: -8 }}
         animate={{ opacity: 1, x: 0, rotate: -12 }}
         transition={{ duration: 1, delay: 0.4 }}
-        className="absolute bottom-[2%] left-0 sm:-left-[5%] xl:-left-[2%] z-30 w-[120px] sm:w-[170px] xl:w-[210px] drop-shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
+        className="absolute bottom-0 left-[2%] sm:left-[0%] xl:-left-[2%] z-30 w-[120px] sm:w-[170px] xl:w-[210px] drop-shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
       >
         <IphoneFrame>
           {phoneContent}

@@ -3,13 +3,7 @@
 /* Remove old CRA styles */
 .App {
   min-height: 100vh;
-  min-height: 100svh;
   overflow-x: hidden;
-}
-
-/* Touch-friendly interactions — no 300ms delay on iOS */
-a, button, [role="button"] {
-  touch-action: manipulation;
 }
 
 /* Eyebrow labels */
@@ -18,7 +12,7 @@ a, button, [role="button"] {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: 700;
-  color: #0048FF;
+  color: #0048ff;
 }
 
 /* Grid line pattern for cards */
@@ -30,13 +24,17 @@ a, button, [role="button"] {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Blue glow for AI/DEXA sections */
+/* Blue glow for AI/DeXa sections */
 .blue-glow {
-  background: radial-gradient(circle at center, rgba(0, 72, 255, 0.12), transparent 60%);
+  background: radial-gradient(circle at center,
+      rgba(0, 72, 255, 0.12),
+      transparent 60%);
 }
 
 .blue-glow-subtle {
-  background: radial-gradient(circle at 50% 50%, rgba(0, 72, 255, 0.08), transparent 50%);
+  background: radial-gradient(circle at 50% 50%,
+      rgba(0, 72, 255, 0.08),
+      transparent 50%);
 }
 
 /* Navigation dropdown animation */
@@ -44,7 +42,9 @@ a, button, [role="button"] {
   opacity: 0;
   transform: translateY(-8px);
   pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .nav-dropdown.active {
@@ -55,22 +55,22 @@ a, button, [role="button"] {
 
 /* Section transitions */
 .section-dark {
-  background-color: #11111F;
-  color: #FFFFFF;
+  background-color: #11111f;
+  color: #ffffff;
 }
 
 .section-light {
-  background-color: #FFFFFF;
-  color: #11111F;
+  background-color: #ffffff;
+  color: #11111f;
 }
 
 /* Subtle depth backgrounds (replacing grid) */
 .depth-dark {
-  background: linear-gradient(180deg, #11111F 0%, #0a0a15 50%, #11111F 100%);
+  background: linear-gradient(180deg, #11111f 0%, #0a0a15 50%, #11111f 100%);
 }
 
 .depth-light {
-  background: linear-gradient(180deg, #FFFFFF 0%, #FAFAFE 50%, #FFFFFF 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #fafafe 50%, #ffffff 100%);
 }
 
 /* Counter number styling */
@@ -80,21 +80,25 @@ a, button, [role="button"] {
 }
 
 /* Form focus states */
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
-  border-color: #0048FF !important;
-  box-shadow: 0 0 0 1px #0048FF;
+  border-color: #0048ff !important;
+  box-shadow: 0 0 0 1px #0048ff;
 }
 
 /* Mobile menu */
 .mobile-menu-overlay {
-  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 /* Premium hover effects on cards */
 .card-hover {
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .card-hover:hover {
@@ -103,7 +107,9 @@ input:focus, textarea:focus, select:focus {
 }
 
 .card-hover-dark {
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .card-hover-dark:hover {
@@ -138,7 +144,7 @@ input:focus, textarea:focus, select:focus {
 .hero-desc {
   font-size: 20px;
   line-height: 1.7;
-  color: #8A8A93;
+  color: #8a8a93;
   max-width: 42rem;
 }
 
@@ -153,7 +159,7 @@ input:focus, textarea:focus, select:focus {
 .section-desc-dark {
   font-size: 18px;
   line-height: 1.625;
-  color: #8A8A93;
+  color: #8a8a93;
 }
 
 /* Body text — standard paragraph content on light backgrounds */
@@ -167,15 +173,16 @@ input:focus, textarea:focus, select:focus {
 .body-text-dark {
   font-size: 17px;
   line-height: 1.625;
-  color: #8A8A93;
+  color: #8a8a93;
 }
 
 /* Card title */
 .card-title {
-  font-size: 1.25rem;          /* text-xl */
+  font-size: 1.25rem;
+  /* text-xl */
   font-weight: 700;
   line-height: 1.375;
-  color: #11111F;
+  color: #11111f;
 }
 
 /* Card description */
@@ -183,4 +190,133 @@ input:focus, textarea:focus, select:focus {
   font-size: 15px;
   line-height: 1.625;
   color: #666666;
+}
+
+/* ═══════════════════════════════════════════════
+   1024px Laptop Fix — Solutions Page
+   ═══════════════════════════════════════════════ */
+
+/* 1920px+ — scale-100 fits fine in large MacBook screen, just remove top padding */
+@media (min-width: 1536px) {
+  [data-testid="solutions-page"] .w-\[450px\].h-\[450px\] {
+    transform: scale(0.9) !important;
+    transform-origin: center center !important;
+  }
+
+  [data-testid="solutions-page"] .w-32.h-6.bg-black.z-30 {
+    height: 6px !important;
+    width: 36px !important;
+  }
+
+  [data-testid="solutions-page"] .absolute.inset-0.pt-6 {
+    padding-top: 0 !important;
+  }
+}
+
+/* 1280px–1535px (1440px) */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  [data-testid="solutions-page"] .w-\[450px\].h-\[450px\] {
+    transform: scale(0.82) !important;
+    transform-origin: center center !important;
+  }
+
+  [data-testid="solutions-page"] .w-32.h-6.bg-black.z-30 {
+    height: 6px !important;
+    width: 36px !important;
+  }
+
+  /* pt-0 so flex truly centers the diagram */
+  [data-testid="solutions-page"] .absolute.inset-0.pt-6 {
+    padding-top: 0 !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+  /* H1 slightly smaller so it fits the left column cleanly */
+  [data-testid="solutions-page"] section:first-of-type h1 {
+    font-size: 42px !important;
+    line-height: 1.07 !important;
+  }
+
+  /* Buttons: force no-wrap + white-space so they stay on one line */
+  [data-testid="solutions-page"] section:first-of-type .flex-wrap {
+    flex-wrap: nowrap !important;
+  }
+
+  [data-testid="solutions-page"] section:first-of-type .flex-wrap a,
+  [data-testid="solutions-page"] section:first-of-type .flex-wrap button {
+    white-space: nowrap !important;
+  }
+
+  /* 1024px: translateY(4px) gives equal ~20px margin above+below the diagram */
+  [data-testid="solutions-page"] .w-\[450px\].h-\[450px\] {
+    transform: translateY(4px) scale(0.54) !important;
+    transform-origin: center center !important;
+  }
+
+  /* Shrink camera notch to 4px so Healthcare has room */
+  [data-testid="solutions-page"] .w-32.h-6.bg-black.z-30 {
+    height: 4px !important;
+    width: 36px !important;
+  }
+
+  /* Remove top padding so flex truly centers the visual */
+  [data-testid="solutions-page"] .absolute.inset-0.pt-6 {
+    padding-top: 0 !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   1024px Laptop Fix — Hero Section
+   Targets: min-width 1024px, max-width 1279px
+   ═══════════════════════════════════════════════ */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+  /* Give hero section a wider max-width so content breathes at 1024px */
+  [data-testid="home-hero"]>div.relative {
+    max-width: 100% !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+    padding-bottom: 11rem !important;
+    padding-top: 6rem !important;
+  }
+
+  /* Change grid from 50/50 to 60/40 so left text column is wider */
+  [data-testid="home-hero"] .grid {
+    grid-template-columns: 3fr 2fr !important;
+  }
+
+  /* Left column: remove max-width cap so it uses full grid cell */
+  [data-testid="home-hero"] .max-w-2xl {
+    max-width: 100% !important;
+  }
+
+  /* h1: slightly smaller so it doesn't overflow wider column */
+  [data-testid="home-hero"] h1 {
+    font-size: 46px !important;
+    line-height: 1.07 !important;
+  }
+
+  /* Hero desc text */
+  [data-testid="home-hero"] .hero-desc {
+    font-size: 17px !important;
+    max-width: 100% !important;
+  }
+
+  /* Bottom rail cards: restore column layout + tighter padding */
+  [data-testid="home-hero"] .absolute.bottom-0 a {
+    flex-direction: column !important;
+    padding: 1rem 1rem !important;
+    min-width: 185px !important;
+  }
+
+  /* Bottom rail label text: prevent overflow */
+  [data-testid="home-hero"] .absolute.bottom-0 a p,
+  [data-testid="home-hero"] .absolute.bottom-0 a h4 {
+    white-space: normal !important;
+    word-break: break-word !important;
+    font-size: 11px !important;
+  }
 }

@@ -1,10 +1,10 @@
 import drAliPhoto from "../assets/dr-ali-rajwani-new.png";
 import navrozPhoto from "../assets/navroz-mansiya.jpeg";
-import rafiqPhoto from "../assets/Rafique Awan.png";
-import jawwadPhoto from "../assets/Jawwad Rizvi.jpeg";
+import rafiqPhoto from "../assets/Rafique Awan.jpg";
+import jawwadPhoto from "../assets/Jawwad Rizvi.jpg";
 import khubaibPhoto from "../assets/syed khubaib hikamt.jpg";
 import sarmadPhoto from "../assets/sarmad-siddiqui.png";
-import ovaisPhoto from "../assets/ovais-khan.png";
+import ovaisPhoto from "../assets/ovais-khan.jpg";
 import drAli from "../assets/dr ali.jpeg";
 import farhatPhoto from "../assets/farhat_shaikh.png";
 import faizaPhoto from "../assets/faiza_barkat.jpeg";
@@ -58,11 +58,6 @@ export const architectureDomains = [
     short: "Enterprise Scale",
   },
   {
-    name: "Jawwad Razvi",
-    domain: "Product Strategy and Platform Experience Architecture",
-    short: "Product",
-  },
-  {
     name: "Syed Khubaib Hikmat",
     domain: "AI, SaaS, Cybersecurity and Technology Architecture",
     short: "Technology",
@@ -73,16 +68,14 @@ export const architectureDomains = [
     short: "Health Operations",
   },
   {
+    name: "Jawwad Razvi",
+    domain: "Product Strategy and Platform Experience Architecture",
+    short: "Product",
+  },
+  {
     name: "Ovais Khan",
     domain: "Finance, Compliance and Governance Architecture",
     short: "Finance & Governance",
-  },
-  {
-    name: "DEXA",
-    domain:
-      "AI Intelligence, Workflow Reasoning and Decision Support Architecture",
-    short: "AI Intelligence",
-    virtual: true,
   },
   {
     name: "Farhat Suhail Shaikh",
@@ -95,12 +88,7 @@ export const architectureDomains = [
     short: "Clinical Ops",
   },
   {
-    name: "Dr. Siza Barkat",
-    domain: "Clinical Operations and Regulatory Architecture",
-    short: "Clinical Ops",
-  },
-  {
-    name: "Ms. Naheed Ali",
+    name: "Naheed Ali",
     domain: "Financial Control, Business Structuring, and Sustainable Growth",
     short: "Finance Architecture",
   },
@@ -108,6 +96,13 @@ export const architectureDomains = [
     name: "Suhail Shaikh",
     domain: "Market Strategy and Investment Architecture",
     short: "Market Strategy",
+  },
+  {
+    name: "DeXa",
+    domain:
+      "AI Intelligence, Workflow Reasoning and Decision Support Architecture",
+    short: "AI Intelligence",
+    virtual: true,
   },
 ];
 
@@ -151,6 +146,7 @@ export const founderFeature = {
     "Company Operating Infrastructure",
   ],
   linkedin: "",
+  quote: "I believe infrastructure is the highest form of leadership because it gives others the power to build. A company may create value for a season, but a true institution creates the conditions for innovation to continue beyond its founder, beyond dependency, and beyond limits. My mission is to make Mentor Global that foundation, where intelligence is governed with responsibility, talent is empowered with purpose, markets are connected with trust, and future builders find the courage, systems, and freedom to create what the world has not yet imagined.",
 };
 
 export const boardProfiles = [
@@ -164,6 +160,7 @@ export const boardProfiles = [
       "Ecosystem design",
       "International expansion direction",
     ],
+    quote: "I believe infrastructure is the highest form of leadership because it gives others the power to build. A company may create value for a season, but a true institution creates the conditions for innovation to continue beyond its founder, beyond dependency, and beyond limits. My mission is to make Mentor Global that foundation, where intelligence is governed with responsibility, talent is empowered with purpose, markets are connected with trust, and future builders find the courage, systems, and freedom to create what the world has not yet imagined.",
   },
   {
     name: "Navroz Mansiya",
@@ -175,6 +172,7 @@ export const boardProfiles = [
       "Technology to business alignment",
       "Cross functional delivery",
     ],
+    quote: "Execution is not a function. It is a discipline. We build systems that turn strategy into movement, and movement into measurable outcomes across every market we enter.",
   },
   {
     name: "Rafique Awan",
@@ -186,6 +184,7 @@ export const boardProfiles = [
       "Cloud and data governance",
       "Executive decision framework",
     ],
+    quote: "The companies that will lead the next decade are not the ones with the best product. They are the ones with the most trusted infrastructure beneath it.",
   },
 ];
 
@@ -195,23 +194,23 @@ export const executiveLeaders = [
   { name: "Sarmad Siddiqui", title: "Group Chief Health Operations Officer" },
   { name: "Ovais Khan", title: "Group Chief Finance and Governance Officer" },
   {
-    name: "DEXA",
+    name: "DeXa",
     title: "Group Chief AI Intelligence Officer",
     subtitle: "Virtual Intelligence Layer",
     virtual: true,
   },
 ];
 
-export const dexaProfile = {
-  name: "DEXA",
+export const DeXaProfile = {
+  name: "DeXa",
   title: "Group Chief AI Intelligence Officer",
   subtitle: "Virtual Intelligence Layer",
   architectureDomain:
     "AI Intelligence, Workflow Reasoning and Decision Support Architecture",
   summary:
-    "DEXA is the intelligence processing engine behind Mentor Global. It is designed to understand context, retrieve approved knowledge, apply rules, coordinate agents, guide workflows, monitor execution, and support governed decision making across healthcare, insurance, fintech, AI, and company operating infrastructure.",
+    "DeXa is the intelligence processing engine behind Mentor Global. It is designed to understand context, retrieve approved knowledge, apply rules, coordinate agents, guide workflows, monitor execution, and support governed decision making across healthcare, insurance, fintech, AI, and company operating infrastructure.",
   distinction:
-    "DEXA is not a chatbot. DEXA is not a human replacement. DEXA is the intelligence layer that helps every infrastructure system become more guided, explainable, responsive, and controlled.",
+    "DeXa is not a chatbot. DeXa is not a human replacement. DeXa is the intelligence layer that helps every infrastructure system become more guided, explainable, responsive, and controlled.",
   experience: [
     "Healthcare benefit guidance",
     "Claims status explanation",
@@ -235,87 +234,126 @@ export const dexaProfile = {
     "Leadership intelligence",
   ],
   governance: [
-    "DEXA operates inside approved knowledge, rules, permissions, approval gates, audit logs, and human oversight.",
-    "DEXA can guide, summarize, recommend, route, and prepare actions.",
-    "DEXA does not make final sensitive decisions without human approval.",
+    "DeXa operates inside approved knowledge, rules, permissions, approval gates, audit logs, and human oversight.",
+    "DeXa can guide, summarize, recommend, route, and prepare actions.",
+    "DeXa does not make final sensitive decisions without human approval.",
   ],
   quote:
     "I do not replace leadership. I make infrastructure intelligent, workflows visible, and decisions easier to govern.",
 };
 
+export const navrozFeature = {
+  id: "navroz",
+  name: "Navroz Mansiya",
+  title: "Co Founder, Board Director and Group COO, Mentor Global",
+  architectureDomain: "Platform Operations, Scale and Execution Architecture",
+  photo: navrozPhoto,
+  summary:
+    "Navroz Mansiya is a product strategist, infrastructure architect, and technology entrepreneur with more than 15 years of experience across fintech systems, digital platforms, product delivery, user experience, and technology operations.",
+  experience: [
+    "Co Founder and Group COO of Mentor Group",
+    "Co Founder and COO of Mentor Health",
+    "Co Founder and COO of Mentor TPA",
+    "Group COO of Mentor Club",
+    "Founder and CEO of Cubes and Dots",
+    "Experience across platform development, B2B ecosystems, product management, user experience, and engineering operations",
+    "Career experience across BlueEX, Viral Edge, The Radical Group, and Cubes and Dots",
+  ],
+  building: [
+    "Global platform deployment discipline",
+    "Operating model execution",
+    "Multi market rollout systems",
+    "Cross functional delivery rhythm",
+    "Client implementation structure",
+    "Scalable operations across subsidiaries",
+    "Technology to business alignment",
+  ],
+  pillars: [
+    "Healthcare Infrastructure",
+    "Fintech Infrastructure",
+    "AI Infrastructure",
+    "Company Operating Infrastructure",
+  ],
+  quote:
+    "Technology must not only solve problems. It must transform experiences, simplify complexity, and quietly power the systems people depend on.",
+  linkedin: "",
+};
+
 export const leaderProfiles = [
+  // {
+  //   id: "navroz",
+  //   name: "Navroz Mansiya",
+  //   title: "Co Founder, Board Director and Group COO, Mentor Global",
+  //   architectureDomain: "Platform Operations, Scale and Execution Architecture",
+  //   photo: navrozPhoto,
+  //   summary:
+  //     "Navroz Mansiya is a product strategist, infrastructure architect, and technology entrepreneur with more than 15 years of experience across fintech systems, digital platforms, product delivery, user experience, and technology operations.",
+  //   experience: [
+  //     "Co Founder and Group COO of Mentor Group",
+  //     "Co Founder and COO of Mentor Health",
+  //     "Co Founder and COO of Mentor TPA",
+  //     "Group COO of Mentor Club",
+  //     "Founder and CEO of Cubes and Dots",
+  //     "Experience across platform development, B2B ecosystems, product management, user experience, and engineering operations",
+  //     "Career experience across BlueEX, Viral Edge, The Radical Group, and Cubes and Dots",
+  //   ],
+  //   building: [
+  //     "Global platform deployment discipline",
+  //     "Operating model execution",
+  //     "Multi market rollout systems",
+  //     "Cross functional delivery rhythm",
+  //     "Client implementation structure",
+  //     "Scalable operations across subsidiaries",
+  //     "Technology to business alignment",
+  //   ],
+  //   pillars: [
+  //     "Healthcare Infrastructure",
+  //     "Fintech Infrastructure",
+  //     "AI Infrastructure",
+  //     "Company Operating Infrastructure",
+  //   ],
+  //   quote:
+  //     "Technology must not only solve problems. It must transform experiences, simplify complexity, and quietly power the systems people depend on.",
+  //   linkedin: "",
+  // },
+
   {
-    id: "navroz",
-    name: "Navroz Mansiya",
-    title: "Co Founder, Board Director and Group COO, Mentor Global",
-    architectureDomain: "Platform Operations, Scale and Execution Architecture",
-    photo: navrozPhoto,
+    id: "khubaib",
+    name: "Syed Khubaib Hikmat",
+    title: "Group Chief Technology Officer, Mentor Global",
+    architectureDomain: "AI, SaaS, Cybersecurity and Technology Architecture",
+    photo: khubaibPhoto,
     summary:
-      "Navroz Mansiya is a product strategist, infrastructure architect, and technology entrepreneur with more than 15 years of experience across fintech systems, digital platforms, product delivery, user experience, and technology operations.",
+      "Syed Khubaib Hikmat is a technology entrepreneur, SaaS product architect, digital transformation consultant, and cybersecurity specialist building the secure technology foundation behind Mentor Global's infrastructure stack.",
     experience: [
-      "Co Founder and Group COO of Mentor Group",
-      "Co Founder and COO of Mentor Health",
-      "Co Founder and COO of Mentor TPA",
-      "Group COO of Mentor Club",
-      "Founder and CEO of Cubes and Dots",
-      "Experience across platform development, B2B ecosystems, product management, user experience, and engineering operations",
-      "Career experience across BlueEX, Viral Edge, The Radical Group, and Cubes and Dots",
+      "Founder of Methologik",
+      "Founder of Getche",
+      "SaaS product architecture",
+      "AI enabled platforms",
+      "Cloud systems",
+      "Cybersecurity solutions",
+      "Enterprise automation platforms",
+      "AWS, AI, ML, cybersecurity, penetration testing, CRM, ERP, SAP security, and information security leadership experience",
     ],
     building: [
-      "Global platform deployment discipline",
-      "Operating model execution",
-      "Multi market rollout systems",
-      "Cross functional delivery rhythm",
-      "Client implementation structure",
-      "Scalable operations across subsidiaries",
-      "Technology to business alignment",
+      "SaaS architecture",
+      "Cloud infrastructure",
+      "AI enabled systems",
+      "Cybersecurity posture",
+      "Enterprise automation",
+      "Platform scalability",
+      "Secure integration architecture",
+      "DeXa technical implementation support",
     ],
     pillars: [
-      "Healthcare Infrastructure",
+      "AI Infrastructure",
       "Fintech Infrastructure",
-      "AI Infrastructure",
-      "Company Operating Infrastructure",
-    ],
-    quote:
-      "Technology must not only solve problems. It must transform experiences, simplify complexity, and quietly power the systems people depend on.",
-    linkedin: "",
-  },
-  {
-    id: "rafique",
-    name: "Rafique Awan",
-    title: "Board Director and Strategic Tech Advisor, Mentor Global",
-    architectureDomain:
-      "U.S. Enterprise Scale, AI Strategy and Governance Architecture",
-    photo: rafiqPhoto,
-    summary:
-      "Rafique Awan brings more than 25 years of U.S. enterprise transformation experience to Mentor Global, helping translate lessons from enterprise data, automation, governance, cloud, AI readiness, and platform scale into global infrastructure execution.",
-    experience: [
-      "25 plus years of U.S. enterprise transformation experience",
-      "Enterprise platform modernization",
-      "Cloud transformation",
-      "Trusted data foundations",
-      "AI readiness programs",
-      "Operating model simplification",
-      "Board and executive advisory",
-    ],
-    building: [
-      "U.S. market expansion strategy",
-      "Enterprise platform maturity",
-      "AI operating model guidance",
-      "Governance and data discipline",
-      "Strategic technology advisory",
-      "Executive decision framework",
-      "Scalable infrastructure discipline for regulated markets",
-    ],
-    pillars: [
-      "AI Infrastructure",
-      "Company Operating Infrastructure",
-      "Healthcare Infrastructure",
       "Insurance Infrastructure",
-      "Enterprise Infrastructure",
+      "Healthcare Infrastructure",
+      "Company Operating Infrastructure",
     ],
     quote:
-      "Systems shape destiny. My mission is to help build infrastructure that removes barriers, restores trust, and gives people access to opportunity at scale.",
+      "Infrastructure is powerful only when it is secure, scalable, intelligent, and built to evolve.",
     linkedin: "",
   },
   {
@@ -354,42 +392,41 @@ export const leaderProfiles = [
     linkedin: "",
   },
   {
-    id: "khubaib",
-    name: "Syed Khubaib Hikmat",
-    title: "Group Chief Technology Officer, Mentor Global",
-    architectureDomain: "AI, SaaS, Cybersecurity and Technology Architecture",
-    photo: khubaibPhoto,
+    id: "rafique",
+    name: "Rafique Awan",
+    title: "Board Director and Strategic Tech Advisor, Mentor Global",
+    architectureDomain:
+      "U.S. Enterprise Scale, AI Strategy and Governance Architecture",
+    photo: rafiqPhoto,
     summary:
-      "Syed Khubaib Hikmat is a technology entrepreneur, SaaS product architect, digital transformation consultant, and cybersecurity specialist building the secure technology foundation behind Mentor Global's infrastructure stack.",
+      "Rafique Awan brings more than 25 years of U.S. enterprise transformation experience to Mentor Global, helping translate lessons from enterprise data, automation, governance, cloud, AI readiness, and platform scale into global infrastructure execution.",
     experience: [
-      "Founder of Methologik",
-      "Founder of Getche",
-      "SaaS product architecture",
-      "AI enabled platforms",
-      "Cloud systems",
-      "Cybersecurity solutions",
-      "Enterprise automation platforms",
-      "AWS, AI, ML, cybersecurity, penetration testing, CRM, ERP, SAP security, and information security leadership experience",
+      "25 plus years of U.S. enterprise transformation experience",
+      "Enterprise platform modernization",
+      "Cloud transformation",
+      "Trusted data foundations",
+      "AI readiness programs",
+      "Operating model simplification",
+      "Board and executive advisory",
     ],
     building: [
-      "SaaS architecture",
-      "Cloud infrastructure",
-      "AI enabled systems",
-      "Cybersecurity posture",
-      "Enterprise automation",
-      "Platform scalability",
-      "Secure integration architecture",
-      "DEXA technical implementation support",
+      "U.S. market expansion strategy",
+      "Enterprise platform maturity",
+      "AI operating model guidance",
+      "Governance and data discipline",
+      "Strategic technology advisory",
+      "Executive decision framework",
+      "Scalable infrastructure discipline for regulated markets",
     ],
     pillars: [
       "AI Infrastructure",
-      "Fintech Infrastructure",
-      "Insurance Infrastructure",
-      "Healthcare Infrastructure",
       "Company Operating Infrastructure",
+      "Healthcare Infrastructure",
+      "Insurance Infrastructure",
+      "Enterprise Infrastructure",
     ],
     quote:
-      "Infrastructure is powerful only when it is secure, scalable, intelligent, and built to evolve.",
+      "Systems shape destiny. My mission is to help build infrastructure that removes barriers, restores trust, and gives people access to opportunity at scale.",
     linkedin: "",
   },
   {
@@ -535,19 +572,25 @@ export const leaderProfiles = [
     linkedin: "",
   },
   {
-    id: "ms-naheed-ali",
+    id: "naheed-ali",
     name: "Ms. Naheed Ali",
     title: "Chief Financial Officer, MedPreneur",
     architectureDomain:
-      "Financial Control, Business Structuring, and Sustainable Growth, Financial Control, Business Structuring, and Sustainable Growth",
+      "Financial Control, Business Structuring, and Sustainable Growth",
     photo: naheedPhoto,
-    summary: `Ms. Naheed Ali is a finance professional with an MBA in Finance and more than 15 years of experience across healthcare, hospitality, and consulting-led business environments. As CFO of MedPreneur, she leads the financial discipline of the company, ensuring that growth is supported by strong controls, structured reporting, budget discipline, investor confidence, and long-term financial sustainability.
 
-Her finance experience includes notable leadership roles and financial responsibilities across Clifton Hospital, Paradise Sukhumvit Hotel, and Health Management Consultants. This diverse exposure gives her a practical understanding of healthcare operations, service businesses, cost management, revenue planning, and institutional financial governance.
-
-At MedPreneur, her role is central to building a financially sound platform for healthcare professionals, franchise owners, and investors. She strengthens MedPreneur’s ability to convert outpatient healthcare ventures into structured, measurable, and professionally managed assets. Her focus includes financial planning, internal controls, unit economics, investor reporting, cost governance, and scalable business models.`,
+    summary: `Ms. Naheed Ali is a finance professional with an MBA in Finance and more than 15 years of experience across healthcare, hospitality, and consulting-led business environments. As CFO of MedPreneur, she leads the financial discipline of the company, ensuring that growth is supported by strong controls, structured reporting, budget discipline, investor confidence, and long-term financial sustainability.`,
     experience: [
-      "Chief Financial Officer, Financial discipline and governance",
+      "Chief Financial Officer, MedPreneur",
+      "MBA Finance and senior finance leadership experience",
+      "Financial responsibilities across Clifton Hospital",
+      "Financial leadership exposure at Paradise Sukhumvit Hotel",
+      "Governance and consulting exposure at Health Management Consultants",
+      "Strong background in operational finance and business structuring",
+    ],
+
+    building: [
+      "Financial discipline and governance",
       "Budgeting, forecasting, and cost control",
       "Healthcare and service business financial management",
       "Investor reporting and financial transparency",
@@ -555,24 +598,22 @@ At MedPreneur, her role is central to building a financially sound platform for 
       "Cash flow planning and operational finance",
       "Structured financial systems for scalable growth",
     ],
-    building: [
-      "Scalable business models and unit economics",
-      "Robust internal financial controls and cost governance",
-      "Structured investor reporting and financial transparency",
-      "Healthcare venture capital allocation models",
-      "Revenue planning and long-term sustainability frameworks",
-      "Corporate financial discipline and audit-readiness",
-    ],
-    pillars: [
-      "Financial Planning",
-      "Internal Controls",
-      "Investor Reporting",
-    ],
+
+    pillars: ["Financial Planning", "Internal Controls", "Investor Reporting"],
+
     quote:
       "Growth without financial discipline is risk. Sustainable growth begins when vision, numbers, and governance move together.",
+
+    oneLineTag:
+      "Builds the financial discipline that turns healthcare ventures into sustainable, investor-ready assets.",
+
+    attribution: "Naheed Ali",
+    profileLabel: "Architect 8",
+    category: "Financial Governance",
+
     linkedin: "",
   },
-  
+
   {
     id: "suhail",
     name: "Suhail Shaikh",
@@ -639,7 +680,7 @@ export const operatingModelFlow = [
   },
   {
     label: "AI Intelligence",
-    leader: "DEXA connects intelligence, workflows, insight, and governance",
+    leader: "DeXa connects intelligence, workflows, insight, and governance",
   },
   {
     label: "Global Deployment",
@@ -680,7 +721,7 @@ export const ownershipMatrix = {
     "Khubaib",
     "Sarmad",
     "Ovais",
-    "DEXA",
+    "DeXa",
   ],
   "Insurance Infrastructure": [
     "Ali",
@@ -690,7 +731,7 @@ export const ownershipMatrix = {
     "Khubaib",
     "Sarmad",
     "Ovais",
-    "DEXA",
+    "DeXa",
   ],
   "Fintech Infrastructure": [
     "Ali",
@@ -700,7 +741,7 @@ export const ownershipMatrix = {
     "Khubaib",
     "—",
     "Ovais",
-    "DEXA",
+    "DeXa",
   ],
   "AI Infrastructure": [
     "Ali",
@@ -710,7 +751,7 @@ export const ownershipMatrix = {
     "Khubaib",
     "—",
     "Ovais",
-    "DEXA",
+    "DeXa",
   ],
   "Company Operating Infrastructure": [
     "Ali",
@@ -720,7 +761,7 @@ export const ownershipMatrix = {
     "Khubaib",
     "Sarmad",
     "Ovais",
-    "DEXA",
+    "DeXa",
   ],
   "Subsidiary Scaling": [
     "Ali",
@@ -730,7 +771,7 @@ export const ownershipMatrix = {
     "Khubaib",
     "Sarmad",
     "Ovais",
-    "DEXA",
+    "DeXa",
   ],
   "Enterprise Governance": [
     "Ali",
@@ -740,7 +781,7 @@ export const ownershipMatrix = {
     "Khubaib",
     "—",
     "Ovais",
-    "DEXA",
+    "DeXa",
   ],
   "Global Expansion": [
     "Ali",
@@ -750,7 +791,7 @@ export const ownershipMatrix = {
     "—",
     "—",
     "Ovais",
-    "DEXA",
+    "DeXa",
   ],
 };
 
@@ -790,7 +831,7 @@ export const credibilityCards = [
 ];
 
 export const governanceDisclaimer =
-  "DEXA is an AI intelligence system, not a statutory officer, board director, employee, or human decision maker. Sensitive decisions remain governed by human leadership, approval workflows, audit logs, and role based controls.";
+  "DeXa is an AI intelligence system, not a statutory officer, board director, employee, or human decision maker. Sensitive decisions remain governed by human leadership, approval workflows, audit logs, and role based controls.";
 
 export const futurePlaceholders = [
   "Country leadership",

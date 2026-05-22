@@ -45,7 +45,7 @@ export const whoWeAreLayers = [
   },
   {
     label: "Technology and Intelligence Layer",
-    org: "Mentor Innovation and DEXA",
+    org: "Mentor Innovation and DeXa",
     desc: "Technology engine and intelligence processing engine powering every infrastructure layer.",
   },
   {
@@ -70,7 +70,7 @@ export const whatWeBuildCards = [
   },
   {
     title: "AI Infrastructure",
-    copy: "Mentor Global builds governed AI infrastructure powered by DEXA. This includes knowledge retrieval, rules engines, workflow routing, agent orchestration, monitoring, audit logs, confidence scoring, and human approval.",
+    copy: "Mentor Global builds governed AI infrastructure powered by DeXa. This includes knowledge retrieval, rules engines, workflow routing, agent orchestration, monitoring, audit logs, confidence scoring, and human approval.",
   },
   {
     title: "Company Operating Infrastructure",
@@ -107,7 +107,7 @@ export const operatingModelLayers = [
   },
   {
     layer: "Intelligence Layer",
-    desc: "DEXA powers intelligence across the group. It understands context, retrieves approved knowledge, applies rules, routes workflows, supports decisions, monitors execution, and escalates sensitive actions for human approval.",
+    desc: "DeXa powers intelligence across the group. It understands context, retrieves approved knowledge, applies rules, routes workflows, supports decisions, monitors execution, and escalates sensitive actions for human approval.",
   },
   {
     layer: "Market Execution Layer",
@@ -212,7 +212,7 @@ export const valuesCards = [
   },
   {
     title: "Intelligence",
-    desc: "DEXA powers every platform with context, reasoning, workflow guidance, monitoring, and governed action.",
+    desc: "DeXa powers every platform with context, reasoning, workflow guidance, monitoring, and governed action.",
   },
 ];
 
@@ -234,7 +234,7 @@ export const differentiators = [
     desc: "Our UAE and US chapters are operational, giving Mentor Global active international execution capability.",
   },
   {
-    title: "Powered by Mentor Innovation and DEXA",
+    title: "Powered by Mentor Innovation and DeXa",
     desc: "Technology and intelligence sit at the center of our group.",
   },
   {

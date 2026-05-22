@@ -94,7 +94,7 @@ const InfrastructureStack = () => {
                   Layer {String(2).padStart(2, "0")}
                 </p>
                 <p className="text-lg sm:text-xl lg:text-2xl font-bold text-white tracking-tight">
-                  Innovation + DEXA
+                  Innovation + DeXa
                 </p>
               </div>
               <Cpu className="w-8 h-8 text-[#0048FF] animate-pulse" />
@@ -226,7 +226,7 @@ function Hero() {
                 </p>
                 <p className="text-base text-[#8A8A93] leading-relaxed">
                   <span className="text-[#0048FF] font-bold mr-2">//</span>
-                  Mentor Innovation builds the technology. DEXA powers
+                  Mentor Innovation builds the technology. DeXa powers
                   intelligence across every layer.
                 </p>
               </div>
@@ -530,7 +530,7 @@ function GlobalClients() {
           <p className="mt-3 text-base text-[#8A8A93]/60">
             Global technology clients are not subsidiaries. They are clients,
             partners, and deployment markets served through Mentor Innovation,
-            DEXA, white labelled platforms, APIs, and custom infrastructure
+            DeXa, white labelled platforms, APIs, and custom infrastructure
             builds.
           </p>
         </ScrollReveal>
@@ -603,7 +603,7 @@ function SharedBackbone() {
               </div>
               <div className="p-4 bg-[#0048FF]/10 border border-[#0048FF]/20">
                 <p className="text-base font-bold text-[#0048FF]">
-                  Mentor Innovation + DEXA
+                  Mentor Innovation + DeXa
                 </p>
                 <p className="text-base text-[#666666] mt-1">
                   Technology + Intelligence
@@ -699,11 +699,13 @@ function GovernanceSection() {
             controls, and compliance expectations.
           </p>
         </ScrollReveal>
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-5 gap-[1px] bg-white/10">
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-5 gap-[1px] bg-white/10 border border-white/10 overflow-hidden">
           {governanceComponents.map((g, i) => (
-            <ScrollReveal key={g} delay={i * 0.02}>
-              <div className="bg-[#11111F] p-4 card-hover-dark">
-                <p className="text-base text-white/80 font-medium">{g}</p>
+            <ScrollReveal key={g} delay={i * 0.02} className="h-full">
+              <div className="bg-[#11111F] p-6 md:p-8 card-hover-dark h-full flex flex-col">
+                <p className="text-sm md:text-base text-white/80 font-medium leading-snug">
+                  {g}
+                </p>
               </div>
             </ScrollReveal>
           ))}
