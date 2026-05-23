@@ -288,6 +288,7 @@ export function DeXaHeroChat() {
     return () => {
       isCancelled = true;
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeThreadIndex]);
 
   // Auto scroll to bottom
